@@ -1,4 +1,7 @@
-;; ==== Emojify  ====
+;;; package ---- Summary:
+;;; Commentary:
+;;; ==== Emojify  ====
+;;; Code:
 (add-hook 'after-init-hook #'global-emojify-mode)
 ;; ===== INSERT TODAY'S DATE AND TIME
   (defun insert-current-date () (interactive)
@@ -6,7 +9,11 @@
 ;; ===== Nyan Mode ====
 (add-to-list 'load-path "~/.emacs.d/nyan-mode")
 (require 'nyan-mode)
-
+;; flycheck-mode
+;;(require 'flycheck)
+;;(global-flycheck-mode)
+;;(setq-default flycheck-disabled-checker '(emacs-lisp-checkdoc))
+(add-hook 'after-init-hook #'global-flycheck-mode)
 (setq-default nyan-wavy-trail t)
 (nyan-mode)
 (nyan-start-animation)
@@ -30,29 +37,28 @@
   ;(declare (indent 1) (debug t))
    ;`(eval-after-load ,file '(progn ,@body))))
 
-(global-hl-line-mode 1);; line selection 
+(global-hl-line-mode 1);; line selection
 (winner-mode 1) ;; winner mode
 ;; ===== Set standard indent to 2 rather that 4 ====
 (setq standard-indent 2)
 
 ;; ===== Make Text mode the default mode for new buffers =====
-(setq default-major-mode 'text-mode)
+(setq major-mode 'text-mode)
 
 ;; ==== Height ====
 (if (window-system)
   (set-frame-height (selected-frame) 60))
 
-;; ==== MELPA ====
-(require 'package) ;; You might already have this line
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
+;; ==== Packages-source ====
+
+(require 'package)
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 ;; ==== Settings ====
+(package-initialize)
 
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
-(package-initialize) ;; You might already have this line
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -64,10 +70,10 @@
     ("590759adc4a5bf7a183df81654cce13b96089e026af67d92b5eec658fb3fe22f" default)))
  '(indicate-buffer-boundaries (quote left))
  '(line-number-mode nil)
- '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (pacmacs xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gotham-theme gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed egg disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode pacmacs xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gotham-theme gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+ '(scroll-bar-mode nil)
  '(send-mail-function (quote smtpmail-send-it))
  '(size-indication-mode t)
  '(tool-bar-mode nil))
@@ -171,4 +177,8 @@ THE SOFTWARE.
          " # Time-stamp: <>\n"
          " # Copyright (C) " (substring (current-time-string) -4) " " auto-insert-copyright "\n"
          " # Description: " _ "\n\n")))
- 
+;; ==== ac ====
+(auto-complete-mode 1)
+;; ==== comments ====
+(bind-key "C-c c" #'comment-dwim)
+;;(provide '.emacs);;; .emacs ends here 
