@@ -101,16 +101,12 @@
      bind-key
      flycheck
      flycheck-cstyle
-     iedit
      impatient-mode
      xkcd
-     twittering-mode
      rotate
      restart-emacs
      persp-mode
      nyan-mode
-     inkpot-theme
-     imgur
      hlinum
      gotham-theme
      gnuplot
