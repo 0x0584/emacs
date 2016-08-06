@@ -1,0 +1,307 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cstdlib" include (:system-flag t) nil [1 20])
+            ("iostream" include (:system-flag t) nil [21 41])
+            ("iomanip" include (:system-flag t) nil [42 61])
+            ("fstream" include (:system-flag t) nil [62 81])
+            ("ctime" include (:system-flag t) nil [82 99])
+            ("cstring" include (:system-flag t) nil [100 119])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [121 141])
+            ("main" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [154 163])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [164 178]))                  
+                :type "int")
+                nil [143 179])
+            ("ch_cap" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ch" variable (:type "char") (reparse-symbol arg-sub-list) [194 203]))                  
+                :type "char")
+                nil [180 204])
+            ("handle" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("file_in_name" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [219 239])
+                    ("file_out_name" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [240 262]))                  
+                :type "void")
+                nil [205 263])
+            ("s_eqi" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s1" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [277 287])
+                    ("s2" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [288 299]))                  
+                :type "bool")
+                nil [264 300])
+            ("timestamp" function
+               (:prototype-flag t
+                :type "void")
+                nil [301 320])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [415 424])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [425 439]))                  
+                :type "int")
+                nil [404 2272])
+            ("ch_cap" function
+               (:arguments 
+                  ( ("ch" variable (:type "char") (reparse-symbol arg-sub-list) [2369 2378]))                  
+                :type "char")
+                nil [2355 2986])
+            ("handle" function
+               (:arguments 
+                  ( ("file_in_name" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3083 3103])
+                    ("file_out_name" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3104 3126]))                  
+                :type "void")
+                nil [3069 8219])
+            ("s_eqi" function
+               (:arguments 
+                  ( ("s1" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8315 8325])
+                    ("s2" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8326 8337]))                  
+                :type "bool")
+                nil [8302 9625])
+            ("timestamp" function (:type "void") nil [9708 10438]))          
+      :file "recomment.cpp"
+      :pointmax 10439
+      :fsize 10438
+      :lastmodtime '(22413 55781 957928 235000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("CC" variable (:default-value ("gcc")) nil [12 21])
+            ("CFLAGS" variable (:default-value ("-Wall" "-g" "-pg" "-std=c99")) nil [21 61])
+            ("LDFLAGS" variable (:default-value ("-lm" "-lncurses" "-I.")) nil [61 89])
+            ("ODIR" variable (:default-value ("obj")) nil [89 100])
+            ("OBJ" variable (:default-value ("main.o")) nil [100 120])
+            ("ARGS" variable (:default-value ("-i" "-v" "-R")) nil [120 137])
+            ("PROG" variable (:default-value ("x")) nil [137 146])
+            ("DEPS" variable nil nil [146 159])
+            ("all" function (:arguments ("main")) nil [160 197])
+            ("run" function (:arguments ("all")) nil [198 226])
+            ("main" function (:arguments ("$(OBJ)")) nil [227 335])
+            ("%.o" function (:arguments ("%.c" "$(DEPS)")) nil [336 429])
+            ("clean" function nil nil [429 482]))          
+      :file "Makefile"
+      :pointmax 482
+      :fsize 481
+      :lastmodtime '(22415 57418 901415 106000)
+      :unmatched-syntax '((shell-command 461 . 481) (bol 460 . 460)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1323 1341])
+            ("stdlib.h" include (:system-flag t) nil [1342 1361])
+            ("stdbool.h" include (:system-flag t) nil [1362 1382])
+            ("string.h" include (:system-flag t) nil [1383 1402])
+            ("BUFF_SIZE" variable (:constant-flag t) nil [1411 1420])
+            ("TRUE" variable (:constant-flag t) nil [1443 1447])
+            ("FALSE" variable (:constant-flag t) nil [1458 1463])
+            ("ASIZEOF" variable (:constant-flag t) nil [1474 1481])
+            ("isOption" type
+               (:members 
+                  ( ("SHORT" variable
+                       (:constant-flag t
+                        :default-value (1642 1643)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1634 1643])
+                    ("LONG" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1645 1651]))                  
+                :type "enum")
+                nil [1618 1652])
+            ("Options" type
+               (:members 
+                  ( ("VERBOSE" variable
+                       (:constant-flag t
+                        :default-value (1678 1679)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1668 1679])
+                    ("INPUT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1690 1696])
+                    ("OUTPUT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1697 1704])
+                    ("MULTI" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1714 1720])
+                    ("SINGLE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1721 1728])
+                    ("REMOVE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1738 1746]))                  
+                :type "enum")
+                nil [1653 1747])
+            ("fread_file" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1820 1833]))                  
+                :type "char")
+                nil [1802 1834])
+            ("fsize" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1846 1853]))                  
+                :type "int")
+                nil [1835 1854])
+            ("help" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1867 1873]))                  
+                :type "void")
+                nil [1855 1874])
+            ("opt" variable
+               (:pointer 1
+                :dereference 2
+                :default-value "{
+  {\"-v\", \"--verbose\"},
+  {\"-i\", \"--input\"},
+  {\"-o\", \"--output\"},
+  {\"-M\", \"--multiline\"},
+  {\"-S\", \"--singleline\"},
+  {\"-R\", \"--remove\"}
+}"
+                :type "char")
+                nil [1935 2094])
+            ("optstat" variable
+               (:dereference 1
+                :default-value "{ FALSE }"
+                :type "bool")
+                nil [2095 2134])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2193 2202])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2203 2215]))                  
+                :type "int")
+                nil [2183 3363])
+            ("fread_file" function
+               (:pointer 1
+                :arguments 
+                  ( ("dir" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3384 3400]))                  
+                :type "char")
+                nil [3365 3885])
+            ("fsize" function
+               (:arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3899 3907]))                  
+                :type "int")
+                nil [3887 3998])
+            ("help" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4011 4017]))                  
+                :type "void")
+                nil [3999 4053]))          
+      :file "main.c"
+      :pointmax 4054
+      :fsize 4053
+      :lastmodtime '(22427 62919 549685 960000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TRUE" . ((number "1" 1448 . 1449)))
+          ("FALSE" . ((number "0" 1464 . 1465)))
+          ("BUFF_SIZE" . ((number "0x200" 1421 . 1426)))
+          ("ASIZEOF" (spp-arg-list ("X") 1481 . 1484) . 
+              ((SIZEOF "sizeof" 1485 . 1491) (semantic-list "(X)" 1491 . 1494) (punctuation "/" 1494 . 1495) (SIZEOF "sizeof" 1495 . 1501) (semantic-list "(X[0])" 1501 . 1507)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("file" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("dir" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [52 62]))                  
+                :type "char")
+                nil [41 63])
+            ("fsize" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [75 83]))                  
+                :type "int")
+                nil [64 84])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [96 105])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [106 118]))                  
+                :type "int")
+                nil [86 257])
+            ("fsize" function
+               (:arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [270 278]))                  
+                :type "int")
+                nil [258 361])
+            ("file" function
+               (:pointer 1
+                :arguments 
+                  ( ("dir" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [374 384]))                  
+                :type "char")
+                nil [362 849]))          
+      :file "check.c"
+      :pointmax 850
+      :fsize 849
+      :lastmodtime '(22427 62213 922186 943000)
+      :unmatched-syntax nil))
+  :file "!home!arubu!Documents!Workspace!uncomment!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

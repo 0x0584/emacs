@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode html-mode
+      :tags nil
+      :file "test.html"
+      :pointmax 76
+      :fsize 75
+      :lastmodtime '(22427 43355 331749 296000)
+      :unmatched-syntax nil))
+  :file "!home!arubu!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
