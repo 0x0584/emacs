@@ -1,28 +1,31 @@
 ;;; package ---- Summary:
 ;;; Commentary:
+
 ;;; ==== Emojify  ====
-;;; Code:
 (add-hook 'after-init-hook #'global-emojify-mode)
+
 ;; ===== INSERT TODAY'S DATE AND TIME
   (defun insert-current-date () (interactive)
     (insert (shell-command-to-string "echo -n $(date +%m/%d/%Y-%H:%M:%S)")))
+(defun insert-date () "Insert current date mm/dd/yyyy_H:M:S." (interactive) (insert (format-time-string "%m/%d/%Y-%H:%M:%S")))
 ;; ===== Nyan Mode ====
 (add-to-list 'load-path "~/.emacs.d/nyan-mode")
 (require 'nyan-mode)
-;; flycheck-mode
-;;(require 'flycheck)
-;;(global-flycheck-mode)
-;;(setq-default flycheck-disabled-checker '(emacs-lisp-checkdoc))
-(add-hook 'after-init-hook #'global-flycheck-mode)
 (setq-default nyan-wavy-trail t)
 (nyan-mode)
 (nyan-start-animation)
+
+;; ===== flycheck mode =====
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 ;; ===== auto-complete-mode =====
 ;(require 'auto-complete-mode)
 ;(auto-complete)
+
 ;; ===== Set the highlight current line minor mode =====
 ;; In every buffer, the line which contains the cursor will be fully
 ;; highlighted
+(global-hl-line-mode 1);; line selection
 
 ;; ==== persp-mode ====
 ;(eval-after-load "persp-mode-autoloads"
@@ -37,8 +40,7 @@
   ;(declare (indent 1) (debug t))
    ;`(eval-after-load ,file '(progn ,@body))))
 
-(global-hl-line-mode 1);; line selection
-(winner-mode 1) ;; winner mode
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 ;; ===== Set standard indent to 2 rather that 4 ====
 (setq standard-indent 2)
 
@@ -49,15 +51,30 @@
 (if (window-system)
   (set-frame-height (selected-frame) 60))
 
+(global-set-key (kbd "S-C-l") 'linum-mode)
+
 ;; ==== Packages-source ====
 
 (require 'package)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ;; ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 ;; ==== Settings ====
+
 (package-initialize)
+(require 'rainbow-delimiters)
+(require 'rainbow-blocks )
+(show-paren-mode 1)
+(hl-sexp-mode 1)
+(electric-operator-mode 1)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(desktop-save-mode 1) ; 0 for off
+(auto-complete-mode 1)
+(winner-mode 1)
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -72,7 +89,44 @@
  '(line-number-mode nil)
  '(package-selected-packages
    (quote
-    (clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode pacmacs xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gotham-theme gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (electric-operator
+     flycheck-perl6
+     rainbow-delimiters
+     helm-gtags
+     ctags-update
+     hl-sexp
+     rainbow-blocks
+     ctags
+     clang-format
+     bind-key
+     flycheck
+     flycheck-cstyle
+     iedit
+     impatient-mode
+     xkcd
+     twittering-mode
+     rotate
+     restart-emacs
+     persp-mode
+     nyan-mode
+     inkpot-theme
+     imgur
+     hlinum
+     gotham-theme
+     gnuplot
+     gnu-apl-mode
+     flycheck-clangcheck
+     emojify
+     elfeed
+     disaster
+     chess
+     badger-theme
+     auto-complete-clang
+     auto-complete-c-headers
+     ac-c-headers
+     abyss-theme
+     2048-game
+     0blayout)))
  '(scroll-bar-mode nil)
  '(send-mail-function (quote smtpmail-send-it))
  '(size-indication-mode t)
@@ -84,18 +138,13 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 134 :width normal)))))
 
-;; ==== Keys ====
-(global-set-key (kbd "S-M-<left>") 'windmove-left)        ; move to left window
-(global-set-key (kbd "S-M-<right>") 'windmove-right)      ; move to right window
-(global-set-key (kbd "S-M-<up>") 'windmove-up)            ; move to upper window
-(global-set-key (kbd "S-M-<down>") 'windmove-down)        ; move to lower window
-;; (defalias 'qrr 'query-replace-regexp)
-    (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
-    (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
-    (global-set-key (kbd "S-C-<down>") 'shrink-window)
-    (global-set-key (kbd "S-C-<up>") 'enlarge-window)
-    (global-set-key (kbd "S-C-l") 'linum-mode)
+
+;;
+
+
+;;
 ;; ==== Move lines ====
+
 (defun move-line (n)
   "Move the current line up or down by N lines."
   (interactive "p")
@@ -122,10 +171,8 @@
 (global-set-key (kbd "M-<up>") 'move-line-up)
 (global-set-key (kbd "M-<down>") 'move-line-down)
 
-;; ===== save\restore opened files ======
-(desktop-save-mode 1) ; 0 for off
-(defun insert-date () "Insert current date mm/dd/yyyy_H:M:S." (interactive) (insert (format-time-string "%m/%d/%Y-%H:%M:%S")))
 ;; ===== autoinsert =====
+
 (setq auto-insert-alist
       '(((ruby-mode . "Ruby program") nil
          "#!/usr/bin/env ruby\n\n"
@@ -177,8 +224,60 @@ THE SOFTWARE.
          " # Time-stamp: <>\n"
          " # Copyright (C) " (substring (current-time-string) -4) " " auto-insert-copyright "\n"
          " # Description: " _ "\n\n")))
-;; ==== ac ====
-(auto-complete-mode 1)
-;; ==== comments ====
+
+;; ==== ctags =====
+
+(setq path-to-ctags "/opt/local/bin/ctags") ;; <- your ctags path here
 (bind-key "C-c c" #'comment-dwim)
-;;(provide '.emacs);;; .emacs ends here 
+(defun create-tags (dir-name)
+  "Create tags file."
+    (interactive "DDirectory: ")
+    (shell-command
+     (format "ctags -f %s -t -T -d --global --declarations --members -R %s" path-to-ctags (directory-file-name dir-name)))
+    )
+
+;; ===== code formatting using astyle ====
+
+(defun ccc-astyle ()
+  "Format C++ code with astyle."
+  (interactive)
+  (let (beg end)
+    (if (region-active-p)
+        (setq beg (region-beginning)
+              end (region-end))
+      (setq beg (point-min)
+            end (point-max)))
+    (shell-command-on-region
+     beg end
+     "astyle --style=otbs --indent=spaces=2 -U --pad-oper --pad-paren-out --add-brackets -k3"
+     nil t)))
+
+;; ===== Windowing =====
+(defun window-split-toggle ()
+  "Toggle between horizontal and vertical split with two windows."
+  (interactive)
+  (if (> (length (window-list)) 2)
+      (error "Can't toggle with more than 2 windows!")
+    (let ((func (if (window-full-height-p)
+                    #'split-window-vertically
+                  #'split-window-horizontally)))
+      (delete-other-windows)
+      (funcall func)
+      (save-selected-window
+        (other-window 1)
+        (switch-to-buffer (other-buffer))))))
+
+
+;; ==== windows size shortkeys ====
+
+(global-set-key (kbd "S-M-<left>") 'windmove-left)        
+(global-set-key (kbd "S-M-<right>") 'windmove-right)     
+(global-set-key (kbd "S-M-<up>") 'windmove-up)           
+(global-set-key (kbd "S-M-<down>") 'windmove-down)      
+;;(defalias 'qrr 'query-replace-regexp)
+(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-<down>") 'shrink-window)
+(global-set-key (kbd "S-C-<up>") 'enlarge-window)
+
+;;(provide '.emacs);;; .emacs ends here
