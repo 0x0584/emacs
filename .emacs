@@ -5,8 +5,8 @@
 (add-hook 'after-init-hook #'global-emojify-mode)
 
 ;; ===== INSERT TODAY'S DATE AND TIME
-  (defun insert-current-date () (interactive)
-    (insert (shell-command-to-string "echo -n $(date +%m/%d/%Y-%H:%M:%S)")))
+(defun insert-current-date () (interactive)
+       (insert (shell-command-to-string "echo -n $(date +%m/%d/%Y-%H:%M:%S)")))
 (defun insert-date () "Insert current date mm/dd/yyyy_H:M:S." (interactive) (insert (format-time-string "%m/%d/%Y-%H:%M:%S")))
 ;; ===== Nyan Mode ====
 (add-to-list 'load-path "~/.emacs.d/nyan-mode")
@@ -19,8 +19,8 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; ===== auto-complete-mode =====
-;(require 'auto-complete-mode)
-;(auto-complete)
+					;(require 'auto-complete-mode)
+					;(auto-complete)
 
 ;; ===== Set the highlight current line minor mode =====
 ;; In every buffer, the line which contains the cursor will be fully
@@ -28,17 +28,17 @@
 (global-hl-line-mode 1);; line selection
 
 ;; ==== persp-mode ====
-;(eval-after-load "persp-mode-autoloads"
- ;  '((setq wg-morph-on nil) ;; switch off animation
-  ;   (add-hook 'after-init-hook #'(lambda () (persp-mode 1)))))
-;(with-eval-after-load "persp-mode-autoloads"
- ; (setq wg-morph-on nil) ;; switch off animation
-  ;(add-hook 'after-init-hook #'(lambda () (persp-mode 1))))
+					;(eval-after-load "persp-mode-autoloads"
+					;  '((setq wg-morph-on nil) ;; switch off animation
+					;   (add-hook 'after-init-hook #'(lambda () (persp-mode 1)))))
+					;(with-eval-after-load "persp-mode-autoloads"
+					; (setq wg-morph-on nil) ;; switch off animation
+					;(add-hook 'after-init-hook #'(lambda () (persp-mode 1))))
 
-;(unless (fboundp 'with-eval-after-load)
- ;(defmacro with-eval-after-load (file &rest body)
-  ;(declare (indent 1) (debug t))
-   ;`(eval-after-load ,file '(progn ,@body))))
+					;(unless (fboundp 'with-eval-after-load)
+					;(defmacro with-eval-after-load (file &rest body)
+					;(declare (indent 1) (debug t))
+					;`(eval-after-load ,file '(progn ,@body))))
 
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 ;; ===== Set standard indent to 2 rather that 4 ====
@@ -49,7 +49,7 @@
 
 ;; ==== Height ====
 (if (window-system)
-  (set-frame-height (selected-frame) 60))
+    (set-frame-height (selected-frame) 60))
 
 (global-set-key (kbd "S-C-l") 'linum-mode)
 
@@ -65,9 +65,10 @@
 (package-initialize)
 (require 'rainbow-delimiters)
 (require 'rainbow-blocks )
+(require 'helm-config)
 (show-paren-mode 1)
+(rainbow-delimiters-mode 1)
 (hl-sexp-mode 1)
-(electric-operator-mode 1)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -81,48 +82,29 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(Linum-format "%7i ")
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(column-number-mode t)
  '(custom-enabled-themes (quote (gotham)))
  '(custom-safe-themes
    (quote
-    ("590759adc4a5bf7a183df81654cce13b96089e026af67d92b5eec658fb3fe22f" default)))
+    ("90e4b4a339776e635a78d398118cb782c87810cb384f1d1223da82b612338046" "590759adc4a5bf7a183df81654cce13b96089e026af67d92b5eec658fb3fe22f" default)))
+ '(fci-rule-character-color "#202020")
+ '(fci-rule-color "#202020")
+ '(fringe-mode 4 nil (fringe))
  '(indicate-buffer-boundaries (quote left))
  '(line-number-mode nil)
+ '(linum-format (quote dynamic))
+ '(main-line-color1 "#1E1E1E")
+ '(main-line-color2 "#111111")
+ '(main-line-separator-style (quote chamfer))
+ '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (electric-operator
-     flycheck-perl6
-     rainbow-delimiters
-     helm-gtags
-     ctags-update
-     hl-sexp
-     rainbow-blocks
-     ctags
-     clang-format
-     bind-key
-     flycheck
-     flycheck-cstyle
-     impatient-mode
-     xkcd
-     rotate
-     restart-emacs
-     persp-mode
-     nyan-mode
-     hlinum
-     gotham-theme
-     gnuplot
-     gnu-apl-mode
-     flycheck-clangcheck
-     emojify
-     elfeed
-     disaster
-     chess
-     badger-theme
-     auto-complete-clang
-     auto-complete-c-headers
-     ac-c-headers
-     abyss-theme
-     2048-game
-     0blayout)))
+    (gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+ '(powerline-color1 "#1E1E1E")
+ '(powerline-color2 "#111111")
  '(scroll-bar-mode nil)
  '(send-mail-function (quote smtpmail-send-it))
  '(size-indication-mode t)
@@ -132,7 +114,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 134 :width normal)))))
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 134 :width normal))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "#99d1ce"))))
+ '(rainbow-delimiters-depth-2-face ((t (:inherit outline-1 :foreground "#5CACEE"))))
+ '(rainbow-delimiters-depth-3-face ((t (:inherit outline-2 :foreground "#FF4500"))))
+ '(rainbow-delimiters-depth-4-face ((t (:inherit outline-3 :foreground "#FF6103"))))
+ '(rainbow-delimiters-depth-5-face ((t (:inherit outline-4 :foreground "#8B7500"))))
+ '(rainbow-delimiters-depth-6-face ((t (:inherit outline-5 :foreground "#228B22"))))
+ '(rainbow-delimiters-depth-7-face ((t (:inherit outline-6 :foreground "#008080"))))
+ '(rainbow-delimiters-depth-8-face ((t (:inherit outline-7 :foreground "#CC681F"))))
+ '(rainbow-delimiters-depth-9-face ((t (:inherit outline-8 :foreground "#4B0082")))))
 
 
 ;;
@@ -176,7 +167,7 @@
          "# Time-stamp: <>\n"
          "# Copyright (C) " (substring (current-time-string) -4) " " auto-insert-copyright "\n"
          "# Description: " _ "\n\n")
-         ((emacs-lisp-mode . "Emacs lisp mode") nil
+	((emacs-lisp-mode . "Emacs lisp mode") nil
          ";;; " (file-name-nondirectory buffer-file-name) " --- " _ "\n\n"
          ";; Time-stamp: <>\n"
          ";; Copyright (C) " (substring (current-time-string) -4) " " auto-insert-copyright "\n\n"
@@ -187,7 +178,7 @@
          
          "/**************************************************************************\\ \n"
          " File: " (file-name-nondirectory buffer-file-name) "\n\n"
-"The MIT License (MIT)\n
+	 "The MIT License (MIT)\n
 
 Copyright (c)" (substring (current-time-string) -4)" - Anas Rchid
 
@@ -213,7 +204,7 @@ THE SOFTWARE.
 	"(insert-date)"					
 								
 \\**************************************************************************/\n"
-         " \n\n")
+	" \n\n")
         ((shell-mode . "Shell script") nil
          "#!/bin/bash\n\n"
          " # File: " (file-name-nondirectory buffer-file-name) "\n"
@@ -227,10 +218,10 @@ THE SOFTWARE.
 (bind-key "C-c c" #'comment-dwim)
 (defun create-tags (dir-name)
   "Create tags file."
-    (interactive "DDirectory: ")
-    (shell-command
-     (format "ctags -f %s -t -T -d --global --declarations --members -R %s" path-to-ctags (directory-file-name dir-name)))
-    )
+  (interactive "DDirectory: ")
+  (shell-command
+   (format "ctags -f %s -t -T -d --global --declarations --members -R %s" path-to-ctags (directory-file-name dir-name)))
+  )
 
 ;; ===== code formatting using astyle ====
 
@@ -284,6 +275,8 @@ THE SOFTWARE.
 (defalias 'wind-above 'my-split-root-window-above)
 (defalias 'wind-right 'my-split-root-window-right)
 (defalias 'wind-left 'my-split-root-window-left)
+(defalias 'window-split-toggle 'wind-tog)
+
 ;; ==== Windows size shortkeys ====
 
 (global-set-key (kbd "S-M-<left>") 'windmove-left)        
@@ -295,5 +288,25 @@ THE SOFTWARE.
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
+
+;; =========
+(defun new-shell ()
+  (interactive)
+
+  (let (
+        (currentbuf (get-buffer-window (current-buffer)))
+        (newbuf     (generate-new-buffer-name "*shell*"))
+	)
+
+    (generate-new-buffer newbuf)
+    (set-window-dedicated-p currentbuf nil)
+    (set-window-buffer currentbuf newbuf)
+    (shell newbuf)))
+
+(defun create-shell ()
+  "creates a shell with a given name"
+  (interactive);; "Prompt\n shell name:")
+  (let ((shell-name (read-string "shell name: " nil)))
+    (shell (concat "*" shell-name "*"))))
 
 ;;(provide '.emacs);;; .emacs ends here
