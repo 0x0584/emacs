@@ -1,79 +1,94 @@
 ;;; package ---- Summary:
 ;;; Commentary:
 
-;;; ==== Emojify  ====
+;;; ==== EMOJIFY  ====
 (add-hook 'after-init-hook #'global-emojify-mode)
 
 ;; ===== INSERT TODAY'S DATE AND TIME
 (defun insert-current-date () (interactive)
        (insert (shell-command-to-string "echo -n $(date +%m/%d/%Y-%H:%M:%S)")))
 (defun insert-date () "Insert current date mm/dd/yyyy_H:M:S." (interactive) (insert (format-time-string "%m/%d/%Y-%H:%M:%S")))
-;; ===== Nyan Mode ====
+
+;; ===== NYAN MODE ====
 (add-to-list 'load-path "~/.emacs.d/nyan-mode")
 (require 'nyan-mode)
 (setq-default nyan-wavy-trail t)
 (nyan-mode)
 (nyan-start-animation)
 
-;; ===== flycheck mode =====
+;; ===== FLYCHECK MODE =====
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
-;; ===== auto-complete-mode =====
-					;(require 'auto-complete-mode)
-					;(auto-complete)
 
-;; ===== Set the highlight current line minor mode =====
+
+;; ===== SET THE HIGHLIGHT CURRENT LINE MINOR MODE =====
 ;; In every buffer, the line which contains the cursor will be fully
 ;; highlighted
 (global-hl-line-mode 1);; line selection
 
-;; ==== persp-mode ====
-					;(eval-after-load "persp-mode-autoloads"
-					;  '((setq wg-morph-on nil) ;; switch off animation
-					;   (add-hook 'after-init-hook #'(lambda () (persp-mode 1)))))
-					;(with-eval-after-load "persp-mode-autoloads"
-					; (setq wg-morph-on nil) ;; switch off animation
-					;(add-hook 'after-init-hook #'(lambda () (persp-mode 1))))
+;; ==== PERSP-MODE ====
+;;(eval-after-load "persp-mode-autoloads"
+;;  '((setq wg-morph-on nil) ;; switch off animation
+;;   (add-hook 'after-init-hook #'(lambda () (persp-mode 1)))))
+;;(with-eval-after-load "persp-mode-autoloads"
+;; (setq wg-morph-on nil) ;; switch off animation
+;;(add-hook 'after-init-hook #'(lambda () (persp-mode 1))))
 
-					;(unless (fboundp 'with-eval-after-load)
-					;(defmacro with-eval-after-load (file &rest body)
-					;(declare (indent 1) (debug t))
-					;`(eval-after-load ,file '(progn ,@body))))
+;;(unless (fboundp 'with-eval-after-load)
+;;(defmacro with-eval-after-load (file &rest body)
+;;(declare (indent 1) (debug t))
+;;`(eval-after-load ,file '(progn ,@body))))
 
-(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
-;; ===== Set standard indent to 2 rather that 4 ====
+
+
+;; ===== SET STANDARD INDENT TO 2 RATHER THAT 4 ====
 (setq standard-indent 2)
 
-;; ===== Make Text mode the default mode for new buffers =====
+;; ===== MAKE TEXT MODE THE DEFAULT MODE FOR NEW BUFFERS =====
 (setq major-mode 'text-mode)
 
-;; ==== Height ====
+;; ==== HEIGHT ====
 (if (window-system)
     (set-frame-height (selected-frame) 60))
 
-(global-set-key (kbd "S-C-l") 'linum-mode)
 
-;; ==== Packages-source ====
+;; ==== PACKAGES-SOURCE ====
 
 (require 'package)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ;; ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
-;; ==== Settings ====
-
+;; ==== SETTINGS ====
 (package-initialize)
-(require 'rainbow-delimiters)
 (require 'rainbow-blocks )
-(require 'helm-config)
-(show-paren-mode 1)
+
+;; ===== RAINBOW-DELIMITER =====
+(require 'rainbow-delimiters)
 (rainbow-delimiters-mode 1)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+;; ==== HELM ====
+(require 'helm-config)
+(helm-mode 1)
+(helm-autoresize-mode t)
+;;(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+;;(global-set-key (kbd "C-x b") 'helm-mini);
+;; (global-set-key (kbd "C-x C-f") 'helm-find-files)
+;;(setq helm-M-x-fuzzy-match t)
+
+;; ===== AUTO-COMPLETE-MODE =====
+;;(require 'auto-complete-mode)
+(auto-complete)
+(auto-complete-mode 1)
+
+(show-paren-mode 1)
 (hl-sexp-mode 1)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (desktop-save-mode 1) ; 0 for off
-(auto-complete-mode 1)
 (winner-mode 1)
 
 
@@ -86,7 +101,7 @@
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(column-number-mode t)
- '(custom-enabled-themes (quote (gotham)))
+ '(custom-enabled-themes (quote (clues)))
  '(custom-safe-themes
    (quote
     ("90e4b4a339776e635a78d398118cb782c87810cb384f1d1223da82b612338046" "590759adc4a5bf7a183df81654cce13b96089e026af67d92b5eec658fb3fe22f" default)))
@@ -99,14 +114,16 @@
  '(main-line-color1 "#1E1E1E")
  '(main-line-color2 "#111111")
  '(main-line-separator-style (quote chamfer))
+ '(menu-bar-mode nil)
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
  '(scroll-bar-mode nil)
  '(send-mail-function (quote smtpmail-send-it))
+ '(show-paren-mode t)
  '(size-indication-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -114,7 +131,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 134 :width normal))))
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 153 :width normal))))
+ '(bm-face ((t (:background "orange" :foreground "Black"))))
+ '(bm-fringe-face ((t (:background "gold" :foreground "Black"))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#99d1ce"))))
  '(rainbow-delimiters-depth-2-face ((t (:inherit outline-1 :foreground "#5CACEE"))))
  '(rainbow-delimiters-depth-3-face ((t (:inherit outline-2 :foreground "#FF4500"))))
@@ -125,13 +144,7 @@
  '(rainbow-delimiters-depth-8-face ((t (:inherit outline-7 :foreground "#CC681F"))))
  '(rainbow-delimiters-depth-9-face ((t (:inherit outline-8 :foreground "#4B0082")))))
 
-
-;;
-
-
-;;
-;; ==== Move lines ====
-
+;; ==== MOVE LINES ====
 (defun move-line (n)
   "Move the current line up or down by N lines."
   (interactive "p")
@@ -158,8 +171,7 @@
 (global-set-key (kbd "M-<up>") 'move-line-up)
 (global-set-key (kbd "M-<down>") 'move-line-down)
 
-;; ===== autoinsert =====
-
+;; ===== AUTOINSERT =====
 (setq auto-insert-alist
       '(((ruby-mode . "Ruby program") nil
          "#!/usr/bin/env ruby\n\n"
@@ -212,7 +224,7 @@ THE SOFTWARE.
          " # Copyright (C) " (substring (current-time-string) -4) " " auto-insert-copyright "\n"
          " # Description: " _ "\n\n")))
 
-;; ==== ctags =====
+;; ==== CTAGS =====
 
 (setq path-to-ctags "/opt/local/bin/ctags") ;; <- your ctags path here
 (bind-key "C-c c" #'comment-dwim)
@@ -223,7 +235,7 @@ THE SOFTWARE.
    (format "ctags -f %s -t -T -d --global --declarations --members -R %s" path-to-ctags (directory-file-name dir-name)))
   )
 
-;; ===== code formatting using astyle ====
+;; ===== CODE FORMATTING USING ASTYLE ====
 
 (defun ccc-astyle ()
   "Format C++ code with astyle."
@@ -239,7 +251,7 @@ THE SOFTWARE.
      "astyle --style=otbs --indent=spaces=2 -U --pad-oper --pad-paren-out --add-brackets -k3"
      nil t)))
 
-;; ===== Windowing =====
+;; ===== WINDOWING =====
 (defun window-split-toggle ()
   "Toggle between horizontal and vertical split with two windows."
   (interactive)
@@ -258,6 +270,7 @@ THE SOFTWARE.
   (split-window (frame-root-window)
                 (and size (prefix-numeric-value size))
                 direction))
+
 (defun my-split-root-window-below (&optional size)
   (interactive "P")
   (my-split-root-window size 'below))
@@ -277,7 +290,7 @@ THE SOFTWARE.
 (defalias 'wind-left 'my-split-root-window-left)
 (defalias 'window-split-toggle 'wind-tog)
 
-;; ==== Windows size shortkeys ====
+;; ==== WINDOWS SIZE SHORTKEYS ====
 
 (global-set-key (kbd "S-M-<left>") 'windmove-left)        
 (global-set-key (kbd "S-M-<right>") 'windmove-right)     
@@ -289,7 +302,10 @@ THE SOFTWARE.
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
-;; =========
+;; ==== LINUM SHORTKEY ====
+(global-set-key (kbd "S-C-l") 'linum-mode)
+
+;; ==== SHELL SETUP ====
 (defun new-shell ()
   (interactive)
 
@@ -309,4 +325,92 @@ THE SOFTWARE.
   (let ((shell-name (read-string "shell name: " nil)))
     (shell (concat "*" shell-name "*"))))
 
+;; (load-theme 'light-blue t t)
+;; (load-theme 'tango t t)
+;; (add-hook 'buffer-list-update-hook
+;;           (lambda ()
+;;             (cond
+;;              ((and (eq major-mode 'c-mode)
+;;                    (not (memq 'light-blue custom-enabled-themes)))
+;;               (disable-theme 'tango)
+;;               (enable-theme 'light-blue))
+;;              ((and (eq major-mode 'perl-mode)
+;;                    (not (memq 'tango custom-enabled-themes)))
+;;               (disable-theme 'light-blue)
+;;               (enable-theme 'tango)))))
+
+;; ==== HIGHLIGHT LINES ====
+(defun find-overlays-specifying (prop pos)
+  (let ((overlays (overlays-at pos))
+        found)
+    (while overlays
+      (let ((overlay (car overlays)))
+        (if (overlay-get overlay prop)
+            (setq found (cons overlay found))))
+      (setq overlays (cdr overlays)))
+    found))
+
+(defun highlight-or-dehighlight-line ()
+  (interactive)
+  (if (find-overlays-specifying
+       'line-highlight-overlay-marker
+       (line-beginning-position))
+      (remove-overlays (line-beginning-position) (+ 1 (line-end-position)))
+    (let ((overlay-highlight (make-overlay
+                              (line-beginning-position)
+                              (+ 1 (line-end-position)))))
+        (overlay-put overlay-highlight 'face '(:background "gray10"))
+        (overlay-put overlay-highlight 'line-highlight-overlay-marker t))))
+
+
+(global-set-key [f8] 'highlight-or-dehighlight-line)
+
+(defun remove-all-highlight ()
+  (interactive)
+  (remove-overlays (point-min) (point-max))
+  )
+(global-set-key [f9] 'remove-all-highlight)
+
+(require 'bm)
+(global-set-key (kbd "<f4>") 'bm-remove-all-current-buffer)
+(global-set-key (kbd "<f5>") 'bm-toggle)
+(global-set-key (kbd "<f6>") 'bm-previous)
+(global-set-key (kbd "<f7>") 'bm-next)
+
+(add-hook 'c-mode-common-hook
+  (lambda()
+    (local-set-key (kbd "C-c <down>") 'hs-show-block)
+    (local-set-key (kbd "C-c <up>")  'hs-hide-block)
+    ;; (local-set-key (kbd "C-c <up>")    'hs-hide-all)
+    ;; (local-set-key (kbd "C-c <down>")  'hs-show-all)
+    (hs-minor-mode t)))
+(defun surround-with-parens ()
+  (interactive)
+  (save-excursion
+    (goto-char (region-beginning))
+    (insert "("))
+  (goto-char (region-end))
+  (insert ")"))
+
+(defun delete-surrounded-parens ()
+  (interactive)
+  (let ((beginning (region-beginning))
+        (end (region-end)))
+    (cond ((not (eq (char-after beginning) ?\())
+           (error "Character at region-begin is not an open-parenthesis"))
+          ((not (eq (char-before end) ?\)))
+           (error "Character at region-end is not a close-parenthesis"))
+          ((save-excursion
+             (goto-char beginning)
+             (forward-sexp)
+             (not (eq (point) end)))
+           (error "Those parentheses are not matched"))
+          (t (save-excursion
+               (goto-char end)
+               (delete-backward-char 1)
+               (goto-char beginning)
+               (delete-char 1))))))
+
+(global-set-key (kbd "C-p ") 'surround-with-parens)
+(global-set-key (kbd "C-o") 'delete-surrounded-parens)
 ;;(provide '.emacs);;; .emacs ends here
