@@ -2,128 +2,30 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Wed Aug 10 23:49:43 2016
-;; Desktop file format version 206
-;; Emacs version 25.0.95.1
+;; Created Fri Aug 19 01:08:42 2016
+;; Desktop file format version 208
+;; Emacs version 25.0.94.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (22443 44935 836906 23000) (desktop . "208") "arubu@CQ56-LinuxMachine" nil nil ((((font-backend xft x) (font . "-unknown-DejaVu Sans Mono-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1") (font-parameter . "DejaVu Sans Mono") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#C0E9F6") (background-color . "#110B14") (mouse-color . "OrangeRed") (border-color . "#222") (screen-gamma) (line-spacing) (left-fringe . 4) (right-fringe . 4) (scroll-bar-foreground . "dark turquoise") (scroll-bar-background . "gray20") (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (fullscreen) (display-type . color) (background-mode . dark) (cursor-color . "orange") (sticky) (environment) (persp) (persp-buffer-predicate-old) (persp-buffer-predicate-generated) (frameset--id . "384F-BC97-92E8-9D2A") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (user-size . t) (visibility . t) (height . 62) (width . 84) (left . 675) (top . 60)) ((min-height . 8) (min-width . 10) (min-height-ignore . 6) (min-width-ignore . 4) (min-height-safe . 2) (min-width-safe . 2) (min-pixel-height . 120) (min-pixel-width . 70) (min-pixel-height-ignore . 90) (min-pixel-width-ignore . 28) (min-pixel-height-safe . 30) (min-pixel-width-safe . 14)) vc (pixel-width . 596) (pixel-height . 915) (total-width . 85) (total-height . 61) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 596) (pixel-height . 465) (total-width . 85) (total-height . 31) (normal-height . 0.5) (normal-width . 1.0) (buffer ".emacs" (selected . t) (hscroll . 0) (fringes 4 4 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 15427) (start . 14669))) (leaf (last . t) (pixel-width . 596) (pixel-height . 450) (total-width . 85) (total-height . 30) (normal-height . 0.5) (normal-width . 1.0) (buffer "*Warnings*" (selected) (hscroll . 0) (fringes 4 4 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 334) (start . 1)))))])
+(setq desktop-saved-frameset [frameset 1 (22454 19978 228204 389000) (desktop . "208") "arfed@cq56.fedora" nil nil ((((font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-20-*-*-*-m-0-iso10646-1") (font-parameter) (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#C0E9F6") (background-color . "#110B14") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 4) (right-fringe . 4) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (fullscreen) (display-type . color) (background-mode . dark) (cursor-color . "orange") (sticky) (environment) (frameset--id . "4424-1754-1798-18C0") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (visibility . t) (display . ":0") (explicit-name) (height . 38) (width . 71) (left . 73) (top . 19)) ((min-height . 4) (min-width . 20) (min-height-ignore . 2) (min-width-ignore . 6) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 96) (min-pixel-width . 240) (min-pixel-height-ignore . 48) (min-pixel-width-ignore . 72) (min-pixel-height-safe . 24) (min-pixel-width-safe . 48)) hc (pixel-width . 860) (pixel-height . 888) (total-width . 72) (total-height . 37) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 440) (pixel-height . 888) (total-width . 37) (total-height . 37) (normal-height . 1.0) (normal-width . 0.513953488372093) (buffer "*scratch*" (selected) (hscroll . 0) (fringes 4 4 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 146) (start . 1))) (leaf (last . t) (pixel-width . 420) (pixel-height . 888) (total-width . 35) (total-height . 37) (normal-height . 1.0) (normal-width . 0.48604651162790696) (buffer "1.c" (selected . t) (hscroll . 0) (fringes 4 4 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 36) (start . 1)))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
 (setq search-ring '("(helm-mode 1)" "(require 'helm-config)" "gotha" "cell" "pacman" "ggta" "rainbow-dd" "rainbow-de" "ctags" "company" "rtags" "company" "company-mode" "package-i" "melpa" "flycheck"))
 (setq regexp-search-ring nil)
 (setq register-alist nil)
-(setq file-name-history '("~/Documents/Workspace/algo/11/knight2.c" "~/Documents/Workspace/algo/kt/p.c" "~/Documents/Workspace/algo/ads.py" "~/Documents/Workspace/algo/kt/kt.c" "~/.emacs" "~/Documents/Workspace/algo/knight.pl~" "~/Documents/Workspace/algo/Untitled Folder/kt.c" "~/Documents/Workspace/algo/knight2.c" "~/Documents/Workspace/algo/knight.c" "~/Documents/Workspace/algo/Makefile" "~/Documents/Workspace/algo/kt.c" "~/Documents/Workspace/algo/Knight-Problem/kt.c" "~/Documents/Workspace/algo/Knight-Problem/Makefile" "~/Documents/Workspace/algo/kt.c" "~/Documents/Workspace/algo/Makefile" "~/1.el" "~/.emacs.bak" "~/Documents/Workspace/algo/wex.c" "~/Documents/Workspace/algo/knight.c" "~/Documents/Workspace/algo/knight.pl" "~/.emacs" "~/Documents/Workspace/algo/1.el" "~/Documents/Workspace/algo/knight2.c" "~/Documents/Workspace/algo/" "/home/arubu/Documents/Workspace/algo" "~/Documents/Workspace/algo/" "~/.emacs" "~/Documents/Workspace/algo/" "~/Documents/Workspace/algo/solve.c" "~/Documents/Workspace/algo/knight.c" "~/.emacs" "~/Documents/Workspace/array-f/src/" "~/Documents/Workspace/algo/" "~/.emacs" "~/Documents/Workspace/algo/knight.c" "~/Documents/Workspace/algo/" "~/Documents/Workspace/algo/1.c" "TAGS" "~/.emacs" "~/Documents/Workspace/algo/1.c" "~/Documents/Workspace/algo/" "~/Documents/Workspace/algo/1.c" "~/Documents/Workspace/uncomment/src/check.c" "~/Documents/Workspace/uncomment/src/test.c" "~/.emacs" "~/./emacs" "~/.emacs" "~/test.html" "~/.emacs.d/" "~/Documents/Workspace/elisp/" "/home/arubu/Documents/Workspace/elisp/read.el" "~/.emacs" "~/Documents/Workspace/uncomment/src/Makefile" "~/5.c" "~/.emacs" "~/Documents/Workspace/uncomment/src/recomment.cpp" "~/.emacs" "~/Documents/Workspace/uncomment/src/main.c" "~/Documents/Workspace/uncomment/src/m" "~/Documents/Workspace/uncomment/src/"))
+(setq file-name-history '("~/1.c" "~/Documents/Workspace/algo/11/knight2.c" "~/Documents/Workspace/algo/kt/p.c" "~/Documents/Workspace/algo/ads.py" "~/Documents/Workspace/algo/kt/kt.c" "~/.emacs" "~/Documents/Workspace/algo/knight.pl~" "~/Documents/Workspace/algo/Untitled Folder/kt.c" "~/Documents/Workspace/algo/knight2.c" "~/Documents/Workspace/algo/knight.c" "~/Documents/Workspace/algo/Makefile" "~/Documents/Workspace/algo/kt.c" "~/Documents/Workspace/algo/Knight-Problem/kt.c" "~/Documents/Workspace/algo/Knight-Problem/Makefile" "~/Documents/Workspace/algo/kt.c" "~/Documents/Workspace/algo/Makefile" "~/1.el" "~/.emacs.bak" "~/Documents/Workspace/algo/wex.c" "~/Documents/Workspace/algo/knight.c" "~/Documents/Workspace/algo/knight.pl" "~/.emacs" "~/Documents/Workspace/algo/1.el" "~/Documents/Workspace/algo/knight2.c" "~/Documents/Workspace/algo/" "/home/arubu/Documents/Workspace/algo" "~/Documents/Workspace/algo/" "~/.emacs" "~/Documents/Workspace/algo/" "~/Documents/Workspace/algo/solve.c" "~/Documents/Workspace/algo/knight.c" "~/.emacs" "~/Documents/Workspace/array-f/src/" "~/Documents/Workspace/algo/" "~/.emacs" "~/Documents/Workspace/algo/knight.c" "~/Documents/Workspace/algo/" "~/Documents/Workspace/algo/1.c" "TAGS" "~/.emacs" "~/Documents/Workspace/algo/1.c" "~/Documents/Workspace/algo/" "~/Documents/Workspace/algo/1.c" "~/Documents/Workspace/uncomment/src/check.c" "~/Documents/Workspace/uncomment/src/test.c" "~/.emacs" "~/./emacs" "~/.emacs" "~/test.html" "~/.emacs.d/" "~/Documents/Workspace/elisp/" "/home/arubu/Documents/Workspace/elisp/read.el" "~/.emacs" "~/Documents/Workspace/uncomment/src/Makefile" "~/5.c" "~/.emacs" "~/Documents/Workspace/uncomment/src/recomment.cpp" "~/.emacs" "~/Documents/Workspace/uncomment/src/main.c" "~/Documents/Workspace/uncomment/src/m" "~/Documents/Workspace/uncomment/src/"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
-(desktop-create-buffer 206
-  "/home/arubu/.emacs"
-  ".emacs"
-  'emacs-lisp-mode
-  '(rainbow-delimiters-mode helm-mode auto-complete-mode flycheck-mode override-global-mode)
-  15427
-  '(15350 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode)))
-
-(desktop-create-buffer 206
-  "/home/arubu/Documents/Workspace/algo/kt/kt.c"
-  "kt.c"
-  'c-mode
-  '(abbrev-mode rainbow-delimiters-mode helm-mode auto-complete-mode flycheck-mode override-global-mode hs-minor-mode)
-  9428
-  '(9409 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/arubu/Documents/Workspace/algo/11/knight2.c"
-  "knight2.c"
-  'c-mode
-  '(abbrev-mode rainbow-delimiters-mode helm-mode flycheck-mode override-global-mode hs-minor-mode)
-  754
-  '(838 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/arubu/Documents/Workspace/algo/kt/p.c"
-  "p.c"
-  'c-mode
-  '(abbrev-mode rainbow-delimiters-mode helm-mode flycheck-mode override-global-mode hs-minor-mode)
-  1
-  '(1 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/arubu/Documents/Workspace/algo/Knight-Problem/Makefile"
-  "Makefile"
-  'makefile-gmake-mode
-  '(rainbow-delimiters-mode helm-mode flycheck-mode override-global-mode)
-  198
-  '(109 nil)
-  nil
-  nil
-  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/arubu/Documents/1.c"
+(desktop-create-buffer 208
+  "/home/arfed/1.c"
   "1.c"
   'c-mode
   '(abbrev-mode rainbow-delimiters-mode helm-mode flycheck-mode override-global-mode hs-minor-mode)
-  1
+  36
   '(nil nil)
   nil
   nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
   nil
-  "Documents"
-  'dired-mode
-  '(helm-mode override-global-mode)
-  408
-  '(nil nil)
-  t
-  '("/home/arubu/Documents/")
-  nil)
-
-(desktop-create-buffer 206
-  "/home/arubu/Documents/Workspace/algo/ads.py"
-  "ads.py"
-  'python-mode
-  '(rainbow-delimiters-mode helm-mode flycheck-mode override-global-mode)
-  234
-  '(1 nil)
-  nil
-  nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/arubu/1.el"
-  "1.el"
-  'emacs-lisp-mode
-  '(rainbow-delimiters-mode helm-mode flycheck-mode override-global-mode)
-  902
-  '(1 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . prefer-utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/arubu/Documents/Workspace/algo/Knight-Problem/kt.c"
-  "kt.c"
-  'c-mode
-  '(abbrev-mode rainbow-delimiters-mode helm-mode flycheck-mode override-global-mode hs-minor-mode)
-  6363
-  '(5127 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
+  '((mark-ring nil)))
 
