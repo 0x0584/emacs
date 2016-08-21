@@ -49,7 +49,9 @@
 
 ;; ==== HEIGHT ====
 (if (window-system)
-    (set-frame-height (selected-frame) 60))
+    (set-frame-height (selected-frame) 47))
+(if (window-system)
+    (set-frame-width (selected-frame) 83))
 
 
 ;; ==== PACKAGES-SOURCE ====
@@ -118,7 +120,62 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (git-timemachine
+     zeal-at-point
+     dash-at-point
+     linum-relative
+     bm
+     ac-helm
+     gotham-theme
+     dark-krystal-theme
+     caroline-theme
+     meacupla-theme
+     clues-theme
+     cherry-blossom-theme
+     distinguished-theme
+     soothe-theme
+     grandshell-theme
+     company-irony
+     company-c-headers
+     helm-company
+     helm-make
+     helm-themes
+     electric-operator
+     flycheck-perl6
+     rainbow-delimiters
+     helm-gtags
+     ctags-update
+     hl-sexp
+     rainbow-blocks
+     ctags
+     clang-format
+     bind-key
+     flycheck
+     flycheck-cstyle
+     iedit
+     impatient-mode
+     xkcd
+     twittering-mode
+     rotate
+     restart-emacs
+     persp-mode
+     nyan-mode
+     inkpot-theme
+     imgur
+     hlinum
+     gnuplot
+     gnu-apl-mode
+     flycheck-clangcheck
+     emojify
+     elfeed disaster
+     chess
+     badger-theme
+     auto-complete-clang
+     auto-complete-c-headers
+     ac-c-headers
+     abyss-theme
+     2048-game
+     0blayout)))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
  '(scroll-bar-mode nil)
@@ -131,7 +188,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 153 :width normal))))
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 113 :width normal :size 15))))
  '(bm-face ((t (:background "orange" :foreground "Black"))))
  '(bm-fringe-face ((t (:background "gold" :foreground "Black"))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#99d1ce"))))
@@ -320,10 +377,26 @@ THE SOFTWARE.
     (shell newbuf)))
 
 (defun create-shell ()
-  "creates a shell with a given name"
+  "Create a shell with a given name."
   (interactive);; "Prompt\n shell name:")
   (let ((shell-name (read-string "shell name: " nil)))
     (shell (concat "*" shell-name "*"))))
+
+(defun m-term-right ()
+  "Add terminal on the right."
+  (interactive)
+  (split-window-right)
+  (balance-windows)
+  (other-window 1)
+  (ansi-term "/usr/bin/fish"))
+
+(defun m-term-below ()
+  "Add terminal on the bottom."
+  (interactive)
+  (split-window-below)
+  (balance-windows)
+  (other-window 1)
+  (ansi-term "/usr/bin/fish"))
 
 ;; (load-theme 'light-blue t t)
 ;; (load-theme 'tango t t)
@@ -359,8 +432,8 @@ THE SOFTWARE.
     (let ((overlay-highlight (make-overlay
                               (line-beginning-position)
                               (+ 1 (line-end-position)))))
-        (overlay-put overlay-highlight 'face '(:background "gray10"))
-        (overlay-put overlay-highlight 'line-highlight-overlay-marker t))))
+      (overlay-put overlay-highlight 'face '(:background "gray10"))
+      (overlay-put overlay-highlight 'line-highlight-overlay-marker t))))
 
 
 (global-set-key [f8] 'highlight-or-dehighlight-line)
@@ -377,13 +450,16 @@ THE SOFTWARE.
 (global-set-key (kbd "<f6>") 'bm-previous)
 (global-set-key (kbd "<f7>") 'bm-next)
 
+;; ==== hook ====
 (add-hook 'c-mode-common-hook
-  (lambda()
-    (local-set-key (kbd "C-c <down>") 'hs-show-block)
-    (local-set-key (kbd "C-c <up>")  'hs-hide-block)
-    ;; (local-set-key (kbd "C-c <up>")    'hs-hide-all)
-    ;; (local-set-key (kbd "C-c <down>")  'hs-show-all)
-    (hs-minor-mode t)))
+	  (lambda()
+	    (local-set-key (kbd "C-c <down>") 'hs-show-block)
+	    (local-set-key (kbd "C-c <up>")  'hs-hide-block)
+	    ;; (local-set-key (kbd "C-c <up>")    'hs-hide-all)
+	    ;; (local-set-key (kbd "C-c <down>")  'hs-show-all)
+	    (hs-minor-mode t)))
+
+;; ==== parens ====
 (defun surround-with-parens ()
   (interactive)
   (save-excursion
@@ -411,6 +487,31 @@ THE SOFTWARE.
                (goto-char beginning)
                (delete-char 1))))))
 
-(global-set-key (kbd "C-p ") 'surround-with-parens)
+
+(global-set-key (kbd "C-p") 'surround-with-parens)
 (global-set-key (kbd "C-o") 'delete-surrounded-parens)
+
+;; === documentation ===
+(dolist (hook
+         '(c-mode-hook
+           c++-mode-hook))
+  (add-hook hook
+	    (lambda ()
+	      (local-set-key (kbd "C-h d")
+                             (lambda ()
+                               (interactive)
+                               (manual-entry (current-word)))))))
+(global-set-key (kbd "<f2>") 'zeal-at-point)
+
+;; ===== =====
+(defun kill-other-buffers ()
+  "Kill all buffers but the current one.
+Don't mess with special buffers."
+  (interactive)
+  (dolist (buffer (buffer-list))
+    (unless (or (eql buffer (current-buffer)) (not (buffer-file-name buffer)))
+      (kill-buffer buffer))))
+
+(global-set-key (kbd "C-c k") 'kill-other-buffers)
+
 ;;(provide '.emacs);;; .emacs ends here
