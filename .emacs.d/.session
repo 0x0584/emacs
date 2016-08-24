@@ -1,0 +1,16 @@
+;;; Automatically generated on Wed Aug 24 12:29:57 2016
+;;; Invoked by arfed@cq56.fedora using 25.0.94.1
+(setq-default session-file-alist '(("~/Documents/Workspace/algo/kt-git/kt.c" 2561 2827 1 nil nil 139 (overwrite-mode)) ("~/.emacs" 16862 16877 1 nil nil 16862 (overwrite-mode))))
+(setq-default file-name-history '("~/Documents/Workspace/algo/kt-git/kt.c" "~/.emacs"))
+(setq-default buffer-name-history '("*terminal*" "kt.c"))
+(setq-default command-history '((restart-emacs nil) (execute-extended-command nil "restart-emacs" nil) (term "/usr/bin/fish") (execute-extended-command nil "term" nil) (kill-buffer "*terminal*") (switch-to-buffer "kt.c" nil (quote force-same-window)) (desktop-save "~/.emacs.d/" nil nil nil) (find-file "~/Documents/Workspace/algo/kt-git/kt.c" t) (git-timemachine-toggle) (execute-extended-command nil "git-timemachine-toggle" nil) (execute-extended-command nil "session-popup-yank-menu" nil) (session-jump-to-last-change nil) (execute-extended-command nil "session-jump-to-last-change" nil) (execute-extended-command nil "session-find-file" nil) (session-save-session 1) (execute-extended-command nil "session-save-session" nil) (session-initialize) (execute-extended-command nil "session-initialize" nil)))
+(setq-default extended-command-history '("restart-emacs" "term" "git-timemachine-toggle" "session-popup-yank-menu" "session-jump-to-last-change" "session-find-file" "session-save-session" "session-initialize"))
+(setq-default helm-ff-history '("/home/arfed/.emacs.d/" "/home/arfed/"))
+(setq-default helm-source-file-name-history '((name . "File Name History") (candidates . file-name-history) (action . helm-type-file-actions) (persistent-action . ignore) (filtered-candidate-transformer helm-file-name-history-transformer helm-fuzzy-highlight-matches) (match helm-mm-exact-match helm-mm-match) (header-line . "C-j: ignore (keeping session)") (matchplugin)))
+(setq-default helm-source-info-automake-history '((name . "Info Index: automake-history") (init . helm-info-init) (candidates . helm-candidates-in-buffer) (action ("Goto node" . helm-info-goto)) (filtered-candidate-transformer helm-fuzzy-highlight-matches) (display-to-real . helm-info-display-to-real) (volatile) (match identity) (header-line . "C-j: Goto node (keeping session)") (matchplugin) (get-line . buffer-substring) (search helm-mm-exact-search helm-mm-search helm-candidates-in-buffer-search-default-fn) (info-file . "automake-history")))
+(setq-default helm-source-info-history '((name . "Info Index: history") (init . helm-info-init) (candidates . helm-candidates-in-buffer) (action ("Goto node" . helm-info-goto)) (filtered-candidate-transformer helm-fuzzy-highlight-matches) (display-to-real . helm-info-display-to-real) (volatile) (match identity) (header-line . "C-j: Goto node (keeping session)") (matchplugin) (get-line . buffer-substring) (search helm-mm-exact-search helm-mm-search helm-candidates-in-buffer-search-default-fn) (info-file . "history")))
+(setq-default minibuffer-history '("/usr/bin/fish" "/home/arfed/.emacs.d/"))
+(setq-default occur-collect-regexp-history '("\\1"))
+(setq-default serial-name-history '("/dev/ttyS0"))
+(setq-default serial-speed-history '("9600" "1200" "2400" "4800" "14400" "19200" "28800" "38400" "57600" "115200"))
+(setq-default yes-or-no-p-history '("yes"))

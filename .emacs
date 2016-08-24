@@ -1,7 +1,7 @@
 ;;; package ---- Summary:
 ;;; Commentary:
 
-;;; ==== EMOJIFY  ====
+;; ==== EMOJIFY  ====
 (add-hook 'after-init-hook #'global-emojify-mode)
 
 ;; ===== INSERT TODAY'S DATE AND TIME
@@ -18,8 +18,6 @@
 
 ;; ===== FLYCHECK MODE =====
 (add-hook 'after-init-hook #'global-flycheck-mode)
-
-
 
 ;; ===== SET THE HIGHLIGHT CURRENT LINE MINOR MODE =====
 ;; In every buffer, the line which contains the cursor will be fully
@@ -90,9 +88,8 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(desktop-save-mode 1) ; 0 for off
+;;(desktop-save-mode 1) ; 0 for off
 (winner-mode 1)
-
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -120,62 +117,7 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (git-timemachine
-     zeal-at-point
-     dash-at-point
-     linum-relative
-     bm
-     ac-helm
-     gotham-theme
-     dark-krystal-theme
-     caroline-theme
-     meacupla-theme
-     clues-theme
-     cherry-blossom-theme
-     distinguished-theme
-     soothe-theme
-     grandshell-theme
-     company-irony
-     company-c-headers
-     helm-company
-     helm-make
-     helm-themes
-     electric-operator
-     flycheck-perl6
-     rainbow-delimiters
-     helm-gtags
-     ctags-update
-     hl-sexp
-     rainbow-blocks
-     ctags
-     clang-format
-     bind-key
-     flycheck
-     flycheck-cstyle
-     iedit
-     impatient-mode
-     xkcd
-     twittering-mode
-     rotate
-     restart-emacs
-     persp-mode
-     nyan-mode
-     inkpot-theme
-     imgur
-     hlinum
-     gnuplot
-     gnu-apl-mode
-     flycheck-clangcheck
-     emojify
-     elfeed disaster
-     chess
-     badger-theme
-     auto-complete-clang
-     auto-complete-c-headers
-     ac-c-headers
-     abyss-theme
-     2048-game
-     0blayout)))
+    (minimal-session-saver session git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
  '(scroll-bar-mode nil)
@@ -513,5 +455,11 @@ Don't mess with special buffers."
       (kill-buffer buffer))))
 
 (global-set-key (kbd "C-c k") 'kill-other-buffers)
+(global-set-key (kbd "C-c s") 'desktop-save-in-desktop-dir)
+(global-set-key (kbd "C-c r") 'desktop-read)
+
+(global-set-key (kbd "C-c d") 'desktop-save-mode)
+(global-set-key (kbd "C-c e") 'recover-session)
+(global-set-key (kbd "C-x C-o") 'ff-find-other-file)
 
 ;;(provide '.emacs);;; .emacs ends here
