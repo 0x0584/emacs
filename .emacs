@@ -117,7 +117,7 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (minimal-session-saver session git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (undo-tree auctex minimal-session-saver session git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
  '(scroll-bar-mode nil)
@@ -310,8 +310,7 @@ THE SOFTWARE.
 
   (let (
         (currentbuf (get-buffer-window (current-buffer)))
-        (newbuf     (generate-new-buffer-name "*shell*"))
-	)
+        (newbuf     (generate-new-buffer-name "*shell*")))
 
     (generate-new-buffer newbuf)
     (set-window-dedicated-p currentbuf nil)
@@ -330,7 +329,7 @@ THE SOFTWARE.
   (split-window-right)
   (balance-windows)
   (other-window 1)
-  (ansi-term "/usr/bin/fish"))
+  (ansi-term "/usr/bin/sh"))
 
 (defun m-term-below ()
   "Add terminal on the bottom."
@@ -338,8 +337,10 @@ THE SOFTWARE.
   (split-window-below)
   (balance-windows)
   (other-window 1)
-  (ansi-term "/usr/bin/fish"))
+  (ansi-term "/usr/bin/sh"))
 
+(global-set-key (kbd "C-x <C-down>") 'm-term-below)
+(global-set-key (kbd "C-x <C-right>") 'm-term-right)
 ;; (load-theme 'light-blue t t)
 ;; (load-theme 'tango t t)
 ;; (add-hook 'buffer-list-update-hook
@@ -461,5 +462,14 @@ Don't mess with special buffers."
 (global-set-key (kbd "C-c d") 'desktop-save-mode)
 (global-set-key (kbd "C-c e") 'recover-session)
 (global-set-key (kbd "C-x C-o") 'ff-find-other-file)
+
+(defun browse-file-directory ()
+  "Open the current file's directory however the OS would."
+  (interactive)
+  (if default-directory
+      (browse-url-of-file (expand-file-name default-directory))
+    (error "No `default-directory' to open")))
+
+(global-undo-tree-mode)
 
 ;;(provide '.emacs);;; .emacs ends here
