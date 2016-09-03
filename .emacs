@@ -1,6 +1,5 @@
 ;;; package ---- Summary:
 ;;; Commentary:
-
 ;; ==== EMOJIFY  ====
 (add-hook 'after-init-hook #'global-emojify-mode)
 
@@ -18,6 +17,7 @@
 
 ;; ===== FLYCHECK MODE =====
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
 
 ;; ===== SET THE HIGHLIGHT CURRENT LINE MINOR MODE =====
 ;; In every buffer, the line which contains the cursor will be fully
@@ -117,14 +117,15 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (undo-tree auctex minimal-session-saver session git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme tao-theme anti-zenburn-theme which-key undo-tree auctex minimal-session-saver session git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
  '(scroll-bar-mode nil)
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t)
  '(size-indication-mode t)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(which-key-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -431,8 +432,8 @@ THE SOFTWARE.
                (delete-char 1))))))
 
 
-(global-set-key (kbd "C-p") 'surround-with-parens)
-(global-set-key (kbd "C-o") 'delete-surrounded-parens)
+(global-set-key (kbd "C-c p") 'surround-with-parens)
+(global-set-key (kbd "C-c o") 'delete-surrounded-parens)
 
 ;; === documentation ===
 (dolist (hook
@@ -471,5 +472,5 @@ Don't mess with special buffers."
     (error "No `default-directory' to open")))
 
 (global-undo-tree-mode)
-
+(message "remember why you are here")
 ;;(provide '.emacs);;; .emacs ends here
