@@ -2,56 +2,104 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Fri Sep  2 20:46:38 2016
+;; Created Sun Sep  4 04:41:09 2016
 ;; Desktop file format version 208
 ;; Emacs version 25.0.94.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (22473 55070 853589 603000) (desktop . "208") "arfed@cq56.fedora" nil nil ((((font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#C0E9F6") (background-color . "#110B14") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 4) (right-fringe . 4) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (fullscreen . fullboth) (display-type . color) (background-mode . dark) (cursor-color . "orange") (sticky) (environment) (frameset--id . "AB6C-7F67-ACF2-6813") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (fullscreen-restore) (visibility . t) (height . 56) (width . 141) (left . 0) (top . 0)) ((min-height . 8) (min-width . 20) (min-height-ignore . 4) (min-width-ignore . 6) (min-height-safe . 2) (min-width-safe . 4) (min-pixel-height . 144) (min-pixel-width . 180) (min-pixel-height-ignore . 72) (min-pixel-width-ignore . 54) (min-pixel-height-safe . 36) (min-pixel-width-safe . 36)) vc (pixel-width . 1280) (pixel-height . 1006) (total-width . 142) (total-height . 56) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (hc (pixel-width . 1280) (pixel-height . 738) (total-width . 142) (total-height . 41) (normal-height . 0.7391304347826086) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 822) (pixel-height . 738) (total-width . 91) (total-height . 41) (normal-height . 1.0) (normal-width . 0.6437086092715232) (buffer "libmorse.c" (selected) (hscroll . 0) (fringes 4 4 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 1829) (start . 1317))) (leaf (last . t) (pixel-width . 458) (pixel-height . 738) (total-width . 51) (total-height . 41) (normal-height . 1.0) (normal-width . 0.3562913907284768) (buffer "libmorse.h" (selected) (hscroll . 0) (fringes 4 4 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 2756) (start . 2283)))) (leaf (last . t) (pixel-width . 1280) (pixel-height . 268) (total-width . 142) (total-height . 15) (normal-height . 0.2608695652173913) (normal-width . 1.0) (buffer "*Man fgets*" (selected . t) (hscroll . 0) (fringes 4 4 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 1305) (start . 765)))))])
+(setq desktop-saved-frameset [frameset 1 (22475 38869 289400 271000) (desktop . "208") "arfed@cq56.fedora" nil nil ((((font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#C0E9F6") (background-color . "#110B14") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 4) (right-fringe . 4) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (fullscreen . fullboth) (display-type . color) (background-mode . dark) (cursor-color . "orange") (sticky) (environment) (frameset--id . "AB6C-7F67-ACF2-6813") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (fullscreen-restore) (visibility . t) (height . 56) (width . 141) (left . 0) (top . 0)) ((min-height . 16) (min-width . 20) (min-height-ignore . 8) (min-width-ignore . 6) (min-height-safe . 4) (min-width-safe . 4) (min-pixel-height . 288) (min-pixel-width . 180) (min-pixel-height-ignore . 144) (min-pixel-width-ignore . 54) (min-pixel-height-safe . 72) (min-pixel-width-safe . 36)) hc (pixel-width . 1280) (pixel-height . 1006) (total-width . 142) (total-height . 56) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (vc (pixel-width . 705) (pixel-height . 1006) (total-width . 78) (total-height . 56) (normal-height . 1.0) (normal-width . 0.552961628686327) (combination-limit) (leaf (pixel-width . 705) (pixel-height . 700) (total-width . 78) (total-height . 39) (normal-height . 0.6968190854870776) (normal-width . 1.0) (buffer "libmorse.c" (selected . t) (hscroll . 0) (fringes 4 4 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 2758) (start . 2262))) (leaf (last . t) (pixel-width . 705) (pixel-height . 306) (total-width . 78) (total-height . 17) (normal-height . 0.3031809145129224) (normal-width . 1.0) (buffer "*ansi-term*<2>" (selected) (hscroll . 0) (fringes 4 4 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 16220) (start . 15738)))) (vc (last . t) (pixel-width . 575) (pixel-height . 1006) (total-width . 64) (total-height . 56) (normal-height . 1.0) (normal-width . 0.44703837131367297) (combination-limit) (leaf (pixel-width . 575) (pixel-height . 520) (total-width . 64) (total-height . 29) (normal-height . 0.5142857142857142) (normal-width . 1.0) (buffer "libmorse.h" (selected) (hscroll . 0) (fringes 4 4 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 1879) (start . 1581))) (leaf (pixel-width . 575) (pixel-height . 288) (total-width . 64) (total-height . 16) (normal-height . 0.2857142857142857) (normal-width . 1.0) (buffer "main.c<morse-code-master>" (selected) (hscroll . 0) (fringes 4 4 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 3351) (start . 3092))) (leaf (pixel-width . 575) (pixel-height . 108) (total-width . 64) (total-height . 6) (normal-height . 0.1142857142857143) (normal-width . 1.0) (buffer "morse.txt" (selected) (hscroll . 0) (fringes 4 4 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 28) (start . 1))) (leaf (last . t) (pixel-width . 575) (pixel-height . 90) (total-width . 64) (total-height . 5) (normal-height . 0.08571428571428572) (normal-width . 1.0) (buffer "text.txt" (selected) (hscroll . 0) (fringes 4 4 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 17) (start . 1))))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring '("which-i"))
+(setq search-ring '("frea" "which-i"))
 (setq regexp-search-ring nil)
 (setq register-alist nil)
-(setq file-name-history '("~/Documents/Workspace/morse-code-master/libmorse.h" "~/Documents/Workspace/morse-code-master/libmorse.c" "~/Documents/Workspace/morse-code-master/Makefile" "~/Documents/Workspace/morse-code-master/LICENSE" "~/Documents/Workspace/morse-code-master/main.c" "~/.emacs" "~/Documents/Workspace/CPL/ch-1/1-5/9.c" "~/Documents/Workspace/CPL/ch-1/1-5/8.c" "~/.emacs" "~/Documents/Workspace/CPL/ch-1/1-5/7.c" "~/Documents/Workspace/CPL/ch-1/1-5/6.c" "~/Documents/Workspace/CPL/ch-1/1-2/3.c" "~/Documents/Workspace/CPL/ch-1/1-3/5.c" "~/Documents/Workspace/CPL/ch-1/1-2/4.c" "~/Documents/Workspace/CPL/ch-1/1-2/3.c" "~/Documents/Workspace/CPL/ch-1/1-1/2.c" "~/Documents/Workspace/CPL/ch-1/1-1/1.c" "~/Documents/Workspace/CPL/ch-1/1-1.c" "~/Documents/Workspace/CPL/README"))
+(setq file-name-history '("~/Documents/Workspace/morse-code-master/text.txt" "~/Documents/Workspace/MorseCode_ENIGMA/srcmorse 1/main.c" "~/Documents/Workspace/morse-code-master/morse.txt" "~/Documents/Workspace/morse-code-master/main.c" "~/Documents/Workspace/morse-code-master/libmorse.h" "~/Documents/Workspace/morse-code-master/libmorse.c" "~/Documents/Workspace/morse-code-master/Makefile" "~/Documents/Workspace/morse-code-master/LICENSE" "~/Documents/Workspace/morse-code-master/main.c" "~/.emacs" "~/Documents/Workspace/CPL/ch-1/1-5/9.c" "~/Documents/Workspace/CPL/ch-1/1-5/8.c" "~/.emacs" "~/Documents/Workspace/CPL/ch-1/1-5/7.c" "~/Documents/Workspace/CPL/ch-1/1-5/6.c" "~/Documents/Workspace/CPL/ch-1/1-2/3.c" "~/Documents/Workspace/CPL/ch-1/1-3/5.c" "~/Documents/Workspace/CPL/ch-1/1-2/4.c" "~/Documents/Workspace/CPL/ch-1/1-2/3.c" "~/Documents/Workspace/CPL/ch-1/1-1/2.c" "~/Documents/Workspace/CPL/ch-1/1-1/1.c" "~/Documents/Workspace/CPL/ch-1/1-1.c" "~/Documents/Workspace/CPL/README"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
-(desktop-create-buffer 208
-  "/home/arfed/.emacs"
-  ".emacs"
-  'emacs-lisp-mode
-  '(rainbow-delimiters-mode helm-mode flycheck-mode which-key-mode override-global-mode undo-tree-mode)
-  16207
-  '(17281 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix))
-  '((mark-ring (17036))))
-
 (desktop-create-buffer 208
   "/home/arfed/Documents/Workspace/morse-code-master/libmorse.c"
   "libmorse.c"
   'c-mode
   '(abbrev-mode rainbow-delimiters-mode helm-mode flycheck-mode which-key-mode override-global-mode undo-tree-mode hs-minor-mode)
-  1829
-  '(1750 nil)
+  2758
+  '(2757 nil)
   nil
   nil
   '((buffer-file-coding-system . undecided-unix))
-  '((mark-ring (1750 522 1755 1801 1847 1893 1893 1846 1818 1857 1721))))
+  '((mark-ring (2757 2757 2757 2549 2466 2035 2046 2026 1987 2466 893 1560 1486 1985 2662 2662))))
+
+(desktop-create-buffer 208
+  "/home/arfed/Documents/Workspace/morse-code-master/main.c"
+  "main.c"
+  'c-mode
+  '(abbrev-mode rainbow-delimiters-mode helm-mode flycheck-mode which-key-mode override-global-mode undo-tree-mode hs-minor-mode)
+  3351
+  '(1265 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (3488 3388 3351 3319 3319 3351 3351 3413 3413 3351 3319 3488 3319 3273 3293 3423))))
+
+(desktop-create-buffer 208
+  "/home/arfed/Documents/Workspace/morse-code-master/text.txt"
+  "text.txt"
+  'text-mode
+  '(helm-mode flycheck-mode which-key-mode override-global-mode undo-tree-mode)
+  17
+  '(13 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (22 17))))
 
 (desktop-create-buffer 208
   "/home/arfed/Documents/Workspace/morse-code-master/libmorse.h"
   "libmorse.h"
   'c-mode
   '(abbrev-mode rainbow-delimiters-mode helm-mode flycheck-mode which-key-mode override-global-mode undo-tree-mode hs-minor-mode)
-  2756
-  '(2731 nil)
+  1879
+  '(2664 nil)
   nil
   nil
   '((buffer-file-coding-system . undecided-unix))
-  '((mark-ring (283 2757 2560 2654 2723 445 2731))))
+  '((mark-ring (3277 3277 3277 3277 3277 3277 3277 3303 2827 3303 3277 3277 283 3303 2560 1879))))
+
+(desktop-create-buffer 208
+  "/home/arfed/Documents/Workspace/morse-code-master/morse.txt"
+  "morse.txt"
+  'text-mode
+  '(helm-mode flycheck-mode which-key-mode override-global-mode undo-tree-mode)
+  28
+  '(7 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (7 7 1 7 1 1 1 1 1 1 1 1 1 1 1 28))))
+
+(desktop-create-buffer 208
+  "/home/arfed/Documents/Workspace/MorseCode_ENIGMA/srcmorse 1/main.c"
+  "main.c"
+  'c-mode
+  '(abbrev-mode rainbow-delimiters-mode helm-mode flycheck-mode which-key-mode override-global-mode undo-tree-mode hs-minor-mode)
+  15855
+  '(13853 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix))
+  '((mark-ring (7896))))
+
+(desktop-create-buffer 208
+  "/home/arfed/.emacs"
+  ".emacs"
+  'emacs-lisp-mode
+  '(rainbow-delimiters-mode helm-mode flycheck-mode which-key-mode override-global-mode undo-tree-mode)
+  17468
+  '(17279 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix))
+  '((mark-ring (17034 15115 15171 15115 15139))))
 
 (desktop-create-buffer 208
   "/home/arfed/Documents/Workspace/morse-code-master/Makefile"
@@ -64,18 +112,6 @@
   nil
   '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix))
   '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/arfed/Documents/Workspace/morse-code-master/main.c"
-  "main.c"
-  'c-mode
-  '(abbrev-mode rainbow-delimiters-mode helm-mode flycheck-mode which-key-mode override-global-mode undo-tree-mode hs-minor-mode)
-  3313
-  '(3313 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix))
-  '((mark-ring (3313 3313 3313 3313 3126 3313 3313 3313 3313 3313 3313 3313 3313 3313 3313 3313))))
 
 (desktop-create-buffer 208
   "/home/arfed/Documents/Workspace/morse-code-master/LICENSE"

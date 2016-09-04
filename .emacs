@@ -117,7 +117,7 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme tao-theme anti-zenburn-theme which-key undo-tree auctex minimal-session-saver session git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (magit magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme tao-theme anti-zenburn-theme which-key undo-tree auctex minimal-session-saver session git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
  '(scroll-bar-mode nil)
@@ -399,8 +399,8 @@ THE SOFTWARE.
 	  (lambda()
 	    (local-set-key (kbd "C-c <down>") 'hs-show-block)
 	    (local-set-key (kbd "C-c <up>")  'hs-hide-block)
-	    ;; (local-set-key (kbd "C-c <up>")    'hs-hide-all)
-	    ;; (local-set-key (kbd "C-c <down>")  'hs-show-all)
+	    (local-set-key (kbd "C-c a <up>")    'hs-hide-all)
+	    (local-set-key (kbd "C-c a <down>")  'hs-show-all)
 	    (hs-minor-mode t)))
 
 ;; ==== parens ====
@@ -472,5 +472,9 @@ Don't mess with special buffers."
     (error "No `default-directory' to open")))
 
 (global-undo-tree-mode)
-(message "remember why you are here")
+
+;;(global-set-key (kbd "C-.") 'duplicate-line)
+
+(message "In theory, there is no difference between theory and practice. But, in practice, there is.")
+
 ;;(provide '.emacs);;; .emacs ends here
