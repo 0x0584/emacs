@@ -1,0 +1,18 @@
+
+;; ----- smex-history -----
+(
+ package-install
+ center-line
+ cd
+ 5x5
+ arp
+ dbx
+ dig
+)
+
+;; ----- smex-data -----
+(
+ (center-line . 1)
+ (package-install . 1)
+ (puml-mode . 1)
+)
