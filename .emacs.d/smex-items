@@ -1,18 +1,21 @@
 
 ;; ----- smex-history -----
 (
+ recover-file
+ org-mode
  package-install
+ package-delete
  center-line
  cd
  5x5
- arp
- dbx
- dig
 )
 
 ;; ----- smex-data -----
 (
  (center-line . 1)
- (package-install . 1)
+ (package-install . 2)
  (puml-mode . 1)
+ (package-delete . 1)
+ (org-mode . 1)
+ (recover-file . 2)
 )

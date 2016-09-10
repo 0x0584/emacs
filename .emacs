@@ -3,7 +3,7 @@
 ;; ==== EMOJIFY  ====
 (add-hook 'after-init-hook #'global-emojify-mode)
 
-;; ===== INSERT TODAY'S DATE AND TIME
+;; ===== INSERT TODAY'S DATE AND TIME ====
 (defun insert-current-date () (interactive)
        (insert (shell-command-to-string "echo -n $(date +%m/%d/%Y-%H:%M:%S)")))
 (defun insert-date () "Insert current date mm/dd/yyyy_H:M:S." (interactive) (insert (format-time-string "%m/%d/%Y-%H:%M:%S")))
@@ -82,7 +82,7 @@
 ;;(require 'auto-complete-mode)
 (auto-complete)
 (auto-complete-mode 1)
-
+(global-undo-tree-mode)
 (show-paren-mode 1)
 (hl-sexp-mode 1)
 (menu-bar-mode -1)
@@ -90,6 +90,9 @@
 (scroll-bar-mode -1)
 ;;(desktop-save-mode 1) ; 0 for off
 (winner-mode 1)
+;; ==== SEHLL ====
+(setenv "SHELL" (expand-file-name "/usr/bin/sh"))
+(ansi-term "/usr/bin/sh")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -117,7 +120,7 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (plantuml-mode showkey ascii-art-to-unicode smex desktop-menu web-mode magit magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme tao-theme anti-zenburn-theme which-key undo-tree auctex minimal-session-saver session git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (highlight-blocks plantuml-mode showkey ascii-art-to-unicode smex desktop-menu web-mode magit magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme tao-theme anti-zenburn-theme which-key undo-tree auctex minimal-session-saver session git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
  '(puml-plantuml-jar-path "~/.emacs.d/plantuml/plantuml.jar")
@@ -448,7 +451,7 @@ THE SOFTWARE.
                                (manual-entry (current-word)))))))
 (global-set-key (kbd "<f2>") 'zeal-at-point)
 
-;; ===== =====
+;; ===== KILL BUFFERS =====
 (defun kill-other-buffers ()
   "Kill all buffers but the current one.
 Don't mess with special buffers."
@@ -458,12 +461,15 @@ Don't mess with special buffers."
       (kill-buffer buffer))))
 
 (global-set-key (kbd "C-c k") 'kill-other-buffers)
+
+;; ==== DESKTOP MODE ====
 (global-set-key (kbd "C-c s") 'desktop-save-in-desktop-dir)
 (global-set-key (kbd "C-c r") 'desktop-read)
-
 (global-set-key (kbd "C-c d") 'desktop-save-mode)
 (global-set-key (kbd "C-c e") 'recover-session)
-(global-set-key (kbd "C-x C-o") 'ff-find-other-file)
+
+
+;;==== BROWSE SOURCE ====
 
 (defun browse-file-directory ()
   "Open the current file's directory however the OS would."
@@ -472,7 +478,9 @@ Don't mess with special buffers."
       (browse-url-of-file (expand-file-name default-directory))
     (error "No `default-directory' to open")))
 
-(global-undo-tree-mode)
+(global-set-key (kbd "C-x C-o") 'ff-find-other-file)
+
+
 
 ;;(global-set-key (kbd "C-.") 'duplicate-line)
 (require 'smex) ; Not needed if you use package.el
@@ -480,12 +488,54 @@ Don't mess with special buffers."
 (smex-initialize) ; when Smex is auto-initialized on its first run.
 
 
-(global-set-key (kbd "M-X") 'smex)
+(global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-m") 'smex-major-mode-commands)
 ;; This is your old M-x.
 ;; (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-(setenv "SHELL" (expand-file-name "/usr/bin/sh"))
-(ansi-term "/usr/bin/sh")
-(message "In theory, there is no difference between theory and practice. But, in practice, there is.")
 
+
+
+(setq org-todo-keywords
+      '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
+
+;; ==== SELECTION ====
+(defun select-line ()
+  "Select the active line."
+  (interactive)
+  (end-of-line)
+  (set-mark (line-beginning-position))
+  (forward-char))
+
+(defun select-paragraph ()
+  "Select the active block of text between blank lines."
+  (interactive)
+  (let (-parag)
+    (progn
+      (if (re-search-backward "\n[ \t]*\n" nil "move")
+          (progn (re-search-forward "\n[ \t]*\n")
+                 (setq -parag (point)))
+        (setq -parag (point)))
+      (re-search-forward "\n[ \t]*\n" nil "move"))
+    (set-mark -parag)))
+
+(defun select-in-delim ()
+  (interactive)
+  (let (a
+        b
+        (target "^\"\'<>(){}[]）"))
+    (if (not (use-region-p))
+	(progn (skip-chars-backward target)
+	 (setq a (point)))
+      (setq a (region-beginnig)))
+    (skip-chars-forward target)
+    (setq b (point))
+    (set-mark a)))
+
+(global-set-key (kbd "M-4") 'select-in-delim)
+(global-set-key (kbd "M-5") 'select-line)
+(global-set-key (kbd "M-6") 'select-paragraph)
+(global-set-key (kbd "C-c h") 'highlight-blocks-mode)
+
+;; ==== QUOTE ====
+(message "In theory, there is no difference between theory and practice. But, in practice, there is.")
 ;;(provide '.emacs);;; .emacs ends here
