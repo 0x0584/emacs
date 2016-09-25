@@ -80,8 +80,8 @@
 
 ;; ===== AUTO-COMPLETE-MODE =====
 ;;(require 'auto-complete-mode)
-(auto-complete)
 (auto-complete-mode 1)
+(auto-complete)
 (global-undo-tree-mode)
 (show-paren-mode 1)
 (hl-sexp-mode 1)
