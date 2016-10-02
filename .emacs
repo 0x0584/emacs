@@ -102,16 +102,18 @@
  '(Linum-format "%7i ")
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(case-fold-search nil)
  '(column-number-mode t)
  '(custom-enabled-themes (quote (clues)))
  '(custom-safe-themes
    (quote
     ("603a9c7f3ca3253cb68584cb26c408afcf4e674d7db86badcfe649dd3c538656" "40bc0ac47a9bd5b8db7304f8ef628d71e2798135935eb450483db0dbbfff8b11" "9b402e9e8f62024b2e7f516465b63a4927028a7055392290600b776e4a5b9905" "bc40f613df8e0d8f31c5eb3380b61f587e1b5bc439212e03d4ea44b26b4f408a" "6bb466c89b7e3eedc1f19f5a0cfa53be9baf6077f4d4a6f9b5d087f0231de9c8" "aae95fc700f9f7ff70efbc294fc7367376aa9456356ae36ec234751040ed9168" "cc60d17db31a53adf93ec6fad5a9cfff6e177664994a52346f81f62840fe8e23" "f9574c9ede3f64d57b3aa9b9cef621d54e2e503f4d75d8613cbcc4ca1c962c21" "5cd0afd0ca01648e1fff95a7a7f8abec925bd654915153fb39ee8e72a8b56a1f" "a3132bd39a977ddde4c002f8bd0ef181414c3fbe9228e3643b999491192680ad" "90e4b4a339776e635a78d398118cb782c87810cb384f1d1223da82b612338046" "590759adc4a5bf7a183df81654cce13b96089e026af67d92b5eec658fb3fe22f" default)))
+ '(ede-project-directories (quote ("/home/arfed/Workspace/morse-code-master/src")))
  '(fci-rule-character-color "#202020")
  '(fci-rule-color "#202020")
  '(flycheck-clang-include-path (quote ("/home/arfed/Workspace/morse-code-master")))
  '(flycheck-clang-includes nil)
- '(fringe-mode 4 nil (fringe))
+ '(global-ede-mode nil)
  '(indicate-buffer-boundaries (quote left))
  '(line-number-mode nil)
  '(linum-format (quote dynamic))
@@ -125,7 +127,7 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme org-ref org-webpage orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx tuareg vdiff vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode showkey ascii-art-to-unicode smex desktop-menu web-mode magit magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme tao-theme anti-zenburn-theme which-key undo-tree auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme org-ref org-webpage orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx tuareg vdiff vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode showkey ascii-art-to-unicode smex desktop-menu web-mode magit magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme tao-theme anti-zenburn-theme which-key undo-tree auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
@@ -134,7 +136,6 @@
  '(send-mail-function (quote smtpmail-send-it))
  '(session-use-package t nil (session))
  '(show-paren-mode t)
- '(size-indication-mode t)
  '(tool-bar-mode nil)
  '(vc-annotate-background "#d4d4d4")
  '(vc-annotate-color-map
@@ -167,15 +168,15 @@
  '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 113 :width normal :size 15))))
  '(bm-face ((t (:background "orange" :foreground "Black"))))
  '(bm-fringe-face ((t (:background "gold" :foreground "Black")))))
- ;; '(rainbow-delimiters-depth-1-face ((t (:foreground "#99d1ce"))))
- ;; '(rainbow-delimiters-depth-2-face ((t (:inherit outline-1 :foreground "#5CACEE"))))
- ;; '(rainbow-delimiters-depth-3-face ((t (:inherit outline-2 :foreground "#FF4500"))))
- ;; '(rainbow-delimiters-depth-4-face ((t (:inherit outline-3 :foreground "#FF6103"))))
- ;; '(rainbow-delimiters-depth-5-face ((t (:inherit outline-4 :foreground "#8B7500"))))
- ;; '(rainbow-delimiters-depth-6-face ((t (:inherit outline-5 :foreground "#228B22"))))
- ;; '(rainbow-delimiters-depth-7-face ((t (:inherit outline-6 :foreground "#008080"))))
- ;; '(rainbow-delimiters-depth-8-face ((t (:inherit outline-7 :foreground "#CC681F"))))
- ;; '(rainbow-delimiters-depth-9-face ((t (:inherit outline-8 :foreground "#4B0082"))))
+;; '(rainbow-delimiters-depth-1-face ((t (:foreground "#99d1ce"))))
+;; '(rainbow-delimiters-depth-2-face ((t (:inherit outline-1 :foreground "#5CACEE"))))
+;; '(rainbow-delimiters-depth-3-face ((t (:inherit outline-2 :foreground "#FF4500"))))
+;; '(rainbow-delimiters-depth-4-face ((t (:inherit outline-3 :foreground "#FF6103"))))
+;; '(rainbow-delimiters-depth-5-face ((t (:inherit outline-4 :foreground "#8B7500"))))
+;; '(rainbow-delimiters-depth-6-face ((t (:inherit outline-5 :foreground "#228B22"))))
+;; '(rainbow-delimiters-depth-7-face ((t (:inherit outline-6 :foreground "#008080"))))
+;; '(rainbow-delimiters-depth-8-face ((t (:inherit outline-7 :foreground "#CC681F"))))
+;; '(rainbow-delimiters-depth-9-face ((t (:inherit outline-8 :foreground "#4B0082"))))
 ;; ==== MOVE LINES ====
 (defun move-line (n)
   "Move the current line up or down by N lines."
@@ -511,6 +512,8 @@ Don't mess with special buffers."
       (browse-url-of-file (expand-file-name default-directory))
     (error "No `default-directory' to open")))
 
+(global-set-key (kbd "C-x M-d") 'browse-file-directory)
+
 (global-set-key (kbd "C-x C-o") 'ff-find-other-file)
 
 
@@ -560,7 +563,7 @@ Don't mess with special buffers."
         (target "^\"\'()[]"))
     (if (not (use-region-p))
 	(progn (skip-chars-backward target)
-	 (setq a (point)))
+	       (setq a (point)))
       (setq a (region-beginnig)))
     (skip-chars-forward target)
     (setq b (point))
@@ -577,6 +580,28 @@ Don't mess with special buffers."
                                 (message "buffer is reverted")))
 
 (global-set-key (kbd "C-x !") 'restart-emacs)
+
+(diminish 'projectile-mode)
+(require 'rich-minority)
+(rich-minority-mode 1)
+(setf rm-blacklist "")
+
+(define-minor-mode minor-mode-blackout-mode
+  "Hides minor modes from the mode line."
+  t)
+
+(catch 'done
+  (mapc (lambda (x)
+          (when (and (consp x)
+                     (equal (cadr x) '("" minor-mode-alist)))
+            (let ((original (copy-sequence x)))
+              (setcar x 'minor-mode-blackout-mode)
+              (setcdr x (list "" original)))
+            (throw 'done t)))
+        mode-line-modes))
+
+(global-set-key (kbd "C-c m") 'minor-mode-blackout-mode)
+
 ;; ==== QUOTE ====
 (message "In theory, there is no difference between theory and practice. But, in practice, there is.")
 ;;(provide '.emacs);;; .emacs ends here

@@ -1,28 +1,28 @@
 
 ;; ----- smex-history -----
 (
- helm-themes
- customize-group
- restart-emacs
- flycheck-buffer
- flycheck-clear
- flycheck-mode
- flycheck-compile
+ menu-bar-mode
+ eldoc-mode
+ turn-on-eldoc-mode
+ c-turn-on-eldoc-mode
+ global-eldoc-mode
+ enriched-mode
+ rich-minority-mode
 )
 
 ;; ----- smex-data -----
 (
  (center-line . 1)
- (package-install . 9)
+ (package-install . 12)
  (puml-mode . 1)
  (package-delete . 5)
  (org-mode . 1)
  (make-directory . 2)
- (org-latex-export-as-latex . 1)
+ (org-latex-export-as-latex . 3)
  (package-install-from-buffer . 1)
- (package-list-packages . 1)
+ (package-list-packages . 3)
  (session-initialize . 1)
- (org-html-export-to-html . 1)
+ (org-html-export-to-html . 3)
  (markdown . 1)
  (markdown-mode . 1)
  (markdown-preview . 1)
@@ -33,16 +33,16 @@
  (package-autoremove . 2)
  (highlight-blocks-now . 2)
  (highlight-blocks-mode . 2)
- (eval-buffer . 1)
+ (eval-buffer . 2)
  (ansi-term . 1)
  (column-marker-1 . 2)
  (column-marker-3 . 1)
  (column-number-mode . 2)
- (eldoc-mode . 6)
- (global-eldoc-mode . 2)
- (turn-on-eldoc-mode . 1)
- (c-turn-on-eldoc-mode . 2)
- (helm-themes . 33)
+ (eldoc-mode . 7)
+ (global-eldoc-mode . 4)
+ (turn-on-eldoc-mode . 2)
+ (c-turn-on-eldoc-mode . 4)
+ (helm-themes . 45)
  (customize-group . 3)
  (customize-themes . 3)
  (customize-face . 2)
@@ -55,4 +55,18 @@
  (flycheck-clear . 1)
  (flycheck-buffer . 1)
  (restart-emacs . 1)
+ (ielm . 1)
+ (flyspell-mode . 1)
+ (ispell-word . 1)
+ (ispell . 3)
+ (rename-file . 2)
+ (browse-file-directory . 1)
+ (split-line . 1)
+ (org-ref-bibtex-pdf . 1)
+ (org-latex-export-to-pdf . 2)
+ (menu-bar-mode . 10)
+ (compile . 2)
+ (menu-bar-options-save . 1)
+ (rich-minority-mode . 1)
+ (enriched-mode . 1)
 )
