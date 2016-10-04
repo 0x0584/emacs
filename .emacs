@@ -108,6 +108,7 @@
  '(custom-safe-themes
    (quote
     ("603a9c7f3ca3253cb68584cb26c408afcf4e674d7db86badcfe649dd3c538656" "40bc0ac47a9bd5b8db7304f8ef628d71e2798135935eb450483db0dbbfff8b11" "9b402e9e8f62024b2e7f516465b63a4927028a7055392290600b776e4a5b9905" "bc40f613df8e0d8f31c5eb3380b61f587e1b5bc439212e03d4ea44b26b4f408a" "6bb466c89b7e3eedc1f19f5a0cfa53be9baf6077f4d4a6f9b5d087f0231de9c8" "aae95fc700f9f7ff70efbc294fc7367376aa9456356ae36ec234751040ed9168" "cc60d17db31a53adf93ec6fad5a9cfff6e177664994a52346f81f62840fe8e23" "f9574c9ede3f64d57b3aa9b9cef621d54e2e503f4d75d8613cbcc4ca1c962c21" "5cd0afd0ca01648e1fff95a7a7f8abec925bd654915153fb39ee8e72a8b56a1f" "a3132bd39a977ddde4c002f8bd0ef181414c3fbe9228e3643b999491192680ad" "90e4b4a339776e635a78d398118cb782c87810cb384f1d1223da82b612338046" "590759adc4a5bf7a183df81654cce13b96089e026af67d92b5eec658fb3fe22f" default)))
+ '(display-time-mode t)
  '(ede-project-directories (quote ("/home/arfed/Workspace/morse-code-master/src")))
  '(fci-rule-character-color "#202020")
  '(fci-rule-color "#202020")
@@ -120,14 +121,13 @@
  '(main-line-color1 "#1E1E1E")
  '(main-line-color2 "#111111")
  '(main-line-separator-style (quote chamfer))
- '(menu-bar-mode nil)
  '(nrepl-message-colors
    (quote
     ("#336c6c" "#205070" "#0f2050" "#806080" "#401440" "#6c1f1c" "#6b400c" "#23733c")))
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme org-ref org-webpage orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx tuareg vdiff vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode showkey ascii-art-to-unicode smex desktop-menu web-mode magit magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme tao-theme anti-zenburn-theme which-key undo-tree auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (org-page all-the-icons neotree ox-pandoc pandoc pandoc-mode org-download langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme org-ref org-webpage orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx tuareg vdiff vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode showkey ascii-art-to-unicode smex desktop-menu web-mode magit magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme tao-theme anti-zenburn-theme which-key undo-tree auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
@@ -532,10 +532,34 @@ Don't mess with special buffers."
 ;; (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 
-
+;; ==== ORG-MODE ====
 (setq org-todo-keywords
-      '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
+      '((sequence "TODO" "IN-PROGRESS" "PENDING" "DONE" "CANCELED" "UNDER-REVISING")))
 
+;; -- Display images in org mode
+;; enable image mode first
+(iimage-mode)
+;; add the org file link format to the iimage mode regex
+(add-to-list 'iimage-mode-image-regex-alist
+  (cons (concat "\\[\\[file:\\(~?" iimage-mode-image-filename-regex "\\)\\]")  1))
+;;  add a hook so we can display images on load
+(add-hook 'org-mode-hook '(lambda () (org-turn-on-iimage-in-org)))
+;; function to setup images for display on load
+(defun org-turn-on-iimage-in-org ()
+  "display images in your org file"
+  (interactive)
+  (turn-on-iimage-mode)
+  (set-face-underline-p 'org-link nil))
+;; function to toggle images in a org bugger
+(defun org-toggle-iimage-in-org ()
+  "display images in your org file"
+  (interactive)
+  (if (face-underline-p 'org-link)
+      (set-face-underline-p 'org-link nil)
+      (set-face-underline-p 'org-link t))
+  (call-interactively 'iimage-mode))
+
+;; (define-key org-mode-map (kbd "C-S-a") 'org-archive-subtree)
 ;; ==== SELECTION ====
 (defun select-line ()
   "Select the active line."
@@ -602,6 +626,8 @@ Don't mess with special buffers."
 
 (global-set-key (kbd "C-c m") 'minor-mode-blackout-mode)
 
+;; ==== NEOTREE ====
+;;(setq neo-theme (if window-system 'icons 'arrow))
 ;; ==== QUOTE ====
 (message "In theory, there is no difference between theory and practice. But, in practice, there is.")
 ;;(provide '.emacs);;; .emacs ends here

@@ -1,28 +1,28 @@
 
 ;; ----- smex-history -----
 (
+ neotree
+ package-install
+ eval-buffer
+ visual-line-mode
  menu-bar-mode
- eldoc-mode
- turn-on-eldoc-mode
- c-turn-on-eldoc-mode
- global-eldoc-mode
- enriched-mode
- rich-minority-mode
+ menu-bar-options-save
+ package-list-packages
 )
 
 ;; ----- smex-data -----
 (
  (center-line . 1)
- (package-install . 12)
+ (package-install . 19)
  (puml-mode . 1)
  (package-delete . 5)
  (org-mode . 1)
  (make-directory . 2)
- (org-latex-export-as-latex . 3)
+ (org-latex-export-as-latex . 4)
  (package-install-from-buffer . 1)
- (package-list-packages . 3)
+ (package-list-packages . 4)
  (session-initialize . 1)
- (org-html-export-to-html . 3)
+ (org-html-export-to-html . 13)
  (markdown . 1)
  (markdown-mode . 1)
  (markdown-preview . 1)
@@ -33,7 +33,7 @@
  (package-autoremove . 2)
  (highlight-blocks-now . 2)
  (highlight-blocks-mode . 2)
- (eval-buffer . 2)
+ (eval-buffer . 3)
  (ansi-term . 1)
  (column-marker-1 . 2)
  (column-marker-3 . 1)
@@ -42,7 +42,7 @@
  (global-eldoc-mode . 4)
  (turn-on-eldoc-mode . 2)
  (c-turn-on-eldoc-mode . 4)
- (helm-themes . 45)
+ (helm-themes . 48)
  (customize-group . 3)
  (customize-themes . 3)
  (customize-face . 2)
@@ -58,15 +58,27 @@
  (ielm . 1)
  (flyspell-mode . 1)
  (ispell-word . 1)
- (ispell . 3)
+ (ispell . 6)
  (rename-file . 2)
  (browse-file-directory . 1)
  (split-line . 1)
  (org-ref-bibtex-pdf . 1)
  (org-latex-export-to-pdf . 2)
- (menu-bar-mode . 10)
+ (menu-bar-mode . 21)
  (compile . 2)
- (menu-bar-options-save . 1)
+ (menu-bar-options-save . 4)
  (rich-minority-mode . 1)
  (enriched-mode . 1)
+ (plantuml-run . 1)
+ (plantuml-render-region . 2)
+ (plantuml-run-and-display . 1)
+ (org-version . 1)
+ (display-time . 4)
+ (langtool-check . 1)
+ (undo-tree-visualize . 1)
+ (insert-date . 1)
+ (info . 1)
+ (org-goto-calendar . 1)
+ (visual-line-mode . 3)
+ (neotree . 3)
 )
