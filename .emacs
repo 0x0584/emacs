@@ -1,13 +1,13 @@
 ;;; package ---- Summary:
 ;;; Commentary:
 ;; ==== EMOJIFY  ====
-(add-hook 'after-init-hook #'global-emojify-mode)
+;;(add-hook 'after-init-hook #'global-emojify-mode)
 
 ;; ===== INSERT TODAY'S DATE AND TIME ====
 (defun insert-current-date () (interactive)
        (insert (shell-command-to-string "echo -n $(date +%m/%d/%Y-%H:%M:%S)")))
 (defun insert-date () "Insert current date mm/dd/yyyy_H:M:S." (interactive) (insert (format-time-string "%m/%d/%Y-%H:%M:%S")))
-
+
 ;; ===== NYAN MODE ====
 (add-to-list 'load-path "~/.emacs.d/nyan-mode")
 (require 'nyan-mode)
@@ -44,30 +44,30 @@
 
 ;; ===== MAKE TEXT MODE THE DEFAULT MODE FOR NEW BUFFERS =====
 (setq major-mode 'text-mode)
-
+
 ;; ==== HEIGHT ====
 (if (window-system)
     (set-frame-height (selected-frame) 47))
 (if (window-system)
     (set-frame-width (selected-frame) 83))
 
-
+
 ;; ==== PACKAGES-SOURCE ====
 
 (require 'package)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ;; ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
-
+
 ;; ==== SETTINGS ====
 (package-initialize)
 (require 'rainbow-blocks )
-
+
 ;; ===== RAINBOW-DELIMITER =====
 (require 'rainbow-delimiters)
 (rainbow-delimiters-mode 1)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
-
+
 ;; ==== HELM ====
 (require 'helm-config)
 (helm-mode 1)
@@ -77,7 +77,7 @@
 ;;(global-set-key (kbd "C-x b") 'helm-mini);
 ;; (global-set-key (kbd "C-x C-f") 'helm-find-files)
 ;;(setq helm-M-x-fuzzy-match t)
-
+
 ;; ===== AUTO-COMPLETE-MODE =====
 ;;(require 'auto-complete-mode)
 (auto-complete-mode 1)
@@ -90,6 +90,8 @@
 (scroll-bar-mode -1)
 ;;(desktop-save-mode 1) ; 0 for off
 (winner-mode 1)
+
+
 ;; ==== SEHLL ====
 (setenv "SHELL" (expand-file-name "/usr/bin/sh"))
 (ansi-term "/usr/bin/sh")
@@ -102,6 +104,8 @@
  '(Linum-format "%7i ")
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
+ '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(case-fold-search nil)
  '(column-number-mode t)
  '(custom-enabled-themes (quote (clues)))
@@ -127,7 +131,7 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (org-page all-the-icons neotree ox-pandoc pandoc pandoc-mode org-download langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme org-ref org-webpage orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx tuareg vdiff vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode showkey ascii-art-to-unicode smex desktop-menu web-mode magit magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme tao-theme anti-zenburn-theme which-key undo-tree auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (desktop+ multiple-cursors ac-html ac-clang flycheck-css-colorguard flymake-css org-page all-the-icons neotree ox-pandoc pandoc pandoc-mode org-download langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme org-ref org-webpage orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx tuareg vdiff vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode showkey ascii-art-to-unicode smex desktop-menu web-mode magit magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme tao-theme anti-zenburn-theme which-key undo-tree auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
@@ -177,6 +181,8 @@
 ;; '(rainbow-delimiters-depth-7-face ((t (:inherit outline-6 :foreground "#008080"))))
 ;; '(rainbow-delimiters-depth-8-face ((t (:inherit outline-7 :foreground "#CC681F"))))
 ;; '(rainbow-delimiters-depth-9-face ((t (:inherit outline-8 :foreground "#4B0082"))))
+
+
 ;; ==== MOVE LINES ====
 (defun move-line (n)
   "Move the current line up or down by N lines."
@@ -204,6 +210,8 @@
 (global-set-key (kbd "M-<up>") 'move-line-up)
 (global-set-key (kbd "M-<down>") 'move-line-down)
 
+(put 'narrow-to-page 'disabled nil)
+
 ;; ===== AUTOINSERT =====
 (setq auto-insert-alist
       '(((ruby-mode . "Ruby program") nil
@@ -257,6 +265,7 @@ THE SOFTWARE.
          " # Copyright (C) " (substring (current-time-string) -4) " " auto-insert-copyright "\n"
          " # Description: " _ "\n\n")))
 
+
 ;; ==== CTAGS =====
 
 (setq path-to-ctags "/opt/local/bin/ctags") ;; <- your ctags path here
@@ -267,7 +276,7 @@ THE SOFTWARE.
   (shell-command
    (format "ctags -f %s -t -T -d --global --declarations --members -R %s" path-to-ctags (directory-file-name dir-name)))
   )
-
+
 ;; ===== CODE FORMATTING USING ASTYLE ====
 (defun ccc-astyle ()
   "Format C++ code with astyle."
@@ -283,6 +292,7 @@ THE SOFTWARE.
      "astyle --style=otbs --indent=spaces=2 -U --pad-oper --pad-paren-out --add-brackets -k3"
      nil t)))
 
+
 ;; ===== WINDOWING =====
 (defun window-split-toggle ()
   "Toggle between horizontal and vertical split with two windows."
@@ -322,6 +332,7 @@ THE SOFTWARE.
 (defalias 'wind-left 'my-split-root-window-left)
 (defalias 'window-split-toggle 'wind-tog)
 
+
 ;; ==== WINDOWS SIZE SHORTKEYS ====
 
 (global-set-key (kbd "S-M-<left>") 'windmove-left)        
@@ -337,6 +348,7 @@ THE SOFTWARE.
 ;; ==== LINUM SHORTKEY ====
 (global-set-key (kbd "S-C-l") 'linum-mode)
 
+
 ;; ==== SHELL SETUP ====
 (defun new-shell ()
   (interactive)
@@ -394,6 +406,7 @@ THE SOFTWARE.
 ;;               (disable-theme 'light-blue)
 ;;               (enable-theme 'tango)))))
 
+
 ;; ==== HIGHLIGHT LINES ====
 (defun find-overlays-specifying (prop pos)
   (let ((overlays (overlays-at pos))
@@ -432,7 +445,8 @@ THE SOFTWARE.
 (global-set-key (kbd "<f6>") 'bm-previous)
 (global-set-key (kbd "<f7>") 'bm-next)
 
-;; ==== hook ====
+
+;; ==== HOOK ====
 (add-hook 'c-mode-common-hook
 	  (lambda()
 	    (local-set-key (kbd "C-c <down>") 'hs-show-block)
@@ -441,7 +455,8 @@ THE SOFTWARE.
 	    (local-set-key (kbd "C-c a <down>")  'hs-show-all)
 	    (hs-minor-mode t)))
 
-;; ==== parens ====
+
+;; ==== PARENS ====
 (defun surround-with-parens ()
   (interactive)
   (save-excursion
@@ -472,8 +487,8 @@ THE SOFTWARE.
 
 (global-set-key (kbd "C-c p") 'surround-with-parens)
 (global-set-key (kbd "C-c o") 'delete-surrounded-parens)
-
-;; === documentation ===
+
+;; === DOCUMENTATION ===
 (dolist (hook
          '(c-mode-hook
            c++-mode-hook))
@@ -495,14 +510,14 @@ Don't mess with special buffers."
       (kill-buffer buffer))))
 
 (global-set-key (kbd "C-c k") 'kill-other-buffers)
-
+
 ;; ==== DESKTOP MODE ====
 (global-set-key (kbd "C-c s") 'desktop-save-in-desktop-dir)
 (global-set-key (kbd "C-c r") 'desktop-read)
 (global-set-key (kbd "C-c d") 'desktop-save-mode)
 (global-set-key (kbd "C-c e") 'recover-session)
 
-
+
 ;;==== BROWSE SOURCE ====
 
 (defun browse-file-directory ()
@@ -519,7 +534,6 @@ Don't mess with special buffers."
 
 (load "c-eldoc")
 (add-hook 'c-mode-hook 'c-turn-on-eldoc-mode)
-
 ;;(global-set-key (kbd "C-.") 'duplicate-line)
 (require 'smex) ; Not needed if you use package.el
 ;; Can be omitted. This might cause a (minimal) delay
@@ -531,10 +545,10 @@ Don't mess with special buffers."
 ;; This is your old M-x.
 ;; (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-
+
 ;; ==== ORG-MODE ====
 (setq org-todo-keywords
-      '((sequence "TODO" "IN-PROGRESS" "PENDING" "DONE" "CANCELED" "UNDER-REVISING")))
+      '((sequence "TODO(t)" "IN-PROGRESS(s!)" "|" "PENDING(p)" "DONE(d!/!)" "CANCELED(c!/!)" "UNDER-REVISING(u)")))
 
 ;; -- Display images in org mode
 ;; enable image mode first
@@ -558,7 +572,7 @@ Don't mess with special buffers."
       (set-face-underline-p 'org-link nil)
       (set-face-underline-p 'org-link t))
   (call-interactively 'iimage-mode))
-
+(setq org-image-actual-width (/ (display-pixel-width) 3))
 ;; (define-key org-mode-map (kbd "C-S-a") 'org-archive-subtree)
 ;; ==== SELECTION ====
 (defun select-line ()
@@ -610,6 +624,29 @@ Don't mess with special buffers."
 (rich-minority-mode 1)
 (setf rm-blacklist "")
 
+(defvar auto-minor-mode-alist ()
+  "Alist of filename patterns vs correpsonding minor mode functions, see `auto-mode-alist'
+All elements of this alist are checked, meaning you can enable multiple minor modes for the same regexp.")
+(defun enable-minor-mode-based-on-extension ()
+  "check file name against auto-minor-mode-alist to enable minor modes
+the checking happens for all pairs in auto-minor-mode-alist"
+  (when buffer-file-name
+    (let ((name buffer-file-name)
+          (remote-id (file-remote-p buffer-file-name))
+          (alist auto-minor-mode-alist))
+      ;; Remove backup-suffixes from file name.
+      (setq name (file-name-sans-versions name))
+      ;; Remove remote file name identification.
+      (when (and (stringp remote-id)
+                 (string-match-p (regexp-quote remote-id) name))
+        (setq name (substring name (match-end 0))))
+      (while (and alist (caar alist) (cdar alist))
+        (if (string-match (caar alist) name)
+            (funcall (cdar alist) 1))
+        (setq alist (cdr alist))))))
+
+(add-hook 'find-file-hook 'enable-minor-mode-based-on-extension)
+
 (define-minor-mode minor-mode-blackout-mode
   "Hides minor modes from the mode line."
   t)
@@ -628,6 +665,19 @@ Don't mess with special buffers."
 
 ;; ==== NEOTREE ====
 ;;(setq neo-theme (if window-system 'icons 'arrow))
+
+;; ==== EMACS BACKUP ====
+;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/.
+
+
+;; create the autosave dir if necessary, since emacs won't.
+(make-directory "~/.emacs.d/autosaves/" t)
+
+;; ==== DESKTOP-PLUS ====
+(require 'desktop+)
+(desktop+/special-buffer-handlers)
+
 ;; ==== QUOTE ====
 (message "In theory, there is no difference between theory and practice. But, in practice, there is.")
 ;;(provide '.emacs);;; .emacs ends here
+(put 'narrow-to-region 'disabled nil)

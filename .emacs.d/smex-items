@@ -1,19 +1,19 @@
 
 ;; ----- smex-history -----
 (
- neotree
+ desktop+-load
+ desktop+-create
  package-install
- eval-buffer
- visual-line-mode
- menu-bar-mode
- menu-bar-options-save
- package-list-packages
+ desktop-read
+ session-minibuffer-history-help
+ session-yank
+ session-save-session
 )
 
 ;; ----- smex-data -----
 (
  (center-line . 1)
- (package-install . 19)
+ (package-install . 30)
  (puml-mode . 1)
  (package-delete . 5)
  (org-mode . 1)
@@ -33,7 +33,7 @@
  (package-autoremove . 2)
  (highlight-blocks-now . 2)
  (highlight-blocks-mode . 2)
- (eval-buffer . 3)
+ (eval-buffer . 4)
  (ansi-term . 1)
  (column-marker-1 . 2)
  (column-marker-3 . 1)
@@ -42,23 +42,23 @@
  (global-eldoc-mode . 4)
  (turn-on-eldoc-mode . 2)
  (c-turn-on-eldoc-mode . 4)
- (helm-themes . 48)
+ (helm-themes . 50)
  (customize-group . 3)
  (customize-themes . 3)
  (customize-face . 2)
  (customize . 1)
  (customize-create-theme . 1)
- (wind-left . 1)
+ (wind-left . 2)
  (flycheck-info . 1)
  (flycheck-compile . 1)
  (flycheck-mode . 2)
  (flycheck-clear . 1)
  (flycheck-buffer . 1)
  (restart-emacs . 1)
- (ielm . 1)
+ (ielm . 2)
  (flyspell-mode . 1)
  (ispell-word . 1)
- (ispell . 6)
+ (ispell . 13)
  (rename-file . 2)
  (browse-file-directory . 1)
  (split-line . 1)
@@ -79,6 +79,29 @@
  (insert-date . 1)
  (info . 1)
  (org-goto-calendar . 1)
- (visual-line-mode . 3)
+ (visual-line-mode . 8)
  (neotree . 3)
+ (iimage-mode . 4)
+ (impatient-mode . 1)
+ (httpd-start . 1)
+ (css-mode . 1)
+ (web-mode . 2)
+ (html-mode . 2)
+ (pdf-tools-enable-minor-modes . 1)
+ (auto-complete . 6)
+ (auto-complete-mode . 3)
+ (clang-format . 1)
+ (multiple-cursors-mode . 2)
+ (mc/edit-lines . 2)
+ (mc/mark-next-lines . 3)
+ (mc/mark-previous-lines . 1)
+ (what-page . 1)
+ (org-todo . 1)
+ (org-todo-list . 1)
+ (session-save-session . 1)
+ (session-yank . 1)
+ (session-minibuffer-history-help . 1)
+ (desktop-read . 1)
+ (desktop+-create . 2)
+ (desktop+-load . 1)
 )
