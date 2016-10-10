@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ visual-line-mode
  desktop+-load
  desktop+-create
  package-install
  desktop-read
  session-minibuffer-history-help
  session-yank
- session-save-session
 )
 
 ;; ----- smex-data -----
@@ -79,7 +79,7 @@
  (insert-date . 1)
  (info . 1)
  (org-goto-calendar . 1)
- (visual-line-mode . 8)
+ (visual-line-mode . 9)
  (neotree . 3)
  (iimage-mode . 4)
  (impatient-mode . 1)

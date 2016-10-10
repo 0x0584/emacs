@@ -1,12 +1,28 @@
 ;;; package ---- Summary:
 ;;; Commentary:
+;;; Code:
 ;; ==== EMOJIFY  ====
 ;;(add-hook 'after-init-hook #'global-emojify-mode)
 
 ;; ===== INSERT TODAY'S DATE AND TIME ====
-(defun insert-current-date () (interactive)
-       (insert (shell-command-to-string "echo -n $(date +%m/%d/%Y-%H:%M:%S)")))
-(defun insert-date () "Insert current date mm/dd/yyyy_H:M:S." (interactive) (insert (format-time-string "%m/%d/%Y-%H:%M:%S")))
+;;(defun insert-current-date () (interactive)
+;;       (insert (shell-command-to-string "echo -n $(date +%m/%d/%Y-%H:%M:%S)")))
+(defun insert-date-time ()
+  "Insert current date mm/dd/yyyy_H:M:S."
+  (interactive)
+  (insert
+   (format-time-string "%m/%d/%Y-%H:%M:%S")))
+
+(defun insert-time ()
+  "Insert current time H:M:S."
+  (interactive)
+  (insert
+   (format-time-string "%H:%M:%S")))
+(defun insert-date ()
+  "Insert current date mm/dd/yyyy."
+  (interactive)
+  (insert
+   (format-time-string "%m/%d/%Y")))
 
 ;; ===== NYAN MODE ====
 (add-to-list 'load-path "~/.emacs.d/nyan-mode")
@@ -106,7 +122,6 @@
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
- '(case-fold-search nil)
  '(column-number-mode t)
  '(custom-enabled-themes (quote (clues)))
  '(custom-safe-themes
@@ -125,20 +140,21 @@
  '(main-line-color1 "#1E1E1E")
  '(main-line-color2 "#111111")
  '(main-line-separator-style (quote chamfer))
+ '(menu-bar-mode nil)
  '(nrepl-message-colors
    (quote
     ("#336c6c" "#205070" "#0f2050" "#806080" "#401440" "#6c1f1c" "#6b400c" "#23733c")))
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (desktop+ multiple-cursors ac-html ac-clang flycheck-css-colorguard flymake-css org-page all-the-icons neotree ox-pandoc pandoc pandoc-mode org-download langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme org-ref org-webpage orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx tuareg vdiff vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode showkey ascii-art-to-unicode smex desktop-menu web-mode magit magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme tao-theme anti-zenburn-theme which-key undo-tree auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (ggtags desktop+ multiple-cursors ac-html ac-clang flycheck-css-colorguard flymake-css org-page all-the-icons neotree ox-pandoc pandoc pandoc-mode org-download langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme org-ref org-webpage orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx tuareg vdiff vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode showkey ascii-art-to-unicode smex desktop-menu web-mode magit magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme tao-theme anti-zenburn-theme which-key undo-tree auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
  '(puml-plantuml-jar-path "~/.emacs.d/plantuml/plantuml.jar")
  '(scroll-bar-mode nil)
  '(send-mail-function (quote smtpmail-send-it))
- '(session-use-package t nil (session))
+ ;;'(session-use-package t nil (session))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(vc-annotate-background "#d4d4d4")
@@ -512,10 +528,12 @@ Don't mess with special buffers."
 (global-set-key (kbd "C-c k") 'kill-other-buffers)
 
 ;; ==== DESKTOP MODE ====
-(global-set-key (kbd "C-c s") 'desktop-save-in-desktop-dir)
-(global-set-key (kbd "C-c r") 'desktop-read)
-(global-set-key (kbd "C-c d") 'desktop-save-mode)
-(global-set-key (kbd "C-c e") 'recover-session)
+(require 'desktop+)
+(global-set-key (kbd "C-c s") 'desktop+-create)
+(global-set-key (kbd "C-c S") 'desktop+-create-auto)
+(global-set-key (kbd "C-c l") 'desktop+-load)
+(global-set-key (kbd "C-c L") 'desktop+-load-auto)
+(global-set-key (kbd "C-c r") 'recover-session)
 
 
 ;;==== BROWSE SOURCE ====
@@ -548,7 +566,7 @@ Don't mess with special buffers."
 
 ;; ==== ORG-MODE ====
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "IN-PROGRESS(s!)" "|" "PENDING(p)" "DONE(d!/!)" "CANCELED(c!/!)" "UNDER-REVISING(u)")))
+      '((sequence "TODO(t)" "IN-PROGRESS(s!)" "|" "PENDING(p!)" "DONE(d!/!)" "CANCELED(c!/!)" "UNDER-REVISING(u)")))
 
 ;; -- Display images in org mode
 ;; enable image mode first
@@ -579,8 +597,7 @@ Don't mess with special buffers."
   "Select the active line."
   (interactive)
   (end-of-line)
-  (set-mark (line-beginning-position))
-  (forward-char))
+  (set-mark (line-beginning-position)))
 
 (defun select-paragraph ()
   "Select the active block of text between blank lines."
@@ -674,8 +691,7 @@ the checking happens for all pairs in auto-minor-mode-alist"
 (make-directory "~/.emacs.d/autosaves/" t)
 
 ;; ==== DESKTOP-PLUS ====
-(require 'desktop+)
-(desktop+/special-buffer-handlers)
+;;(desktop+/special-buffer-handlers)
 
 ;; ==== QUOTE ====
 (message "In theory, there is no difference between theory and practice. But, in practice, there is.")
