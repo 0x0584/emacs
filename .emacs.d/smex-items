@@ -1,33 +1,33 @@
 
 ;; ----- smex-history -----
 (
- visual-line-mode
- desktop+-load
- desktop+-create
- package-install
- desktop-read
- session-minibuffer-history-help
- session-yank
+ artist-mode
+ artist-select-operation
+ ispell
+ org-timer
+ menu-bar-mode
+ super-save-mode
+ auto-save-mode
 )
 
 ;; ----- smex-data -----
 (
  (center-line . 1)
- (package-install . 30)
+ (package-install . 31)
  (puml-mode . 1)
  (package-delete . 5)
  (org-mode . 1)
- (make-directory . 2)
+ (make-directory . 3)
  (org-latex-export-as-latex . 4)
  (package-install-from-buffer . 1)
- (package-list-packages . 4)
+ (package-list-packages . 5)
  (session-initialize . 1)
  (org-html-export-to-html . 13)
  (markdown . 1)
  (markdown-mode . 1)
  (markdown-preview . 1)
- (artist-mode . 4)
- (artist-select-operation . 2)
+ (artist-mode . 26)
+ (artist-select-operation . 20)
  (term . 1)
  (term-mode . 1)
  (package-autoremove . 2)
@@ -58,13 +58,13 @@
  (ielm . 2)
  (flyspell-mode . 1)
  (ispell-word . 1)
- (ispell . 13)
+ (ispell . 16)
  (rename-file . 2)
  (browse-file-directory . 1)
  (split-line . 1)
  (org-ref-bibtex-pdf . 1)
  (org-latex-export-to-pdf . 2)
- (menu-bar-mode . 21)
+ (menu-bar-mode . 23)
  (compile . 2)
  (menu-bar-options-save . 4)
  (rich-minority-mode . 1)
@@ -79,7 +79,7 @@
  (insert-date . 1)
  (info . 1)
  (org-goto-calendar . 1)
- (visual-line-mode . 9)
+ (visual-line-mode . 10)
  (neotree . 3)
  (iimage-mode . 4)
  (impatient-mode . 1)
@@ -104,4 +104,7 @@
  (desktop-read . 1)
  (desktop+-create . 2)
  (desktop+-load . 1)
+ (auto-save-mode . 2)
+ (super-save-mode . 2)
+ (org-timer . 1)
 )
