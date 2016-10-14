@@ -63,9 +63,9 @@
 
 ;; ==== HEIGHT ====
 (if (window-system)
-    (set-frame-height (selected-frame) 47))
+    (set-frame-height (selected-frame) 35))
 (if (window-system)
-    (set-frame-width (selected-frame) 83))
+    (set-frame-width (selected-frame) 82))
 
 
 ;; ==== PACKAGES-SOURCE ====
@@ -108,9 +108,9 @@
 (winner-mode 1)
 
 
-;; ==== SEHLL ====
+;; ==== SHELL ====
 (setenv "SHELL" (expand-file-name "/usr/bin/sh"))
-(ansi-term "/usr/bin/sh")
+;;(ansi-term "/usr/bin/sh")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -147,7 +147,7 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (super-save ggtags desktop+ multiple-cursors ac-html ac-clang flycheck-css-colorguard flymake-css org-page all-the-icons neotree ox-pandoc pandoc pandoc-mode org-download langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme org-ref org-webpage orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx tuareg vdiff vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode showkey ascii-art-to-unicode smex desktop-menu web-mode magit magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme tao-theme anti-zenburn-theme which-key undo-tree auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (mu4e-maildirs-extension hide-comnt super-save ggtags desktop+ multiple-cursors ac-html ac-clang flycheck-css-colorguard flymake-css org-page all-the-icons neotree ox-pandoc pandoc pandoc-mode org-download langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme org-ref org-webpage orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx tuareg vdiff vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode showkey ascii-art-to-unicode smex desktop-menu web-mode magit magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme tao-theme anti-zenburn-theme which-key undo-tree auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
@@ -321,6 +321,7 @@ THE SOFTWARE.
       (funcall func)
       (save-selected-window
         (other-window 1)
+	;;(delete-window)
         (switch-to-buffer (other-buffer))))))
 
 (defun my-split-root-window (size direction)
@@ -346,6 +347,10 @@ THE SOFTWARE.
 (defalias 'wind-right 'my-split-root-window-right)
 (defalias 'wind-left 'my-split-root-window-left)
 (defalias 'window-split-toggle 'wind-tog)
+(global-set-key (kbd "C-c w <down>") 'wind-below)
+(global-set-key (kbd "C-c w <up>") 'wind-above)
+(global-set-key (kbd "C-c w <left>") 'wind-left)
+(global-set-key (kbd "C-c w <right>") 'wind-right)
 
 
 ;; ==== WINDOWS SIZE SHORTKEYS ====
@@ -686,12 +691,15 @@ the checking happens for all pairs in auto-minor-mode-alist"
 ;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/.
 
 
+
 ;; create the autosave dir if necessary, since emacs won't.
 (make-directory "~/.emacs.d/autosaves/" t)
 
+;; 
 ;; ==== DESKTOP-PLUS ====
 ;;(desktop+/special-buffer-handlers)
 
+(global-set-key (kbd "C-c ;") 'hide/show-comments-toggle)
 ;; ==== QUOTE ====
 (message "In theory, there is no difference between theory and practice. But, in practice, there is.")
 ;;(provide '.emacs);;; .emacs ends here

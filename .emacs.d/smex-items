@@ -1,26 +1,26 @@
 
 ;; ----- smex-history -----
 (
- artist-mode
- artist-select-operation
+ visual-line-mode
+ chess
+ eval-buffer
  ispell
- org-timer
- menu-bar-mode
- super-save-mode
- auto-save-mode
+ insert-time
+ eww
+ browse-url-w3
 )
 
 ;; ----- smex-data -----
 (
  (center-line . 1)
- (package-install . 31)
+ (package-install . 35)
  (puml-mode . 1)
  (package-delete . 5)
  (org-mode . 1)
- (make-directory . 3)
+ (make-directory . 4)
  (org-latex-export-as-latex . 4)
  (package-install-from-buffer . 1)
- (package-list-packages . 5)
+ (package-list-packages . 6)
  (session-initialize . 1)
  (org-html-export-to-html . 13)
  (markdown . 1)
@@ -33,8 +33,8 @@
  (package-autoremove . 2)
  (highlight-blocks-now . 2)
  (highlight-blocks-mode . 2)
- (eval-buffer . 4)
- (ansi-term . 1)
+ (eval-buffer . 5)
+ (ansi-term . 2)
  (column-marker-1 . 2)
  (column-marker-3 . 1)
  (column-number-mode . 2)
@@ -58,7 +58,7 @@
  (ielm . 2)
  (flyspell-mode . 1)
  (ispell-word . 1)
- (ispell . 16)
+ (ispell . 20)
  (rename-file . 2)
  (browse-file-directory . 1)
  (split-line . 1)
@@ -79,11 +79,11 @@
  (insert-date . 1)
  (info . 1)
  (org-goto-calendar . 1)
- (visual-line-mode . 10)
+ (visual-line-mode . 17)
  (neotree . 3)
  (iimage-mode . 4)
- (impatient-mode . 1)
- (httpd-start . 1)
+ (impatient-mode . 2)
+ (httpd-start . 2)
  (css-mode . 1)
  (web-mode . 2)
  (html-mode . 2)
@@ -107,4 +107,12 @@
  (auto-save-mode . 2)
  (super-save-mode . 2)
  (org-timer . 1)
+ (hide/show-comments . 9)
+ (hide/show-comments-toggle . 9)
+ (setenv . 1)
+ (kill-other-buffers . 1)
+ (eww . 4)
+ (browse-url-w3 . 1)
+ (insert-time . 1)
+ (chess . 1)
 )
