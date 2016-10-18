@@ -698,9 +698,11 @@ the checking happens for all pairs in auto-minor-mode-alist"
 ;; 
 ;; ==== DESKTOP-PLUS ====
 ;;(desktop+/special-buffer-handlers)
+(set-frame-parameter (selected-frame) 'buffer-predicate #'buffer-file-name)
 
 (global-set-key (kbd "C-c ;") 'hide/show-comments-toggle)
 ;; ==== QUOTE ====
 (message "In theory, there is no difference between theory and practice. But, in practice, there is.")
-;;(provide '.emacs);;; .emacs ends here
 (put 'narrow-to-region 'disabled nil)
+
+;;(provide '.emacs);;; .emacs ends here
