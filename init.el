@@ -85,11 +85,11 @@
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 ;; ==== HELM ====
-(require 'helm-config)
-(helm-mode 1)
-(helm-autoresize-mode t)
+;;(require 'helm-config)
+;;(helm-mode 1)
+;;(helm-autoresize-mode t)
 ;;(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+;;(global-set-key (kbd "M-y") 'helm-show-kill-ring)
 ;;(global-set-key (kbd "C-x b") 'helm-mini);
 ;; (global-set-key (kbd "C-x C-f") 'helm-find-files)
 ;;(setq helm-M-x-fuzzy-match t)
@@ -688,9 +688,11 @@ the checking happens for all pairs in auto-minor-mode-alist"
 ;;(setq neo-theme (if window-system 'icons 'arrow))
 
 ;; ==== EMACS BACKUP ====
-;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/.
+;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/
 
-
+(custom-set-variables
+  '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
+  '(backup-directory-alist '((".*" . "~/.emacs.d/backups/"))))
 
 ;; create the autosave dir if necessary, since emacs won't.
 (make-directory "~/.emacs.d/autosaves/" t)
@@ -718,6 +720,7 @@ the checking happens for all pairs in auto-minor-mode-alist"
                                 (revert-buffer t t t)
                                 (message "buffer is reverted")))
 
+(global-set-key (kbd "M-j") 'join-line)
 ;; ==== QUOTE ====
 (message "In theory, there is no difference between theory and practice. But, in practice, there is.")
 (put 'narrow-to-region 'disabled nil)
