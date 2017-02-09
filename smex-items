@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ ansi-term
+ org-mode
  visual-line-mode
  chess
  eval-buffer
  ispell
  insert-time
- eww
- browse-url-w3
 )
 
 ;; ----- smex-data -----
@@ -16,7 +16,7 @@
  (package-install . 35)
  (puml-mode . 1)
  (package-delete . 5)
- (org-mode . 1)
+ (org-mode . 2)
  (make-directory . 4)
  (org-latex-export-as-latex . 4)
  (package-install-from-buffer . 1)
@@ -34,7 +34,7 @@
  (highlight-blocks-now . 2)
  (highlight-blocks-mode . 2)
  (eval-buffer . 5)
- (ansi-term . 2)
+ (ansi-term . 3)
  (column-marker-1 . 2)
  (column-marker-3 . 1)
  (column-number-mode . 2)

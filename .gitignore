@@ -43,6 +43,7 @@ flycheck_*.el
 
 auto-save-list
 backups
+desktops/
 *~
 .places
 session.*

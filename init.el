@@ -595,7 +595,7 @@ Don't mess with special buffers."
       (set-face-underline-p 'org-link t))
   (call-interactively 'iimage-mode))
 (setq org-image-actual-width (/ (display-pixel-width) 3))
-;; (define-key org-mode-map (kbd "C-S-a") 'org-archive-subtree)
+
 ;; ==== SELECTION ====
 (defun select-line ()
   "Select the active line."
@@ -615,6 +615,7 @@ Don't mess with special buffers."
       (re-search-forward "\n[ \t]*\n" nil "move"))
     (set-mark -parag)))
 
+
 (defun select-in-delim ()
   (interactive)
   (let (a
@@ -633,14 +634,18 @@ Don't mess with special buffers."
 (global-set-key (kbd "M-6") 'select-paragraph)
 (global-set-key (kbd "C-c h") 'highlight-blocks-mode)
 
+;; ==== REVERT THE BUFFER ==== 
 (global-set-key (kbd "C-c v") (lambda ()
                                 (interactive)
                                 (revert-buffer t t t)
                                 (message "buffer is reverted")))
-
+;; ==== RESTART EMACS ====
 (global-set-key (kbd "C-x !") 'restart-emacs)
 
+;; ==== (I don't really remember why I put this) ====
 (diminish 'projectile-mode)
+
+;; ==== MINOR MODE SETUP ====
 (require 'rich-minority)
 (rich-minority-mode 1)
 (setf rm-blacklist "")
@@ -698,7 +703,7 @@ the checking happens for all pairs in auto-minor-mode-alist"
 (make-directory "~/.emacs.d/autosaves/" t)
 
 ;; 
-;; ==== DESKTOP-PLUS ====
+;; ==== key bendings and stuff ====
 ;;(desktop+/special-buffer-handlers)
 (set-frame-parameter (selected-frame) 'buffer-predicate #'buffer-file-name)
 
@@ -721,8 +726,14 @@ the checking happens for all pairs in auto-minor-mode-alist"
                                 (message "buffer is reverted")))
 
 (global-set-key (kbd "M-j") 'join-line)
+(global-set-key (kbd "C-c x") 'man)
+
+;; ==== magit setup ====
+(global-set-key (kbd "C-x g") 'magit-status)
+
 ;; ==== QUOTE ====
 (message "In theory, there is no difference between theory and practice. But, in practice, there is.")
 (put 'narrow-to-region 'disabled nil)
 
-;;(provide '.emacs);;; .emacs ends here
+(provide '.emacs)
+;;; init.el ends here
