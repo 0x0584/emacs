@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ describe-mode
+ make-directory
+ visual-line-mode
  ansi-term
  org-mode
- visual-line-mode
  chess
  eval-buffer
- ispell
- insert-time
 )
 
 ;; ----- smex-data -----
@@ -17,7 +17,7 @@
  (puml-mode . 1)
  (package-delete . 5)
  (org-mode . 2)
- (make-directory . 4)
+ (make-directory . 7)
  (org-latex-export-as-latex . 4)
  (package-install-from-buffer . 1)
  (package-list-packages . 6)
@@ -79,7 +79,7 @@
  (insert-date . 1)
  (info . 1)
  (org-goto-calendar . 1)
- (visual-line-mode . 17)
+ (visual-line-mode . 18)
  (neotree . 3)
  (iimage-mode . 4)
  (impatient-mode . 2)
@@ -115,4 +115,5 @@
  (browse-url-w3 . 1)
  (insert-time . 1)
  (chess . 1)
+ (describe-mode . 1)
 )

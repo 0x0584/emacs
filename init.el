@@ -118,12 +118,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(Linum-format "%7i ")
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(column-number-mode t)
- '(custom-enabled-themes (quote (clues)))
+ '(custom-enabled-themes (quote (manoj-dark)))
  '(custom-safe-themes
    (quote
     ("603a9c7f3ca3253cb68584cb26c408afcf4e674d7db86badcfe649dd3c538656" "40bc0ac47a9bd5b8db7304f8ef628d71e2798135935eb450483db0dbbfff8b11" "9b402e9e8f62024b2e7f516465b63a4927028a7055392290600b776e4a5b9905" "bc40f613df8e0d8f31c5eb3380b61f587e1b5bc439212e03d4ea44b26b4f408a" "6bb466c89b7e3eedc1f19f5a0cfa53be9baf6077f4d4a6f9b5d087f0231de9c8" "aae95fc700f9f7ff70efbc294fc7367376aa9456356ae36ec234751040ed9168" "cc60d17db31a53adf93ec6fad5a9cfff6e177664994a52346f81f62840fe8e23" "f9574c9ede3f64d57b3aa9b9cef621d54e2e503f4d75d8613cbcc4ca1c962c21" "5cd0afd0ca01648e1fff95a7a7f8abec925bd654915153fb39ee8e72a8b56a1f" "a3132bd39a977ddde4c002f8bd0ef181414c3fbe9228e3643b999491192680ad" "90e4b4a339776e635a78d398118cb782c87810cb384f1d1223da82b612338046" "590759adc4a5bf7a183df81654cce13b96089e026af67d92b5eec658fb3fe22f" default)))
@@ -133,6 +135,7 @@
  '(fci-rule-color "#202020")
  '(flycheck-clang-include-path (quote ("/home/arfed/Workspace/morse-code-master")))
  '(flycheck-clang-includes nil)
+ '(fringe-mode 10 nil (fringe))
  '(global-ede-mode nil)
  '(indicate-buffer-boundaries (quote left))
  '(line-number-mode nil)
@@ -695,9 +698,7 @@ the checking happens for all pairs in auto-minor-mode-alist"
 ;; ==== EMACS BACKUP ====
 ;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/
 
-(custom-set-variables
-  '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
-  '(backup-directory-alist '((".*" . "~/.emacs.d/backups/"))))
+
 
 ;; create the autosave dir if necessary, since emacs won't.
 (make-directory "~/.emacs.d/autosaves/" t)
@@ -726,6 +727,10 @@ the checking happens for all pairs in auto-minor-mode-alist"
                                 (message "buffer is reverted")))
 
 (global-set-key (kbd "M-j") 'join-line)
+(global-set-key (kbd "C-c M-j") (lambda ()
+                                (interactive)
+                                (join-line -1)))
+
 (global-set-key (kbd "C-c x") 'man)
 
 ;; ==== magit setup ====
