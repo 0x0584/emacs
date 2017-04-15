@@ -150,7 +150,7 @@
  '(nyan-mode t)
  '(package-selected-packages
    (quote
-    (helm-rubygems-local helm-rubygems-org helm-spotify howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore mu4e-maildirs-extension hide-comnt super-save ggtags desktop+ multiple-cursors ac-html ac-clang flycheck-css-colorguard flymake-css org-page all-the-icons neotree ox-pandoc pandoc pandoc-mode org-download langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme org-ref org-webpage orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx tuareg vdiff vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode showkey ascii-art-to-unicode smex desktop-menu web-mode magit magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme anti-zenburn-theme which-key auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (basic-c-compile company company-irony-c-headers flycheck-irony irony irony-eldoc runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org helm-spotify howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore mu4e-maildirs-extension hide-comnt super-save ggtags desktop+ multiple-cursors ac-html ac-clang flycheck-css-colorguard flymake-css org-page all-the-icons neotree ox-pandoc pandoc pandoc-mode org-download langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme org-ref org-webpage orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx tuareg vdiff vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode showkey ascii-art-to-unicode smex desktop-menu web-mode magit magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer pdf-tools tango-2-theme tango-plus-theme tangotango-theme anti-zenburn-theme which-key auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm gotham-theme dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd twittering-mode rotate restart-emacs persp-mode nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
@@ -750,5 +750,21 @@ the checking happens for all pairs in auto-minor-mode-alist"
 (put 'narrow-to-region 'disabled nil)
 
 (add-hook 'ruby-mode-hook 'robe-mode)
+
+(ac-config-default)
+
+(setq rsense-home "/opt/rsense-0.3")
+(add-to-list 'load-path (concat rsense-home "/etc"))
+(require 'rsense)
+
+;; Rsense + Autocomplete
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (add-to-list 'ac-sources 'ac-source-rsense-method)
+            (add-to-list 'ac-sources 'ac-source-rsense-constant)))
+
+(require 'ruby-electric)
+(add-hook 'ruby-mode-hook 'ruby-electric-mode)
+
 (provide '.emacs)
 ;;; init.el ends here
