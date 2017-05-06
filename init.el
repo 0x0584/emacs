@@ -24,12 +24,6 @@
   (insert
    (format-time-string "%m/%d/%Y")))
 
-;; ===== NYAN MODE ====
-(add-to-list 'load-path "~/.emacs.d/nyan-mode")
-(require 'nyan-mode)
-(setq-default nyan-wavy-trail t)
-(nyan-mode)
-(nyan-start-animation)
 
 ;; ===== FLYCHECK MODE =====
 (add-hook 'after-init-hook #'global-flycheck-mode)
@@ -53,7 +47,17 @@
 ;;(declare (indent 1) (debug t))
 ;;`(eval-after-load ,file '(progn ,@body))))
 
-
+(add-to-list 'load-path "~/.emacs.d/nyan-mode")
+      (require 'nyan-mode)
+      (setq-default nyan-wavy-trail t)
+      (nyan-mode)
+      (nyan-start-animation)
+;; (if (/= 1 detect-display)
+;;     ((add-to-list 'load-path "~/.emacs.d/nyan-mode")
+;;      (require 'nyan-mode)
+;;      (setq-default nyan-wavy-trail t)
+;;      (nyan-mode)
+;;      (nyan-start-animation)))
 
 ;; ===== SET STANDARD INDENT TO 2 RATHER THAT 4 ====
 (setq standard-indent 2)
@@ -747,6 +751,7 @@ the checking happens for all pairs in auto-minor-mode-alist"
 
 ;; ==== magit setup ====
 (global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 
 ;; ==== QUOTE ====
 (message "In theory, there is no difference between theory and practice. But, in practice, there is.")
@@ -793,7 +798,24 @@ the checking happens for all pairs in auto-minor-mode-alist"
 ;; (add-hook 'ruby-mode-hook 'inf-ruby)
 (global-set-key (kbd "C-.") 'quickrun)
 (global-set-key (kbd "C-,") 'quickrun-compile-only)
+(global-set-key (kbd "C-c z") 'occur)
+(global-set-key (kbd "C-c i") 'inf-ruby)
+
+(setq lexical-binding t
+      visible-bell t)
+
+(defvar night-start 22
+  "The hour that people go to sleep.")
+
+(defvar night-end 8
+  "The hour that people wake up.")
+
+;; (defun nightp ()
+;;   "Check if it is night."
+;;   (let ((hr (nth 2 (decode-time (current-time)))))
+;;     (unless (< hr night-end) (> hr night-start))))
 
 
-(provide '.emacs)
+
+(provide '.init.el)
 ;;; init.el ends here

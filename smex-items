@@ -1,26 +1,26 @@
 
 ;; ----- smex-history -----
 (
- describe-mode
- make-directory
- visual-line-mode
- ansi-term
- org-mode
- chess
+ package-install
  eval-buffer
+ helm-themes
+ artist-mode
+ menu-bar-mode
+ ispell
+ visual-line-mode
 )
 
 ;; ----- smex-data -----
 (
  (center-line . 1)
- (package-install . 35)
+ (package-install . 38)
  (puml-mode . 1)
  (package-delete . 5)
  (org-mode . 2)
  (make-directory . 7)
  (org-latex-export-as-latex . 4)
  (package-install-from-buffer . 1)
- (package-list-packages . 6)
+ (package-list-packages . 12)
  (session-initialize . 1)
  (org-html-export-to-html . 13)
  (markdown . 1)
@@ -33,7 +33,7 @@
  (package-autoremove . 2)
  (highlight-blocks-now . 2)
  (highlight-blocks-mode . 2)
- (eval-buffer . 5)
+ (eval-buffer . 6)
  (ansi-term . 3)
  (column-marker-1 . 2)
  (column-marker-3 . 1)
@@ -51,7 +51,7 @@
  (wind-left . 2)
  (flycheck-info . 1)
  (flycheck-compile . 1)
- (flycheck-mode . 2)
+ (flycheck-mode . 4)
  (flycheck-clear . 1)
  (flycheck-buffer . 1)
  (restart-emacs . 1)
@@ -77,7 +77,7 @@
  (langtool-check . 1)
  (undo-tree-visualize . 1)
  (insert-date . 1)
- (info . 1)
+ (info . 2)
  (org-goto-calendar . 1)
  (visual-line-mode . 18)
  (neotree . 3)
@@ -89,7 +89,7 @@
  (html-mode . 2)
  (pdf-tools-enable-minor-modes . 1)
  (auto-complete . 6)
- (auto-complete-mode . 3)
+ (auto-complete-mode . 6)
  (clang-format . 1)
  (multiple-cursors-mode . 2)
  (mc/edit-lines . 2)
@@ -115,5 +115,22 @@
  (browse-url-w3 . 1)
  (insert-time . 1)
  (chess . 1)
- (describe-mode . 1)
+ (describe-mode . 3)
+ (robe-start . 1)
+ (robe-mode . 2)
+ (ruby-dev . 2)
+ (company-robe . 2)
+ (company-mode . 1)
+ (inf-ruby . 2)
+ (flymake-ruby-load . 1)
+ (ruby-send-buffer . 2)
+ (ac-start . 2)
+ (irony-mode . 3)
+ (irony-completion-at-point-async . 3)
+ (irony-install-server . 2)
+ (rsense-complete . 1)
+ (rsense-version . 1)
+ (rsense-service-status . 1)
+ (rsense-service-start . 1)
+ (rsense-where-is . 1)
 )
