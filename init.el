@@ -291,16 +291,37 @@ THE SOFTWARE.
          " # Description: " _ "\n\n")))
 
 
-;; ==== CTAGS =====
+;; ==== etags ====
+ (defun create-tags (dir-name)
+     "Create tags file."
+     (interactive "DDirectory: ")
+     (eshell-command 
+      (format "find %s -type f -name \"*.[ch]\" | etags -" dir-name)))
 
-(setq path-to-ctags "/opt/local/bin/ctags") ;; <- your ctags path here
-(bind-key "C-c c" #'comment-dwim)
-(defun create-tags (dir-name)
-  "Create tags file."
-  (interactive "DDirectory: ")
-  (shell-command
-   (format "ctags -f %s -t -T -d --global --declarations --members -R %s" path-to-ctags (directory-file-name dir-name)))
-  )
+(defadvice find-tag (around refresh-etags activate)
+   "Rerun etags and reload tags if tag not found and redo find-tag.              
+   If buffer is modified, ask about save before running etags."
+  (let ((extension (file-name-extension (buffer-file-name))))
+    (condition-case err
+    ad-do-it
+      (error (and (buffer-modified-p)
+          (not (ding))
+          (y-or-n-p "Buffer is modified, save it? ")
+          (save-buffer))
+         (er-refresh-etags extension)
+         ad-do-it))))
+
+(defun er-refresh-etags (&optional extension)
+  "Run etags on all peer files in current dir and reload them silently."
+  (interactive)
+  (shell-command (format "etags *.%s" (or extension "el")))
+  (let ((tags-revert-without-query t))  ; don't query, revert silently          
+    (visit-tags-table default-directory nil)))
+
+(global-set-key (kbd "C-;") 'list-tags)
+(global-set-key (kbd "C-x C-,") 'tags-search)
+(global-set-key (kbd "C-x /") 'tags-query-replace)
+
 
 ;; ===== CODE FORMATTING USING ASTYLE ====
 (defun ccc-astyle ()
@@ -705,7 +726,9 @@ the checking happens for all pairs in auto-minor-mode-alist"
 ;; ==== EMACS BACKUP ====
 ;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/
 
-
+(custom-set-variables
+  '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
+  '(backup-directory-alist '((".*" . "~/.emacs.d/backups/"))))
 
 ;; create the autosave dir if necessary, since emacs won't.
 (make-directory "~/.emacs.d/autosaves/" t)
@@ -800,6 +823,28 @@ the checking happens for all pairs in auto-minor-mode-alist"
 (global-set-key (kbd "C-,") 'quickrun-compile-only)
 (global-set-key (kbd "C-c z") 'occur)
 (global-set-key (kbd "C-c i") 'inf-ruby)
+
+(defun next-code-buffer ()
+  (interactive)
+  (let (( bread-crumb (buffer-name) ))
+    (next-buffer)
+    (while
+        (and
+         (string-match-p "^\*" (buffer-name))
+         (not ( equal bread-crumb (buffer-name) )) )
+      (next-buffer))))
+(global-set-key [remap next-buffer] 'next-code-buffer)
+
+(defun previous-code-buffer ()
+  (interactive)
+  (let (( bread-crumb (buffer-name) ))
+    (previous-buffer)
+    (while
+        (and
+         (string-match-p "^\*" (buffer-name))
+         (not ( equal bread-crumb (buffer-name) )) )
+      (previous-buffer))))
+(global-set-key [remap previous-buffer] 'previous-code-buffer)
 
 (setq lexical-binding t
       visible-bell t)
