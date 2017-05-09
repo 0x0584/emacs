@@ -296,7 +296,7 @@ THE SOFTWARE.
      "Create tags file."
      (interactive "DDirectory: ")
      (eshell-command 
-      (format "find %s -type f -name \"*.[ch]\" | etags -" dir-name)))
+      (format "find . -name '*.c' -print -or -name '*.h' -print | xargs etags --append" dir-name)))
 
 (defadvice find-tag (around refresh-etags activate)
    "Rerun etags and reload tags if tag not found and redo find-tag.              
@@ -318,9 +318,10 @@ THE SOFTWARE.
   (let ((tags-revert-without-query t))  ; don't query, revert silently          
     (visit-tags-table default-directory nil)))
 
-(global-set-key (kbd "C-;") 'list-tags)
-(global-set-key (kbd "C-x C-,") 'tags-search)
-(global-set-key (kbd "C-x /") 'tags-query-replace)
+(global-set-key (kbd "C-;") 'helm-etags-select)
+(global-set-key (kbd "C-c C-f") 'find-tag)
+(global-set-key (kbd "C-c /") 'tags-query-replace)
+(global-set-key (kbd "<f12>") 'info)
 
 
 ;; ===== CODE FORMATTING USING ASTYLE ====
