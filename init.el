@@ -48,10 +48,10 @@
 ;;`(eval-after-load ,file '(progn ,@body))))
 
 (add-to-list 'load-path "~/.emacs.d/nyan-mode")
-      (require 'nyan-mode)
-      (setq-default nyan-wavy-trail t)
-      (nyan-mode)
-      (nyan-start-animation)
+(require 'nyan-mode)
+(setq-default nyan-wavy-trail t)
+(nyan-mode)
+(nyan-start-animation)
 ;; (if (/= 1 detect-display)
 ;;     ((add-to-list 'load-path "~/.emacs.d/nyan-mode")
 ;;      (require 'nyan-mode)
@@ -132,12 +132,14 @@
  '(custom-enabled-themes (quote (manoj-dark)))
  '(custom-safe-themes
    (quote
-    ("603a9c7f3ca3253cb68584cb26c408afcf4e674d7db86badcfe649dd3c538656" "40bc0ac47a9bd5b8db7304f8ef628d71e2798135935eb450483db0dbbfff8b11" "9b402e9e8f62024b2e7f516465b63a4927028a7055392290600b776e4a5b9905" "bc40f613df8e0d8f31c5eb3380b61f587e1b5bc439212e03d4ea44b26b4f408a" "6bb466c89b7e3eedc1f19f5a0cfa53be9baf6077f4d4a6f9b5d087f0231de9c8" "aae95fc700f9f7ff70efbc294fc7367376aa9456356ae36ec234751040ed9168" "cc60d17db31a53adf93ec6fad5a9cfff6e177664994a52346f81f62840fe8e23" "f9574c9ede3f64d57b3aa9b9cef621d54e2e503f4d75d8613cbcc4ca1c962c21" "5cd0afd0ca01648e1fff95a7a7f8abec925bd654915153fb39ee8e72a8b56a1f" "a3132bd39a977ddde4c002f8bd0ef181414c3fbe9228e3643b999491192680ad" "90e4b4a339776e635a78d398118cb782c87810cb384f1d1223da82b612338046" "590759adc4a5bf7a183df81654cce13b96089e026af67d92b5eec658fb3fe22f" default)))
+    ("12ab69d8db952a79aa079da812c147ae551f6427448f2564e29f910bcef7bf93" "603a9c7f3ca3253cb68584cb26c408afcf4e674d7db86badcfe649dd3c538656" "40bc0ac47a9bd5b8db7304f8ef628d71e2798135935eb450483db0dbbfff8b11" "9b402e9e8f62024b2e7f516465b63a4927028a7055392290600b776e4a5b9905" "bc40f613df8e0d8f31c5eb3380b61f587e1b5bc439212e03d4ea44b26b4f408a" "6bb466c89b7e3eedc1f19f5a0cfa53be9baf6077f4d4a6f9b5d087f0231de9c8" "aae95fc700f9f7ff70efbc294fc7367376aa9456356ae36ec234751040ed9168" "cc60d17db31a53adf93ec6fad5a9cfff6e177664994a52346f81f62840fe8e23" "f9574c9ede3f64d57b3aa9b9cef621d54e2e503f4d75d8613cbcc4ca1c962c21" "5cd0afd0ca01648e1fff95a7a7f8abec925bd654915153fb39ee8e72a8b56a1f" "a3132bd39a977ddde4c002f8bd0ef181414c3fbe9228e3643b999491192680ad" "90e4b4a339776e635a78d398118cb782c87810cb384f1d1223da82b612338046" "590759adc4a5bf7a183df81654cce13b96089e026af67d92b5eec658fb3fe22f" default)))
  '(display-time-mode t)
  '(ede-project-directories (quote ("/home/arfed/Workspace/morse-code-master/src")))
  '(fci-rule-character-color "#202020")
  '(fci-rule-color "#202020")
- '(flycheck-clang-include-path (quote ("/home/arfed/Workspace/morse-code-master")))
+ '(flycheck-clang-include-path
+   (quote
+    ("/home/arfed/Workspace/morse-code-master" "/home/arfed/Workspace/sdku-gen/include")))
  '(flycheck-clang-includes nil)
  '(fringe-mode 10 nil (fringe))
  '(global-ede-mode nil)
@@ -727,9 +729,7 @@ the checking happens for all pairs in auto-minor-mode-alist"
 ;; ==== EMACS BACKUP ====
 ;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/
 
-(custom-set-variables
-  '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
-  '(backup-directory-alist '((".*" . "~/.emacs.d/backups/"))))
+
 
 ;; create the autosave dir if necessary, since emacs won't.
 (make-directory "~/.emacs.d/autosaves/" t)
@@ -765,10 +765,15 @@ the checking happens for all pairs in auto-minor-mode-alist"
 (global-set-key (kbd "C-c d") (lambda ()
                                 (interactive)
                                 (delete-char -1)))
+(global-set-key (kbd "C-c M-d") (lambda ()
+                                (interactive)
+                                (kill-word -1)))
 
 (global-set-key (kbd "C-c e") (lambda ()
                                 (interactive)
                                 (eval-buffer)))
+
+(global-set-key (kbd "C-c y") 'popup-kill-ring)
 
 (global-set-key (kbd "C-c b") 'recover-this-file)
 (global-set-key (kbd "C-c x") 'man)
@@ -861,7 +866,5 @@ the checking happens for all pairs in auto-minor-mode-alist"
 ;;   (let ((hr (nth 2 (decode-time (current-time)))))
 ;;     (unless (< hr night-end) (> hr night-start))))
 
-
-
 (provide '.init.el)
-;;; init.el ends here
+;;; init.el ends here.
