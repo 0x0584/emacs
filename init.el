@@ -401,6 +401,7 @@ THE SOFTWARE.
 
 ;; ==== LINUM SHORTKEY ====
 (global-set-key (kbd "S-C-l") 'linum-mode)
+(global-set-key (kbd "C-:") 'linum-relative-mode)
 
 
 ;; ==== SHELL SETUP ====
@@ -827,6 +828,7 @@ the checking happens for all pairs in auto-minor-mode-alist"
 ;; (add-hook 'ruby-mode-hook 'inf-ruby)
 (global-set-key (kbd "C-.") 'quickrun)
 (global-set-key (kbd "C-,") 'quickrun-compile-only)
+(global-set-key (kbd "C-c =") 'compile)
 (global-set-key (kbd "C-c z") 'occur)
 (global-set-key (kbd "C-c i") 'inf-ruby)
 

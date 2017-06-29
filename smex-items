@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ recover-session
+ package-install
  hide/show-comments
  helm-themes
  eval-expression
  menu-bar-options-save
  menu-bar-mode
- gnus
- cd
 )
 
 ;; ----- smex-data -----
@@ -18,4 +18,6 @@
  (menu-bar-options-save . 1)
  (eval-expression . 1)
  (hide/show-comments . 2)
+ (package-install . 2)
+ (recover-session . 1)
 )
