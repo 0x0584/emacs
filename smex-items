@@ -7,7 +7,7 @@
  helm-themes
  eval-expression
  menu-bar-options-save
- menu-bar-mode
+ gnus
 )
 
 ;; ----- smex-data -----
@@ -20,4 +20,5 @@
  (hide/show-comments . 2)
  (package-install . 2)
  (recover-session . 1)
+ (org-table-create . 2)
 )
