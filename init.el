@@ -154,9 +154,10 @@
    (quote
     ("#336c6c" "#205070" "#0f2050" "#806080" "#401440" "#6c1f1c" "#6b400c" "#23733c")))
  '(nyan-mode t)
+ '(org-agenda-files (quote ("~/orged/todo.org")))
  '(package-selected-packages
    (quote
-    (helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile company company-irony-c-headers flycheck-irony irony irony-eldoc runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org helm-spotify howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile company company-irony-c-headers flycheck-irony irony irony-eldoc runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org helm-spotify howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
@@ -324,6 +325,7 @@ THE SOFTWARE.
 (global-set-key (kbd "C-c C-f") 'find-tag)
 (global-set-key (kbd "C-c /") 'tags-query-replace)
 (global-set-key (kbd "<f12>") 'info)
+(global-set-key (kbd "C-c a") 'org-agenda)
 
 
 ;; ===== CODE FORMATTING USING ASTYLE ====
@@ -387,18 +389,33 @@ THE SOFTWARE.
 (global-set-key (kbd "C-c w <right>") 'wind-right)
 
 
-;; ==== WINDOWS SIZE SHORTKEYS ====
+;;    
+(global-set-key (kbd "S-M-<down>") 'windmove-down)
 
 (global-set-key (kbd "S-M-<left>") 'windmove-left)        
 (global-set-key (kbd "S-M-<right>") 'windmove-right)     
 (global-set-key (kbd "S-M-<up>") 'windmove-up)           
-(global-set-key (kbd "S-M-<down>") 'windmove-down)      
-(defalias 'qrr 'query-replace-regexp)
+;; ==== WINDOWS SIZE SHORTKEYS ====
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
+;; V2
+(global-set-key (kbd "S-M-n") 'windmove-down)
+;;    
+
+(global-set-key (kbd "S-M-b") 'windmove-left)        
+(global-set-key (kbd "S-M-f") 'windmove-right)     
+(global-set-key (kbd "S-M-p") 'windmove-up)           
+;; ==== WINDOWS SIZE SHORTKEYS ====
+(global-set-key (kbd "S-C-b") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-f") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-n") 'shrink-window)
+(global-set-key (kbd "S-C-p") 'enlarge-window)
+
+;;
+(defalias 'qrr 'query-replace-regexp)
 ;; ==== LINUM SHORTKEY ====
 (global-set-key (kbd "S-C-l") 'linum-mode)
 (global-set-key (kbd "C-:") 'linum-relative-mode)
@@ -447,6 +464,7 @@ THE SOFTWARE.
 
 (global-set-key (kbd "C-x <C-down>") 'm-term-below)
 (global-set-key (kbd "C-x <C-right>") 'm-term-right)
+
 ;; (load-theme 'light-blue t t)
 ;; (load-theme 'tango t t)
 ;; (add-hook 'buffer-list-update-hook
@@ -599,6 +617,7 @@ Don't mess with special buffers."
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-m") 'smex-major-mode-commands)
+
 ;; This is your old M-x.
 ;; (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
@@ -745,6 +764,10 @@ the checking happens for all pairs in auto-minor-mode-alist"
 (global-set-key (kbd "C-x p") (lambda ()
 			(interactive)
 			(other-window -1)))
+(global-set-key (kbd "C-x 5 p") (lambda ()
+			(interactive)
+			(other-frame -1)))
+
 (global-set-key (kbd "C-c C-t") (lambda ()
 			(interactive)
 			(transpose-chars -1)))
@@ -826,6 +849,7 @@ the checking happens for all pairs in auto-minor-mode-alist"
 (autoload 'inf-ruby-minor-mode "inf-ruby" "Run an inferior Ruby process" t)
 (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
 ;; (add-hook 'ruby-mode-hook 'inf-ruby)
+
 (global-set-key (kbd "C-.") 'quickrun)
 (global-set-key (kbd "C-,") 'quickrun-compile-only)
 (global-set-key (kbd "C-c =") 'compile)

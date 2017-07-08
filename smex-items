@@ -1,24 +1,38 @@
 
 ;; ----- smex-history -----
 (
- recover-session
  package-install
- hide/show-comments
+ flycheck-disable-checker
+ package-list-packages
+ make-directory
+ flymake-mode
  helm-themes
- eval-expression
- menu-bar-options-save
- gnus
+ insert-time
 )
 
 ;; ----- smex-data -----
 (
  (gnus . 2)
  (menu-bar-mode . 1)
- (helm-themes . 2)
+ (helm-themes . 4)
  (menu-bar-options-save . 1)
- (eval-expression . 1)
+ (eval-expression . 2)
  (hide/show-comments . 2)
- (package-install . 2)
+ (package-install . 4)
  (recover-session . 1)
  (org-table-create . 2)
+ (term . 4)
+ (create-tags . 5)
+ (xref-find-definitions . 1)
+ (magit-log . 1)
+ (magit-log-all . 1)
+ (my-magit-status . 1)
+ (describe-key . 1)
+ (eval-buffer . 1)
+ (insert-date . 1)
+ (insert-time . 1)
+ (flymake-mode . 1)
+ (make-directory . 1)
+ (package-list-packages . 1)
+ (flycheck-disable-checker . 1)
 )
