@@ -1,24 +1,24 @@
 
 ;; ----- smex-history -----
 (
- package-install
- flycheck-disable-checker
- package-list-packages
- make-directory
- flymake-mode
- helm-themes
- insert-time
+ emms-player-mpd-connect
+ emms
+ eval-buffer
+ powerline-revert
+ powerline-center-theme
+ powerline-center-evil-theme
+ powerline-reset
 )
 
 ;; ----- smex-data -----
 (
  (gnus . 2)
- (menu-bar-mode . 1)
- (helm-themes . 4)
+ (menu-bar-mode . 3)
+ (helm-themes . 6)
  (menu-bar-options-save . 1)
  (eval-expression . 2)
  (hide/show-comments . 2)
- (package-install . 4)
+ (package-install . 5)
  (recover-session . 1)
  (org-table-create . 2)
  (term . 4)
@@ -28,11 +28,28 @@
  (magit-log-all . 1)
  (my-magit-status . 1)
  (describe-key . 1)
- (eval-buffer . 1)
- (insert-date . 1)
+ (eval-buffer . 2)
+ (insert-date . 2)
  (insert-time . 1)
  (flymake-mode . 1)
  (make-directory . 1)
- (package-list-packages . 1)
+ (package-list-packages . 5)
  (flycheck-disable-checker . 1)
+ (occur . 1)
+ (browse-url-w3 . 1)
+ (eww-search-words . 1)
+ (eww . 1)
+ (xwidget-webkit-browse-url . 4)
+ (auto-complete . 4)
+ (ac-start . 2)
+ (sml/setup . 5)
+ (sml/apply-theme . 4)
+ (sml/customize . 1)
+ (powerline-default-theme . 1)
+ (powerline-reset . 1)
+ (powerline-center-evil-theme . 1)
+ (powerline-center-theme . 1)
+ (powerline-revert . 1)
+ (emms . 1)
+ (emms-player-mpd-connect . 1)
 )
