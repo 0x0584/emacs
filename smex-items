@@ -1,20 +1,20 @@
 
 ;; ----- smex-history -----
 (
- emms-player-mpd-connect
- emms
- eval-buffer
- powerline-revert
- powerline-center-theme
- powerline-center-evil-theme
- powerline-reset
+ timeclock-update-modeline
+ timeclock-mode-line-display
+ display-time-mode
+ display-time
+ timeclock-modeline-display
+ timeclock-in
+ timeclock-out
 )
 
 ;; ----- smex-data -----
 (
  (gnus . 2)
  (menu-bar-mode . 3)
- (helm-themes . 6)
+ (helm-themes . 7)
  (menu-bar-options-save . 1)
  (eval-expression . 2)
  (hide/show-comments . 2)
@@ -27,7 +27,7 @@
  (magit-log . 1)
  (magit-log-all . 1)
  (my-magit-status . 1)
- (describe-key . 1)
+ (describe-key . 2)
  (eval-buffer . 2)
  (insert-date . 2)
  (insert-time . 1)
@@ -52,4 +52,14 @@
  (powerline-revert . 1)
  (emms . 1)
  (emms-player-mpd-connect . 1)
+ (bongo . 2)
+ (join-line . 2)
+ (tabify . 1)
+ (timeclock-in . 3)
+ (timeclock-out . 1)
+ (timeclock-modeline-display . 1)
+ (timeclock-mode-line-display . 6)
+ (display-time . 2)
+ (display-time-mode . 3)
+ (timeclock-update-modeline . 1)
 )

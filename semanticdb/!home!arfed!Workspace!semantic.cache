@@ -1,0 +1,172 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [21 41])
+            ("removeHat" function
+               (:arguments 
+                  ( ("cat" variable (:type "char") (reparse-symbol arg-sub-list) [59 68]))                  
+                :type "void")
+                nil [44 273])
+            ("main" function (:type "int") nil [276 308]))          
+      :file "foo.cc"
+      :pointmax 315
+      :fsize 314
+      :lastmodtime '(22881 42886 662769 162000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("nodeAlloc" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("static")
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [41 73])
+            ("insertFirst" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [98 102]))                  
+                :type "void")
+                nil [74 103])
+            ("insertLast" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [127 131]))                  
+                :type "void")
+                nil [104 132])
+            ("dumpList" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [147 161])
+                    ("" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [162 176]))                  
+                :type "void")
+                nil [133 177])
+            ("node" type
+               (:members 
+                  ( ("value" variable (:type "int") (reparse-symbol classsubparts) [195 205])
+                    ("np" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [208 224]))                  
+                :type "struct")
+                nil [179 227])
+            ("head" variable
+               (:pointer 1
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [229 247])
+            ("tail" variable
+               (:pointer 1
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [248 266])
+            ("nodeAlloc" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [268 356])
+            ("XOR" variable (:constant-flag t) nil [366 369])
+            ("insertFirst" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [466 476]))                  
+                :type "void")
+                nil [442 729])
+            ("insertLast" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [754 764]))                  
+                :type "void")
+                nil [731 1001])
+            ("dumpList" function
+               (:arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1017 1035])
+                    ("prev" variable
+                       (:pointer 1
+                        :type ("node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1036 1054]))                  
+                :type "void")
+                nil [1003 1157])
+            ("main" function (:type "int") nil [1182 1488]))          
+      :file "xor.cc"
+      :pointmax 1489
+      :fsize 1488
+      :lastmodtime '(22882 48190 628922 99000)
+      :unmatched-syntax '((punctuation 131 . 132) (semantic-list 126 . 131) (punctuation 102 . 103) (semantic-list 97 . 102))
+      :lexical-table 
+        '(("XOR" (spp-arg-list ("prev" "next") 369 . 381) . ((semantic-list "(struct node*)" 382 . 396) (semantic-list "((unsigned long)prev ^ (unsigned long)next)" 396 . 439)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("foo" function (:type "int") nil [21 43])
+            ("main" function (:type "int") nil [44 98]))          
+      :file "weird.c"
+      :pointmax 414
+      :fsize 413
+      :lastmodtime '(22882 60862 380145 190000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("x" variable
+               (:default-value "0"
+                :type "int")
+                nil [1 23]))          
+      :file "pi.c"
+      :pointmax 25
+      :fsize 24
+      :lastmodtime '(22883 26514 995511 389000)
+      :unmatched-syntax nil))
+  :file "!home!arfed!Workspace!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

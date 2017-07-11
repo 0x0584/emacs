@@ -1,0 +1,101 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [17 36])
+            ("string" include (:system-flag t) nil [37 54])
+            ("fstream" include (:system-flag t) nil [55 73])
+            ("vector" include (:system-flag t) nil [74 91])
+            ("FOOSIZE" variable (:constant-flag t) nil [101 108])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [112 132])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [143 152])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [153 165]))                  
+                :type "int")
+                nil [134 970]))          
+      :file "vectors.cc"
+      :pointmax 978
+      :fsize 977
+      :lastmodtime '(22881 42312 669002 366000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FOOSIZE" . ((number "5" 109 . 110)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags nil
+      :file "specifiers.cc"
+      :pointmax 1095
+      :fsize 1094
+      :lastmodtime '(22881 45154 668839 212000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [19 38])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [39 59])
+            ("foo" function
+               (:arguments 
+                  ( ("f" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [69 76]))                  
+                :type "int")
+                nil [61 99])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [110 119])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [120 132]))                  
+                :type "int")
+                nil [101 272]))          
+      :file "references.cc"
+      :pointmax 273
+      :fsize 272
+      :lastmodtime '(22882 2673 524739 243000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("unless" (spp-arg-list ("x") 75 . 78) . ((IF "if" 79 . 81) (semantic-list "(!(x))" 81 . 87)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("foo" function
+               (:arguments 
+                  ( ("mem" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [61 70]))                  
+                :type "void")
+                nil [52 775])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [786 791]))                  
+                :type "int")
+                nil [777 1148]))          
+      :file "pointers.cc"
+      :pointmax 1149
+      :fsize 1148
+      :lastmodtime '(22882 11663 151727 363000)
+      :unmatched-syntax nil))
+  :file "!home!arfed!Workspace!cplusplus!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
