@@ -1,0 +1,103 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("List" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("node_t" type
+                       (:typedef ("List" type
+                             (:prototype t
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [302 328])
+                    ("public" label nil (reparse-symbol classsubparts) [329 336])
+                    ("List" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("List" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [339 346])
+                    ("List" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [349 357])
+                    ("InsertBeg" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [360 377])
+                    ("InsertEnd" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [380 397])
+                    ("InsertBetween" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [400 421])
+                    ("DeleteFront" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [424 443])
+                    ("DeleteEnd" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [446 463])
+                    ("DeleteBetween" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [466 487])
+                    ("Reverse" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [490 505])
+                    ("SortAsc" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [508 523])
+                    ("SortDesc" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [526 542])
+                    ("Swap" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [545 557])
+                    ("ToString" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [560 576])
+                    ("private" label nil (reparse-symbol classsubparts) [577 585])
+                    ("head" variable
+                       (:pointer 1
+                        :type ("node_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [588 622])
+                    ("tail" variable
+                       (:pointer 1
+                        :type ("node_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [588 622])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("node_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [588 622])
+                    ("prev" variable
+                       (:pointer 1
+                        :type ("node_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [588 622])
+                    ("data" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol classsubparts) [625 632]))                  )
+                nil [268 635]))          
+      :file "list.cc"
+      :pointmax 636
+      :fsize 635
+      :lastmodtime '(22897 54965 115952 446000)
+      :unmatched-syntax nil))
+  :file "!home!arfed!Workspace!lists!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

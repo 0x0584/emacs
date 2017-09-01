@@ -31,7 +31,7 @@
       :file "sys_errlist.h"
       :pointmax 1216
       :fsize 1215
-      :lastmodtime '(22856 42984 0 0)
+      :lastmodtime '(22878 16722 0 0)
       :unmatched-syntax '((string 891 . 960) (symbol 885 . 890) (punctuation 883 . 884)))
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -39,7 +39,7 @@
       :file "stdio_lim.h"
       :pointmax 1355
       :fsize 1354
-      :lastmodtime '(22856 42984 0 0)
+      :lastmodtime '(22878 16721 0 0)
       :unmatched-syntax '((string 876 . 943) (symbol 870 . 875) (punctuation 868 . 869)))
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -150,7 +150,7 @@
       :file "types.h"
       :pointmax 7564
       :fsize 7563
-      :lastmodtime '(22856 42986 0 0)
+      :lastmodtime '(22878 16724 0 0)
       :unmatched-syntax '((symbol 7482 . 7492) (symbol 7404 . 7414) (symbol 7050 . 7060) (symbol 6951 . 6961) (symbol 6828 . 6838) (symbol 6788 . 6798) (symbol 6691 . 6701) (symbol 6648 . 6658) (symbol 6560 . 6570) (symbol 6517 . 6527) (symbol 6432 . 6442) (symbol 6393 . 6403) (symbol 6254 . 6264) (symbol 6179 . 6189) (symbol 6093 . 6103) (symbol 5981 . 5991) (symbol 5909 . 5919) (symbol 5826 . 5836) (symbol 5753 . 5763) (symbol 5686 . 5696) (symbol 5625 . 5635) (symbol 5542 . 5552) (symbol 5469 . 5479) (symbol 5399 . 5409) (symbol 5332 . 5342) (symbol 5259 . 5269) (symbol 5177 . 5187) (symbol 5105 . 5115) (symbol 5035 . 5045) (symbol 4960 . 4970) (symbol 4883 . 4893) (symbol 4814 . 4824) (symbol 4743 . 4753) (symbol 4673 . 4683) (symbol 4609 . 4619) (symbol 4532 . 4537) (punctuation 4530 . 4531) (LONG 1886 . 1890) (UNSIGNED 1877 . 1885) (TYPEDEF 1869 . 1876) (LONG 1831 . 1835) (TYPEDEF 1823 . 1830) (LONG 1652 . 1656) (UNSIGNED 1643 . 1651) (TYPEDEF 1635 . 1642) (LONG 1596 . 1600) (SIGNED 1589 . 1595) (TYPEDEF 1581 . 1588))
       :lexical-table 
         '(("__U32_TYPE" . ((UNSIGNED "unsigned" 3598 . 3606) (INT "int" 3607 . 3610)))
@@ -170,7 +170,7 @@
       :file "stdlib-float.h"
       :pointmax 1157
       :fsize 1156
-      :lastmodtime '(22856 42984 0 0)
+      :lastmodtime '(22878 16721 0 0)
       :unmatched-syntax '((string 865 . 936) (symbol 859 . 864) (punctuation 857 . 858)))
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -189,7 +189,7 @@
       :file "waitstatus.h"
       :pointmax 2287
       :fsize 2286
-      :lastmodtime '(22856 42986 0 0)
+      :lastmodtime '(22878 16724 0 0)
       :unmatched-syntax '((string 893 . 964) (symbol 887 . 892) (punctuation 885 . 886))
       :lexical-table 
         '(("__WTERMSIG" (spp-arg-list ("status") 1226 . 1234) . ((semantic-list "((status) & 0x7f)" 1235 . 1252)))
@@ -220,7 +220,7 @@
       :file "waitflags.h"
       :pointmax 1629
       :fsize 1628
-      :lastmodtime '(22856 42986 0 0)
+      :lastmodtime '(22878 16724 0 0)
       :unmatched-syntax '((string 894 . 964) (symbol 888 . 893) (punctuation 886 . 887))
       :lexical-table 
         '(("WCONTINUED" . ((number "8" 1311 . 1312)))
@@ -243,7 +243,7 @@
       :file "wordsize.h"
       :pointmax 328
       :fsize 327
-      :lastmodtime '(22856 42984 0 0)
+      :lastmodtime '(22878 16721 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("__WORDSIZE_TIME64_COMPAT32" . ((number "1" 222 . 223)))
@@ -295,7 +295,7 @@
       :file "typesizes.h"
       :pointmax 3277
       :fsize 3276
-      :lastmodtime '(22856 42986 0 0)
+      :lastmodtime '(22878 16724 0 0)
       :unmatched-syntax '((string 892 . 963) (symbol 886 . 891) (punctuation 884 . 885))
       :lexical-table 
         '(("__RLIM64_T_TYPE" . ((symbol "__UQUAD_TYPE" 2050 . 2062)))
@@ -557,7 +557,7 @@
       :file "pthreadtypes.h"
       :pointmax 6742
       :fsize 6741
-      :lastmodtime '(22856 42986 0 0)
+      :lastmodtime '(22878 16724 0 0)
       :unmatched-syntax '((LONG 4268 . 4272) (LONG 4091 . 4095) (UNSIGNED 4082 . 4090) (LONG 4036 . 4040) (UNSIGNED 4027 . 4035) (LONG 3982 . 3986) (UNSIGNED 3973 . 3981))
       :lexical-table 
         '(("__SIZEOF_PTHREAD_MUTEX_T" . ((number "32" 1355 . 1357)))
@@ -591,7 +591,7 @@
       :file "select.h"
       :pointmax 2106
       :fsize 2105
-      :lastmodtime '(22856 42987 0 0)
+      :lastmodtime '(22878 16726 0 0)
       :unmatched-syntax '((string 820 . 889) (symbol 814 . 819) (punctuation 812 . 813))
       :lexical-table 
         '(("__FD_ZERO_STOS" . ((string "\"stosl\"" 1053 . 1060)))
@@ -633,7 +633,7 @@
       :file "sigset.h"
       :pointmax 4554
       :fsize 4553
-      :lastmodtime '(22856 42983 0 0)
+      :lastmodtime '(22878 16721 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_SIGSET_NWORDS" . ((semantic-list "(1024 / (8 * sizeof (unsigned long int)))" 1015 . 1056)))
@@ -671,7 +671,7 @@
       :file "time.h"
       :pointmax 3466
       :fsize 3465
-      :lastmodtime '(22856 42985 0 0)
+      :lastmodtime '(22878 16723 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("CLOCKS_PER_SEC" . ((semantic-list "((clock_t) 1000000)" 1719 . 1738)))
@@ -686,7 +686,7 @@
       :file "endian.h"
       :pointmax 177
       :fsize 176
-      :lastmodtime '(22856 42985 0 0)
+      :lastmodtime '(22878 16723 0 0)
       :unmatched-syntax '((string 66 . 131) (symbol 60 . 65) (punctuation 58 . 59))
       :lexical-table 
         '(("__BYTE_ORDER" . ((symbol "__LITTLE_ENDIAN" 161 . 176)))
@@ -707,7 +707,7 @@
       :file "byteswap.h"
       :pointmax 5665
       :fsize 5664
-      :lastmodtime '(22856 42985 0 0)
+      :lastmodtime '(22878 16723 0 0)
       :unmatched-syntax '((close-paren 5625 . 5626) (punctuation 5623 . 5624) (semantic-list #("((((x) & 0xff00000000000000ull) >> 56)				      \\
       | (((x) & 0x00ff000000000000ull) >> 40)				      \\
       | (((x) & 0x0000ff0000000000ull) >> 24)				      \\
@@ -748,7 +748,7 @@
       :file "wchar.h"
       :pointmax 1906
       :fsize 1905
-      :lastmodtime '(22856 42985 0 0)
+      :lastmodtime '(22878 16723 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_BITS_WCHAR_H" . ((number "1" 871 . 872)))
@@ -832,7 +832,7 @@
       :file "timex.h"
       :pointmax 4557
       :fsize 4556
-      :lastmodtime '(22856 42985 0 0)
+      :lastmodtime '(22878 16723 0 0)
       :unmatched-syntax '((punctuation 2232 . 2233) (number 2230 . 2232) (punctuation 2229 . 2230) (INT 2224 . 2227) (punctuation 2222 . 2223) (number 2220 . 2222) (punctuation 2219 . 2220) (INT 2214 . 2217) (punctuation 2212 . 2213) (number 2210 . 2212) (punctuation 2209 . 2210) (INT 2204 . 2207) (punctuation 2200 . 2201) (number 2198 . 2200) (punctuation 2197 . 2198) (INT 2192 . 2195) (punctuation 2190 . 2191) (number 2188 . 2190) (punctuation 2187 . 2188) (INT 2182 . 2185) (punctuation 2180 . 2181) (number 2178 . 2180) (punctuation 2177 . 2178) (INT 2172 . 2175) (punctuation 2170 . 2171) (number 2168 . 2170) (punctuation 2167 . 2168) (INT 2162 . 2165) (punctuation 2158 . 2159) (number 2156 . 2158) (punctuation 2155 . 2156) (INT 2150 . 2153) (punctuation 2148 . 2149) (number 2146 . 2148) (punctuation 2145 . 2146) (INT 2140 . 2143) (punctuation 2138 . 2139) (number 2136 . 2138) (punctuation 2135 . 2136) (INT 2130 . 2133) (punctuation 2128 . 2129) (number 2126 . 2128) (punctuation 2125 . 2126) (INT 2120 . 2123))
       :lexical-table 
         '(("MOD_CLKB" . ((symbol "ADJ_TICK" 3225 . 3233)))
@@ -887,7 +887,7 @@
       :file "byteswap-16.h"
       :pointmax 1732
       :fsize 1731
-      :lastmodtime '(22856 42985 0 0)
+      :lastmodtime '(22878 16723 0 0)
       :unmatched-syntax '((string 886 . 958) (symbol 880 . 885) (punctuation 878 . 879))
       :lexical-table 
         '(("__bswap_16" (spp-arg-list ("x") 1022 . 1025) . ((semantic-list "(__extension__							      \\
@@ -900,6 +900,194 @@
 		    : \"0\" (__x)						      \\
 		    : \"cc\");						      \\
 	 __v; }))" 1033 . 1390)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_BITS_LOCALE_H" variable (:constant-flag t) nil [998 1012])
+            ("__LC_CTYPE" variable (:constant-flag t) nil [1024 1034])
+            ("__LC_NUMERIC" variable (:constant-flag t) nil [1047 1059])
+            ("__LC_TIME" variable (:constant-flag t) nil [1072 1081])
+            ("__LC_COLLATE" variable (:constant-flag t) nil [1094 1106])
+            ("__LC_MONETARY" variable (:constant-flag t) nil [1119 1132])
+            ("__LC_MESSAGES" variable (:constant-flag t) nil [1145 1158])
+            ("__LC_ALL" variable (:constant-flag t) nil [1171 1179])
+            ("__LC_PAPER" variable (:constant-flag t) nil [1192 1202])
+            ("__LC_NAME" variable (:constant-flag t) nil [1215 1224])
+            ("__LC_ADDRESS" variable (:constant-flag t) nil [1237 1249])
+            ("__LC_TELEPHONE" variable (:constant-flag t) nil [1262 1276])
+            ("__LC_MEASUREMENT" variable (:constant-flag t) nil [1289 1305])
+            ("__LC_IDENTIFICATION" variable (:constant-flag t) nil [1317 1336]))          
+      :file "locale.h"
+      :pointmax 1368
+      :fsize 1367
+      :lastmodtime '(22878 16710 0 0)
+      :unmatched-syntax '((string 893 . 958) (symbol 887 . 892) (punctuation 885 . 886))
+      :lexical-table 
+        '(("__LC_ALL" . ((number "6" 1182 . 1183)))
+          ("__LC_IDENTIFICATION" . ((number "12" 1337 . 1339)))
+          ("_BITS_LOCALE_H" . ((number "1" 1013 . 1014)))
+          ("__LC_ADDRESS" . ((number "9" 1252 . 1253)))
+          ("__LC_MEASUREMENT" . ((number "11" 1306 . 1308)))
+          ("__LC_TELEPHONE" . ((number "10" 1278 . 1280)))
+          ("__LC_NUMERIC" . ((number "1" 1062 . 1063)))
+          ("__LC_MONETARY" . ((number "4" 1135 . 1136)))
+          ("__LC_PAPER" . ((number "7" 1205 . 1206)))
+          ("__LC_MESSAGES" . ((number "5" 1161 . 1162)))
+          ("__LC_COLLATE" . ((number "3" 1109 . 1110)))
+          ("__LC_CTYPE" . ((number "0" 1037 . 1038)))
+          ("__LC_TIME" . ((number "2" 1084 . 1085)))
+          ("__LC_NAME" . ((number "8" 1227 . 1228)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_BITS_SETJMP_H" variable (:constant-flag t) nil [890 904])
+            ("bits/wordsize.h" include (:system-flag t) nil [1037 1063])
+            ("__jmp_buf" variable
+               (:dereference 1
+                :type "long int")
+                nil [1186 1208]))          
+      :file "setjmp.h"
+      :pointmax 1287
+      :fsize 1286
+      :lastmodtime '(22878 16720 0 0)
+      :unmatched-syntax '((LONG 1181 . 1185) (TYPEDEF 1173 . 1180) (string 963 . 1028) (symbol 957 . 962) (punctuation 955 . 956))
+      :lexical-table 
+        '(("_BITS_SETJMP_H" . ((number "1" 906 . 907)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "errno.h"
+      :pointmax 2146
+      :fsize 2145
+      :lastmodtime '(22878 16721 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("SCHED_OTHER" variable (:constant-flag t) nil [1048 1059])
+            ("SCHED_FIFO" variable (:constant-flag t) nil [1071 1081])
+            ("SCHED_RR" variable (:constant-flag t) nil [1093 1101])
+            ("SCHED_BATCH" variable (:constant-flag t) nil [1131 1142])
+            ("SCHED_IDLE" variable (:constant-flag t) nil [1155 1165])
+            ("SCHED_RESET_ON_FORK" variable (:constant-flag t) nil [1179 1198])
+            ("CSIGNAL" variable (:constant-flag t) nil [1266 1273])
+            ("CLONE_VM" variable (:constant-flag t) nil [1339 1347])
+            ("CLONE_FS" variable (:constant-flag t) nil [1416 1424])
+            ("CLONE_FILES" variable (:constant-flag t) nil [1498 1509])
+            ("CLONE_SIGHAND" variable (:constant-flag t) nil [1583 1596])
+            ("CLONE_PTRACE" variable (:constant-flag t) nil [1655 1667])
+            ("CLONE_VFORK" variable (:constant-flag t) nil [1735 1746])
+            ("CLONE_PARENT" variable (:constant-flag t) nil [1848 1860])
+            ("CLONE_THREAD" variable (:constant-flag t) nil [1952 1964])
+            ("CLONE_NEWNS" variable (:constant-flag t) nil [2026 2037])
+            ("CLONE_SYSVSEM" variable (:constant-flag t) nil [2096 2109])
+            ("CLONE_SETTLS" variable (:constant-flag t) nil [2176 2188])
+            ("CLONE_PARENT_SETTID" variable (:constant-flag t) nil [2231 2250])
+            ("CLONE_CHILD_CLEARTID" variable (:constant-flag t) nil [2332 2352])
+            ("CLONE_DETACHED" variable (:constant-flag t) nil [2439 2453])
+            ("CLONE_UNTRACED" variable (:constant-flag t) nil [2504 2518])
+            ("CLONE_CHILD_SETTID" variable (:constant-flag t) nil [2623 2641])
+            ("CLONE_NEWCGROUP" variable (:constant-flag t) nil [2720 2735])
+            ("CLONE_NEWUTS" variable (:constant-flag t) nil [2788 2800])
+            ("CLONE_NEWIPC" variable (:constant-flag t) nil [2847 2859])
+            ("CLONE_NEWUSER" variable (:constant-flag t) nil [2897 2910])
+            ("CLONE_NEWPID" variable (:constant-flag t) nil [2958 2970])
+            ("CLONE_NEWNET" variable (:constant-flag t) nil [3017 3029])
+            ("CLONE_IO" variable (:constant-flag t) nil [3080 3088])
+            ("sched_param" type
+               (:members 
+                  ( ("__sched_priority" variable (:type "int") (reparse-symbol classsubparts) [3193 3214]))                  
+                :type "struct")
+                nil [3166 3219])
+            ("setns" function
+               (:type "int"
+                :arguments 
+                  ( ("__fd" variable (:type "int") (reparse-symbol arg-sub-list) [3643 3652])
+                    ("__nstype" variable (:type "int") (reparse-symbol arg-sub-list) [3653 3666]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3625 3675])
+            ("sched_getcpu" function
+               (:type "int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3542 3547]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3517 3556])
+            ("unshare" function
+               (:type "int"
+                :arguments 
+                  ( ("__flags" variable (:type "int") (reparse-symbol arg-sub-list) [3454 3466]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3434 3475])
+            ("clone" function
+               (:type "int"
+                :arguments 
+                  ( ("__fn" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("__arg" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3314 3326]))                          
+                        :type "int")
+                        nil nil)
+                    ("__child_stack" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3328 3348])
+                    ("__flags" variable (:type "int") (reparse-symbol arg-sub-list) [3353 3365])
+                    ("__arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3366 3378])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [3379 3383]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3283 3392]))          
+      :file "sched.h"
+      :pointmax 7562
+      :fsize 7561
+      :lastmodtime '(22878 16724 0 0)
+      :unmatched-syntax '((string 937 . 1000) (symbol 931 . 936) (punctuation 929 . 930))
+      :lexical-table 
+        '(("CLONE_NEWNS" . ((number "0x00020000" 2040 . 2050)))
+          ("CLONE_NEWIPC" . ((number "0x08000000" 2860 . 2870)))
+          ("CLONE_IO" . ((number "0x80000000" 3089 . 3099)))
+          ("CLONE_PTRACE" . ((number "0x00002000" 1669 . 1679)))
+          ("CLONE_PARENT_SETTID" . ((number "0x00100000" 2251 . 2261)))
+          ("CLONE_PARENT" . ((number "0x00008000" 1862 . 1872)))
+          ("CLONE_SETTLS" . ((number "0x00080000" 2190 . 2200)))
+          ("CLONE_CHILD_CLEARTID" . ((number "0x00200000" 2353 . 2363)))
+          ("CLONE_CHILD_SETTID" . ((number "0x01000000" 2642 . 2652)))
+          ("SCHED_IDLE" . ((number "5" 1167 . 1168)))
+          ("CLONE_NEWNET" . ((number "0x40000000" 3030 . 3040)))
+          ("SCHED_RR" . ((number "2" 1103 . 1104)))
+          ("CLONE_THREAD" . ((number "0x00010000" 1966 . 1976)))
+          ("CLONE_UNTRACED" . ((number "0x00800000" 2519 . 2529)))
+          ("CLONE_NEWPID" . ((number "0x20000000" 2971 . 2981)))
+          ("CLONE_DETACHED" . ((number "0x00400000" 2454 . 2464)))
+          ("CLONE_NEWCGROUP" . ((number "0x02000000" 2739 . 2749)))
+          ("SCHED_BATCH" . ((number "3" 1144 . 1145)))
+          ("CLONE_NEWUTS" . ((number "0x04000000" 2801 . 2811)))
+          ("SCHED_RESET_ON_FORK" . ((number "0x40000000" 1199 . 1209)))
+          ("CLONE_FS" . ((number "0x00000200" 1430 . 1440)))
+          ("CLONE_VFORK" . ((number "0x00004000" 1749 . 1759)))
+          ("CSIGNAL" . ((number "0x000000ff" 1280 . 1290)))
+          ("CLONE_FILES" . ((number "0x00000400" 1512 . 1522)))
+          ("CLONE_SIGHAND" . ((number "0x00000800" 1597 . 1607)))
+          ("CLONE_SYSVSEM" . ((number "0x00040000" 2110 . 2120)))
+          ("CLONE_NEWUSER" . ((number "0x10000000" 2911 . 2921)))
+          ("SCHED_OTHER" . ((number "0" 1061 . 1062)))
+          ("SCHED_FIFO" . ((number "1" 1083 . 1084)))
+          ("CLONE_VM" . ((number "0x00000100" 1353 . 1363)))
           )
 ))
   :file "!usr!include!bits!semantic.cache"

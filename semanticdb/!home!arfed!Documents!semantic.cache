@@ -1,0 +1,78 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("string.h" include (:system-flag t) nil [40 59])
+            ("unistd.h" include (:system-flag t) nil [60 79])
+            ("sys/types.h" include (:system-flag t) nil [80 102])
+            ("sys/socket.h" include (:system-flag t) nil [103 126])
+            ("netdb.h" include (:system-flag t) nil [127 145])
+            ("netinet/in.h" include (:system-flag t) nil [146 169])
+            ("netinet/tcp.h" include (:system-flag t) nil [170 194])
+            ("pthread.h" include (:system-flag t) nil [195 215])
+            ("ARG_NUM" variable (:constant-flag t) nil [225 232])
+            ("STR_SIZE" variable (:constant-flag t) nil [243 251])
+            ("PSTART_ARG" variable (:constant-flag t) nil [263 273])
+            ("PEND_ARG" variable (:constant-flag t) nil [284 292])
+            ("MAX_THREADS" variable (:constant-flag t) nil [303 314])
+            ("output" variable
+               (:pointer 2
+                :type "char")
+                nil [342 356])
+            ("address" variable
+               (:pointer 1
+                :type "char")
+                nil [357 371])
+            ("pstart" variable (:type "unsigned short") nil [372 394])
+            ("pend" variable (:type "unsigned short") nil [395 415])
+            ("fail" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("message" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [476 497]))                  
+                :type "void")
+                nil [458 552])
+            ("scan" function
+               (:pointer 1
+                :arguments 
+                  ( ("port_number" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [566 584]))                  
+                :type "void")
+                nil [555 1915])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1927 1936])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1937 1950]))                  
+                :type "int")
+                nil [1918 3019]))          
+      :file "TCPScanner.c"
+      :pointmax 3020
+      :fsize 3019
+      :lastmodtime '(22897 55385 670483 738000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ARG_NUM" . ((number "3" 233 . 234)))
+          ("PEND_ARG" . ((number "3" 293 . 294)))
+          ("MAX_THREADS" . ((number "50000" 315 . 320)))
+          ("STR_SIZE" . ((number "16" 252 . 254)))
+          ("PSTART_ARG" . ((number "2" 274 . 275)))
+          )
+))
+  :file "!home!arfed!Documents!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

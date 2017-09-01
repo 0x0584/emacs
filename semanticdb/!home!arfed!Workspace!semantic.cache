@@ -166,7 +166,47 @@
       :pointmax 25
       :fsize 24
       :lastmodtime '(22883 26514 995511 389000)
-      :unmatched-syntax nil))
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("limits.h" include (:system-flag t) nil [20 39])
+            ("N" variable (:constant-flag t) nil [48 49])
+            ("ERR" variable (:constant-flag t) nil [62 65])
+            ("llong" type
+               (:typedef ("long long")
+                :type "typedef")
+                nil [73 97])
+            ("mod" function
+               (:arguments 
+                  ( ("a" variable (:type ("llong" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [109 117])
+                    ("b" variable (:type ("llong" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [118 127]))                  
+                :type ("llong" type (:type "class") nil nil))
+                nil [99 179])
+            ("general" function
+               (:arguments 
+                  ( ("limit" variable (:type ("llong" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [195 207])
+                    ("mod" variable (:type ("llong" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [208 218]))                  
+                :type ("llong" type (:type "class") nil nil))
+                nil [181 327])
+            ("Sum" function
+               (:arguments 
+                  ( ("y" variable (:type ("llong" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [339 347])
+                    ("x" variable (:type ("llong" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [348 356]))                  
+                :type ("llong" type (:type "class") nil nil))
+                nil [329 460])
+            ("main" function (:type "int") nil [462 826]))          
+      :file "2.c"
+      :pointmax 827
+      :fsize 826
+      :lastmodtime '(22896 59763 618762 190000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("N" . ((number "10" 51 . 53)))
+          ("ERR" . ((semantic-list "(-1)" 67 . 71)))
+          )
+))
   :file "!home!arfed!Workspace!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

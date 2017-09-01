@@ -1,24 +1,24 @@
 
 ;; ----- smex-history -----
 (
- timeclock-update-modeline
+ package-list-packages
+ helm-themes
+ package-delete
+ describe-mode
+ package-install
  timeclock-mode-line-display
- display-time-mode
- display-time
- timeclock-modeline-display
- timeclock-in
- timeclock-out
+ sml/setup
 )
 
 ;; ----- smex-data -----
 (
  (gnus . 2)
  (menu-bar-mode . 3)
- (helm-themes . 7)
+ (helm-themes . 12)
  (menu-bar-options-save . 1)
  (eval-expression . 2)
  (hide/show-comments . 2)
- (package-install . 5)
+ (package-install . 9)
  (recover-session . 1)
  (org-table-create . 2)
  (term . 4)
@@ -27,13 +27,13 @@
  (magit-log . 1)
  (magit-log-all . 1)
  (my-magit-status . 1)
- (describe-key . 2)
+ (describe-key . 3)
  (eval-buffer . 2)
  (insert-date . 2)
  (insert-time . 1)
  (flymake-mode . 1)
- (make-directory . 1)
- (package-list-packages . 5)
+ (make-directory . 3)
+ (package-list-packages . 7)
  (flycheck-disable-checker . 1)
  (occur . 1)
  (browse-url-w3 . 1)
@@ -52,8 +52,8 @@
  (powerline-revert . 1)
  (emms . 1)
  (emms-player-mpd-connect . 1)
- (bongo . 2)
- (join-line . 2)
+ (bongo . 4)
+ (join-line . 3)
  (tabify . 1)
  (timeclock-in . 3)
  (timeclock-out . 1)
@@ -62,4 +62,13 @@
  (display-time . 2)
  (display-time-mode . 3)
  (timeclock-update-modeline . 1)
+ (bongo-show . 3)
+ (visual-line-mode . 1)
+ (org-deadline . 3)
+ (bongo-next . 3)
+ (describe-mode . 1)
+ (package-delete . 1)
+ (eclim-mode . 1)
+ (jdee-find . 1)
+ (jdee-run . 1)
 )
