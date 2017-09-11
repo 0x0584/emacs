@@ -11,6 +11,8 @@
 
 (define-abbrev-table 'diff-mode-abbrev-table '())
 
+(define-abbrev-table 'display-time-world-mode-abbrev-table '())
+
 (define-abbrev-table 'dsssl-mode-abbrev-table '())
 
 (define-abbrev-table 'edebug-eval-mode-abbrev-table '())
@@ -81,9 +83,7 @@
 
 (define-abbrev-table 'tuareg-interactive-mode-abbrev-table '())
 
-(define-abbrev-table 'tuareg-mode-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'tuareg-mode-abbrev-table '())
 
 (define-abbrev-table 'url-cookie-mode-abbrev-table '())
 
