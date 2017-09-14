@@ -47,11 +47,13 @@
 ;;(declare (indent 1) (debug t))
 ;;`(eval-after-load ,file '(progn ,@body))))
 
-(add-to-list 'load-path "~/.emacs.d/nyan-mode")
-(require 'nyan-mode)
-(setq-default nyan-wavy-trail t)
-(nyan-mode)
-(nyan-start-animation)
+(when (display-graphic-p)
+  (add-to-list 'load-path "~/.emacs.d/nyan-mode")
+  (require 'nyan-mode)
+  (setq-default nyan-wavy-trail t)
+  (nyan-mode)
+  (nyan-start-animation))
+
 ;; (if (/= 1 detect-display)
 ;;     ((add-to-list 'load-path "~/.emacs.d/nyan-mode")
 ;;      (require 'nyan-mode)
