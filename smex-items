@@ -2,38 +2,38 @@
 ;; ----- smex-history -----
 (
  package-list-packages
- helm-themes
- package-delete
- describe-mode
- package-install
- timeclock-mode-line-display
- sml/setup
+ eval-buffer
+ eval-expression
+ lisp-eval-defun
+ lisp-complete-symbol
+ lisp-interaction-mode
+ eshell-mode
 )
 
 ;; ----- smex-data -----
 (
  (gnus . 2)
  (menu-bar-mode . 3)
- (helm-themes . 12)
+ (helm-themes . 25)
  (menu-bar-options-save . 1)
- (eval-expression . 2)
+ (eval-expression . 3)
  (hide/show-comments . 2)
- (package-install . 9)
+ (package-install . 13)
  (recover-session . 1)
  (org-table-create . 2)
- (term . 4)
+ (term . 5)
  (create-tags . 5)
  (xref-find-definitions . 1)
  (magit-log . 1)
  (magit-log-all . 1)
  (my-magit-status . 1)
  (describe-key . 3)
- (eval-buffer . 2)
+ (eval-buffer . 4)
  (insert-date . 2)
  (insert-time . 1)
  (flymake-mode . 1)
- (make-directory . 3)
- (package-list-packages . 7)
+ (make-directory . 4)
+ (package-list-packages . 9)
  (flycheck-disable-checker . 1)
  (occur . 1)
  (browse-url-w3 . 1)
@@ -63,12 +63,36 @@
  (display-time-mode . 3)
  (timeclock-update-modeline . 1)
  (bongo-show . 3)
- (visual-line-mode . 1)
- (org-deadline . 3)
+ (visual-line-mode . 3)
+ (org-deadline . 7)
  (bongo-next . 3)
- (describe-mode . 1)
+ (describe-mode . 5)
  (package-delete . 1)
  (eclim-mode . 1)
  (jdee-find . 1)
  (jdee-run . 1)
+ (impatient-mode . 3)
+ (httpd-start . 2)
+ (sx-search . 1)
+ (pwd . 1)
+ (phpcs . 1)
+ (web-mode . 7)
+ (php-insert-class . 1)
+ (describe-face . 1)
+ (html-line . 2)
+ (html-mode . 1)
+ (doc-view-menu . 1)
+ (doc-view-shrink . 1)
+ (org-agenda . 1)
+ (org-agenda-list . 1)
+ (chess . 1)
+ (lisp-interaction-mode . 2)
+ (emacs-lisp-byte-compile . 1)
+ (helm-eval-expression . 1)
+ (anything-eval-expression-with-eldoc . 1)
+ (eshell . 1)
+ (eshell-mode . 1)
+ (eshell-pcomplete . 1)
+ (lisp-complete-symbol . 1)
+ (lisp-eval-defun . 2)
 )

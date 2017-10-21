@@ -47,12 +47,11 @@
 ;;(declare (indent 1) (debug t))
 ;;`(eval-after-load ,file '(progn ,@body))))
 
-(when (display-graphic-p)
-  (add-to-list 'load-path "~/.emacs.d/nyan-mode")
-  (require 'nyan-mode)
-  (setq-default nyan-wavy-trail t)
-  (nyan-mode)
-  (nyan-start-animation))
+(add-to-list 'load-path "~/.emacs.d/nyan-mode")
+(require 'nyan-mode)
+(setq-default nyan-wavy-trail t)
+(nyan-mode)
+(nyan-start-animation)
 
 ;; (if (/= 1 detect-display)
 ;;     ((add-to-list 'load-path "~/.emacs.d/nyan-mode")
@@ -157,10 +156,12 @@
    (quote
     ("#336c6c" "#205070" "#0f2050" "#806080" "#401440" "#6c1f1c" "#6b400c" "#23733c")))
  '(nyan-mode t)
- '(org-agenda-files (quote ("~/orged/todo.org")))
+ '(org-agenda-files
+   (quote
+    ("~/orged/LP-DBA/gl.org" "/home/arfed/orged/MASTER.org" "/home/arfed/orged/Q.org" "/home/arfed/orged/emails.org" "/home/arfed/orged/ghiwan.org" "/home/arfed/orged/led-zeppelin.org" "/home/arfed/orged/todo.org")))
  '(package-selected-packages
    (quote
-    (visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile company company-irony-c-headers flycheck-irony irony irony-eldoc runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org helm-spotify howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (smartparens tern zenburn-theme php+-mode yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile company company-irony-c-headers flycheck-irony irony irony-eldoc runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org helm-spotify howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme company-irony company-c-headers helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(powerline-color1 "#1E1E1E")
  '(powerline-color2 "#111111")
@@ -266,7 +267,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 113 :width normal :size 15))))
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 98 :width normal :size 15))))
  '(bm-face ((t (:background "orange" :foreground "Black"))))
  '(bm-fringe-face ((t (:background "gold" :foreground "Black")))))
 ;; '(rainbow-delimiters-depth-1-face ((t (:foreground "#99d1ce"))))
@@ -929,6 +930,7 @@ the checking happens for all pairs in auto-minor-mode-alist"
 (global-set-key (kbd "C-c i") 'inf-ruby)
 
 (defun next-code-buffer ()
+  "Next code buffer."
   (interactive)
   (let (( bread-crumb (buffer-name) ))
     (next-buffer)
@@ -937,9 +939,9 @@ the checking happens for all pairs in auto-minor-mode-alist"
          (string-match-p "^\*" (buffer-name))
          (not ( equal bread-crumb (buffer-name) )) )
       (next-buffer))))
-(global-set-key [remap next-buffer] 'next-code-buffer)
 
 (defun previous-code-buffer ()
+  "Previous code buffer."
   (interactive)
   (let (( bread-crumb (buffer-name) ))
     (previous-buffer)
@@ -948,6 +950,8 @@ the checking happens for all pairs in auto-minor-mode-alist"
          (string-match-p "^\*" (buffer-name))
          (not ( equal bread-crumb (buffer-name) )) )
       (previous-buffer))))
+
+(global-set-key [remap next-buffer] 'next-code-buffer)
 (global-set-key [remap previous-buffer] 'previous-code-buffer)
 
 (setq lexical-binding t
@@ -959,26 +963,83 @@ the checking happens for all pairs in auto-minor-mode-alist"
 (defvar night-end 8
   "The hour that people wake up.")
 
-;; (fa-config-default)
-
-;; (require 'symon)
-;; (symon-mode)
-;; (setq powerline-arrow-shape 'arrow)   ;; the default
-;; (setq powerline-arrow-shape 'curve)   ;; give your mode-line curves
-;; (setq powerline-arrow-shape 'arrow14) ;; best for small fonts
-
-;; (custom-set-faces
-;;  '(mode-line ((t(:foreground "#030303" :background "#bdbdbd" :box nil))))
-;;  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
-
-;; (setq powerline-color1 "grey22")
-;; (setq powerline-color2 "grey40")
 ;; (defun nightp ()
 ;;   "Check if it is night."
 ;;   (let ((hr (nth 2 (decode-time (current-time)))))
 ;;     (unless (< hr night-end) (> hr night-start))))
 
-(provide 'init)
-;;; init.el ends here
+(defvar install-theme-loading-times nil
+  "An association list of time strings and theme names.
+The themes will be loaded at the specified time every day.")
+(defvar install-theme-timers nil)
+
+(defun install-theme-loading-at-times ()
+  "Set up theme loading according to `install-theme-loading-at-times`."
+  (interactive)
+  (dolist (timer install-theme-timers) (cancel-timer timer))
+  (setq install-theme-timers nil)
+  (dolist (time-theme install-theme-loading-times)
+    (add-to-list
+     'install-theme-timers
+     (run-at-time
+      (car time-theme)
+      (* 60 60 24)
+      'load-theme (cdr time-theme)))))
+(setq install-theme-loading-times '(("6:00am" . manoj-dark)
+				    ("10:30pm" . anti-zenburn-theme)))
+
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+
+;;; ==== disable the mouse =====
+(define-minor-mode disable-mouse-mode
+  "A minor-mode that disables all mouse keybinds."
+  :global t
+  :lighter " 🐭"
+  :keymap (make-sparse-keymap))
+
+(dolist (type '(mouse down-mouse drag-mouse
+                      double-mouse triple-mouse))
+  (dolist (prefix '("" C- M- S- M-S- C-M- C-S- C-M-S-))
+    ;; Yes, I actually HAD to go up to 7 here.
+    (dotimes (n 7)
+      (let ((k (format "%s%s-%s" prefix type n)))
+        (define-key disable-mouse-mode-map
+          (vector (intern k)) #'ignore)))))
+
+(disable-mouse-mode 1) ;; activate the mode
+
+(require 'php+-mode)
+(php+-mode-setup)
+
+;;(setq org-agenda-files (file-expand-wildcards "~/orged/*.org"))
+;;(add-to-list 'org-agenda-files (expand-file-name "~/orged"))
+(setq org-agenda-files (list "~/orged"))
+
+;; By an unknown contributor
+          
+(global-set-key "%" 'match-paren)
+
+(defun match-paren (arg)
+  "Go to the matching parenthesis if on parenthesis, otherwise insert %.
+vi style of % jumping to matching brace."
+  (interactive "p")
+  (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
+        ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
+        (t (self-insert-command (or arg 1)))))
+
+(setq show-paren-when-point-inside-paren t)
+
+(defun shell-command-on-str (cmd &optional str)
+  "Insert result of calling CMD with STR as input.
+STR is `current-kill` if unspecified."
+  (interactive (list (read-shell-command "Shell command on region: ")))
+  (setq str (or str
+                (current-kill 0)))
+  (insert (with-temp-buffer
+            (insert str)
+            (shell-command-on-region (point-min) (point-max) cmd nil 'replace)
+            (buffer-string))))
+
+(provide 'init)
+;;; init ends here
