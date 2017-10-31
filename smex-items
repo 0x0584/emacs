@@ -1,19 +1,19 @@
 
 ;; ----- smex-history -----
 (
- hs-minor-mode
  eval-buffer
- org-mode
- customize-variable
- setenv
- plantuml-mode
- describe-mode
+ impatient-mode
+ pwd
+ httpd-start
+ org-version
+ helm-themes
+ sql-mysql
 )
 
 ;; ----- smex-data -----
 (
- (helm-themes . 2)
- (electric-pair-mode . 1)
+ (helm-themes . 5)
+ (electric-pair-mode . 2)
  (electric-operator-mode . 1)
  (find-file . 2)
  (find-grep . 2)
@@ -21,8 +21,18 @@
  (describe-mode . 1)
  (plantuml-mode . 1)
  (setenv . 1)
- (customize-variable . 1)
+ (customize-variable . 2)
  (org-mode . 1)
- (eval-buffer . 2)
+ (eval-buffer . 3)
  (hs-minor-mode . 2)
+ (sql-mysql . 3)
+ (auto-complete . 3)
+ (pwd . 3)
+ (org-table-create . 2)
+ (auto-complete-mode . 2)
+ (org-version . 2)
+ (impatient-mode . 3)
+ (httpd-start . 2)
+ (org-toggle-inline-images . 1)
+ (org-remove-inline-images . 1)
 )

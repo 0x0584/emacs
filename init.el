@@ -132,10 +132,10 @@
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(blink-cursor-mode t)
  '(column-number-mode t)
- '(custom-enabled-themes (quote (manoj-dark)))
+ '(custom-enabled-themes (quote (gotham)))
  '(custom-safe-themes
    (quote
-    ("ed8cf6d52a2ba9ed7a29a8aac81d83c362a9b62f48b558932a77130163fe9972" "12b7ed9b0e990f6d41827c343467d2a6c464094cbcc6d0844df32837b50655f9" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "b9e9ba5aeedcc5ba8be99f1cc9301f6679912910ff92fdf7980929c2fc83ab4d" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "12ab69d8db952a79aa079da812c147ae551f6427448f2564e29f910bcef7bf93" "603a9c7f3ca3253cb68584cb26c408afcf4e674d7db86badcfe649dd3c538656" "40bc0ac47a9bd5b8db7304f8ef628d71e2798135935eb450483db0dbbfff8b11" "9b402e9e8f62024b2e7f516465b63a4927028a7055392290600b776e4a5b9905" "bc40f613df8e0d8f31c5eb3380b61f587e1b5bc439212e03d4ea44b26b4f408a" "6bb466c89b7e3eedc1f19f5a0cfa53be9baf6077f4d4a6f9b5d087f0231de9c8" "aae95fc700f9f7ff70efbc294fc7367376aa9456356ae36ec234751040ed9168" "cc60d17db31a53adf93ec6fad5a9cfff6e177664994a52346f81f62840fe8e23" "f9574c9ede3f64d57b3aa9b9cef621d54e2e503f4d75d8613cbcc4ca1c962c21" "5cd0afd0ca01648e1fff95a7a7f8abec925bd654915153fb39ee8e72a8b56a1f" "a3132bd39a977ddde4c002f8bd0ef181414c3fbe9228e3643b999491192680ad" "90e4b4a339776e635a78d398118cb782c87810cb384f1d1223da82b612338046" "590759adc4a5bf7a183df81654cce13b96089e026af67d92b5eec658fb3fe22f" default)))
+    ("b550fc3d6f0407185ace746913449f6ed5ddc4a9f0cf3be218af4fb3127c7877" "ed8cf6d52a2ba9ed7a29a8aac81d83c362a9b62f48b558932a77130163fe9972" "12b7ed9b0e990f6d41827c343467d2a6c464094cbcc6d0844df32837b50655f9" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "b9e9ba5aeedcc5ba8be99f1cc9301f6679912910ff92fdf7980929c2fc83ab4d" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "12ab69d8db952a79aa079da812c147ae551f6427448f2564e29f910bcef7bf93" "603a9c7f3ca3253cb68584cb26c408afcf4e674d7db86badcfe649dd3c538656" "40bc0ac47a9bd5b8db7304f8ef628d71e2798135935eb450483db0dbbfff8b11" "9b402e9e8f62024b2e7f516465b63a4927028a7055392290600b776e4a5b9905" "bc40f613df8e0d8f31c5eb3380b61f587e1b5bc439212e03d4ea44b26b4f408a" "6bb466c89b7e3eedc1f19f5a0cfa53be9baf6077f4d4a6f9b5d087f0231de9c8" "aae95fc700f9f7ff70efbc294fc7367376aa9456356ae36ec234751040ed9168" "cc60d17db31a53adf93ec6fad5a9cfff6e177664994a52346f81f62840fe8e23" "f9574c9ede3f64d57b3aa9b9cef621d54e2e503f4d75d8613cbcc4ca1c962c21" "5cd0afd0ca01648e1fff95a7a7f8abec925bd654915153fb39ee8e72a8b56a1f" "a3132bd39a977ddde4c002f8bd0ef181414c3fbe9228e3643b999491192680ad" "90e4b4a339776e635a78d398118cb782c87810cb384f1d1223da82b612338046" "590759adc4a5bf7a183df81654cce13b96089e026af67d92b5eec658fb3fe22f" default)))
  '(display-time-mode t)
  '(ede-project-directories (quote ("/home/arfed/Workspace/morse-code-master/src")))
  '(fci-rule-character-color "#202020")
@@ -1128,5 +1128,108 @@ STR is `current-kill` if unspecified."
          (plantuml . t)
          (latex . t))))
 (message "done.")
+
+(setq image-file-name-extensions
+   (quote
+    ("png" "jpeg" "jpg" "gif" "tiff" "tif" "xbm" "xpm" "pbm" "pgm" "ppm" "pnm" "svg" "pdf" "bmp")))
+
+(setq org-image-actual-width 400)
+
+(setq org-imagemagick-display-command "convert -density 600 \"%s\" -thumbnail \"%sx%s>\" \"%s\"")
+(defun org-display-inline-images (&optional include-linked refresh beg end)
+  "Display inline images.
+Normally only links without a description part are inlined, because this
+is how it will work for export.  When INCLUDE-LINKED is set, also links
+with a description part will be inlined.  This
+can be nice for a quick
+look at those images, but it does not reflect what exported files will look
+like.
+When REFRESH is set, refresh existing images between BEG and END.
+This will create new image displays only if necessary.
+BEG and END default to the buffer boundaries."
+  (interactive "P")
+  (unless refresh
+    (org-remove-inline-images)
+    (if (fboundp 'clear-image-cache) (clear-image-cache)))
+  (save-excursion
+    (save-restriction
+      (widen)
+      (setq beg (or beg (point-min)) end (or end (point-max)))
+      (goto-char beg)
+      (let ((re (concat "\\[\\[\\(\\(file:\\)\\|\\([./~]\\)\\)\\([^]\n]+?"
+                        (substring (org-image-file-name-regexp) 0 -2)
+                        "\\)\\]" (if include-linked "" "\\]")))
+            old file ov img)
+        (while (re-search-forward re end t)
+          (setq old (get-char-property-and-overlay (match-beginning 1)
+                                                   'org-image-overlay)
+        file (expand-file-name
+                      (concat (or (match-string 3) "") (match-string 4))))
+          (when (file-exists-p file)
+            (let ((file-thumb (format "%s%s_thumb.png" (file-name-directory file) (file-name-base file))))
+              (if (file-exists-p file-thumb)
+                  (let ((thumb-time (nth 5 (file-attributes file-thumb 'string)))
+                        (file-time (nth 5 (file-attributes file 'string))))
+                    (if (time-less-p thumb-time file-time)
+            (shell-command (format org-imagemagick-display-command
+                           file org-image-actual-width org-image-actual-width file-thumb) nil nil)))
+                (shell-command (format org-imagemagick-display-command
+                                         file org-image-actual-width org-image-actual-width file-thumb) nil nil))
+              (if (and (car-safe old) refresh)
+                  (image-refresh (overlay-get (cdr old) 'display))
+                (setq img (save-match-data (create-image file-thumb)))
+                (when img
+                  (setq ov (make-overlay (match-beginning 0) (match-end 0)))
+                  (overlay-put ov 'display img)
+                  (overlay-put ov 'face 'default)
+                  (overlay-put ov 'org-image-overlay t)
+                  (overlay-put ov 'modification-hooks
+                               (list 'org-display-inline-remove-overlay))
+                  (push ov org-inline-image-overlays))))))))))
+;; (defun org-display-inline-images (&optional include-linked refresh beg end)
+;;   "Display inline images.
+;; Normally only links without a description part are inlined, because this
+;; is how it will work for export.  When INCLUDE-LINKED is set, also links
+;; with a description part will be inlined.  This can be nice for a quick
+;; look at those images, but it does not reflect what exported files will look
+;; like.
+;; When REFRESH is set, refresh existing images between BEG and END.
+;; This will create new image displays only if necessary.
+;; BEG and END default to the buffer boundaries."
+;;   (interactive "P")
+;;   (unless refresh
+;;     (org-remove-inline-images)
+;;     (if (fboundp 'clear-image-cache) (clear-image-cache)))
+;;   (save-excursion
+;;     (save-restriction
+;;       (widen)
+;;       (setq beg (or beg (point-min)) end (or end (point-max)))
+;;       (goto-char beg)
+;;       (let ((re (concat "\\[\\[\\(\\(file:\\)\\|\\([./~]\\)\\)\\([^]\n]+?"
+;; 			(substring (org-image-file-name-regexp) 0 -2)
+;; 			"\\)\\]" (if include-linked "" "\\]")))
+;; 	    old file ov img)
+;; 	(while (re-search-forward re end t)
+;; 	  (setq old (get-char-property-and-overlay (match-beginning 1)
+;; 						   'org-image-overlay))
+;; 	  (setq file (expand-file-name
+;; 		      (concat (or (match-string 3) "") (match-string 4))))
+;; 	  (when (file-exists-p file)
+;;             (let ((file-thumb (format "%s%st.png" (file-name-directory file) (file-name-base file) "t.png")))
+;;               (unless (file-exists-p file-thumb)
+;;                 (shell-command (format "convert %s -thumbnail 400x400 %s"
+;;                                        file file-thumb)))
+;; 	      (if (and (car-safe old) refresh)
+;; 		  (image-refresh (overlay-get (cdr old) 'display))
+;; 		(setq img (save-match-data (create-image file-thumb)))
+;; 		(when img
+;; 		  (setq ov (make-overlay (match-beginning 0) (match-end 0)))
+;; 		  (overlay-put ov 'display img)
+;; 		  (overlay-put ov 'face 'default)
+;; 		  (overlay-put ov 'org-image-overlay t)
+;; 		  (overlay-put ov 'modification-hooks
+;; 			       (list 'org-display-inline-remove-overlay))
+;; 		  (push ov org-inline-image-overlays))))))))))
+
 (provide 'init)
 ;;; init ends here
