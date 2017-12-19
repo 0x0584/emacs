@@ -1,23 +1,23 @@
 
 ;; ----- smex-history -----
 (
- eval-buffer
- impatient-mode
- pwd
- httpd-start
- org-version
  helm-themes
- sql-mysql
+ package-list-packages
+ electric-pair-mode
+ php-mode
+ c-reformat-buffer
+ auto-insert
+ package-delete
 )
 
 ;; ----- smex-data -----
 (
- (helm-themes . 5)
- (electric-pair-mode . 2)
+ (helm-themes . 10)
+ (electric-pair-mode . 5)
  (electric-operator-mode . 1)
  (find-file . 2)
  (find-grep . 2)
- (package-list-packages . 1)
+ (package-list-packages . 2)
  (describe-mode . 1)
  (plantuml-mode . 1)
  (setenv . 1)
@@ -35,4 +35,12 @@
  (httpd-start . 2)
  (org-toggle-inline-images . 1)
  (org-remove-inline-images . 1)
+ (load-theme . 1)
+ (customize-themes . 1)
+ (customize-face . 1)
+ (web-mode . 1)
+ (php-mode . 3)
+ (package-delete . 4)
+ (auto-insert . 1)
+ (c-reformat-buffer . 3)
 )

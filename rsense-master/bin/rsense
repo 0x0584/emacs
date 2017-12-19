@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/rsense/client/daemon'
+require_relative '../lib/rsense/client/runner'
+require_relative "../lib/rsense/version"
+require "jruby-jars"
+require "pathname"
+
+daemon = Rsense::Client::Daemon.new(ARGV[1..-1])
+
+if ARGV[0] == 'start'
+  daemon.start
+  STDERR.puts "rsense version: #{Rsense::VERSION}"
+  STDERR.puts "logs at: /tmp/rsense.log"
+  STDERR.puts "process running at: #{Rsense::Client::Runner.get_pid}"
+elsif ARGV[0] == 'stop'
+  daemon.stop
+elsif ARGV[0] == 'restart'
+  daemon.stop
+  daemon.start
+else
+  STDERR.puts "rsense version #{Rsense::VERSION}"
+  STDERR.puts "Usage: rsense <start|stop|restart>"
+  exit!
+end
