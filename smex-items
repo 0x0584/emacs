@@ -1,23 +1,23 @@
 
 ;; ----- smex-history -----
 (
+ customize-themes
  helm-themes
+ cfw:open-calendar-buffer
  package-list-packages
- electric-pair-mode
- php-mode
- c-reformat-buffer
- auto-insert
- package-delete
+ package-install
+ customize-face
+ org-reload
 )
 
 ;; ----- smex-data -----
 (
- (helm-themes . 10)
+ (helm-themes . 12)
  (electric-pair-mode . 5)
  (electric-operator-mode . 1)
  (find-file . 2)
  (find-grep . 2)
- (package-list-packages . 2)
+ (package-list-packages . 3)
  (describe-mode . 1)
  (plantuml-mode . 1)
  (setenv . 1)
@@ -36,11 +36,16 @@
  (org-toggle-inline-images . 1)
  (org-remove-inline-images . 1)
  (load-theme . 1)
- (customize-themes . 1)
- (customize-face . 1)
+ (customize-themes . 2)
+ (customize-face . 4)
  (web-mode . 1)
  (php-mode . 3)
  (package-delete . 4)
  (auto-insert . 1)
  (c-reformat-buffer . 3)
+ (visual-line-mode . 1)
+ (org-reload . 1)
+ (org-deadline . 1)
+ (package-install . 2)
+ (cfw:open-calendar-buffer . 1)
 )

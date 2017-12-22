@@ -164,7 +164,7 @@
  '(org-plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(package-selected-packages
    (quote
-    (geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org helm-spotify howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org helm-spotify howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(powerline-color1 "#1E1E1E")
@@ -274,7 +274,25 @@
  '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 98 :width normal :size 15))))
  '(bm-face ((t (:background "orange" :foreground "Black"))))
  '(bm-fringe-face ((t (:background "gold" :foreground "Black"))))
- '(font-lock-comment-face ((t (:foreground "#245361" :slant oblique)))))
+ '(cfw:face-annotation ((t :foreground "RosyBrown" :inherit cfw:face-day-title)))
+ '(cfw:face-day-title ((t :background "grey10")))
+ '(cfw:face-default-content ((t :foreground "#bfebbf")))
+ '(cfw:face-default-day ((t :weight bold :inherit cfw:face-day-title)))
+ '(cfw:face-disable ((t :foreground "DarkGray" :inherit cfw:face-day-title)))
+ '(cfw:face-grid ((t :foreground "DarkGrey")))
+ '(cfw:face-header ((t (:foreground "#d0bf8f" :weight bold))))
+ '(cfw:face-holiday ((t :background "grey10" :foreground "#8c5353" :weight bold)))
+ '(cfw:face-periods ((t :foreground "cyan")))
+ '(cfw:face-saturday ((t :foreground "#8cd0d3" :background "grey10" :weight bold)))
+ '(cfw:face-select ((t :background "#2f2f2f")))
+ '(cfw:face-sunday ((t :foreground "#cc9393" :background "grey10" :weight bold)))
+ '(cfw:face-title ((t (:foreground "#f0dfaf" :weight bold :height 2.0 :inherit variable-pitch))))
+ '(cfw:face-today ((t :background: "grey10" :weight bold)))
+ '(cfw:face-today-title ((t :background "#7f9f7f" :weight bold)))
+ '(cfw:face-toolbar ((t :foreground "Steelblue4" :background "Steelblue4")))
+ '(cfw:face-toolbar-button-off ((t :foreground "Gray10" :weight bold)))
+ '(cfw:face-toolbar-button-on ((t :foreground "Gray50" :weight bold)))
+ '(font-lock-comment-face ((t (:foreground "cadet blue" :slant oblique)))))
 ;; '(rainbow-delimiters-depth-1-face ((t (:foreground "#99d1ce"))))
 ;; '(rainbow-delimiters-depth-2-face ((t (:inherit outline-1 :foreground "#5CACEE"))))
 ;; '(rainbow-delimiters-depth-3-face ((t (:inherit outline-2 :foreground "#FF4500"))))
@@ -769,7 +787,7 @@ Don't mess with special buffers."
 
 ;; ==== ORG-MODE ====
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "IN-PROGRESS(s!)" "|" "PENDING(p!)" "DONE(d!/!)" "CANCELED(c!/!)" "UNDER-REVISING(u)")))
+      '((sequence "TODO(t)" "IN-PROGRESS(s!)" "EXAM" "|" "PENDING(p!)" "DONE(d!/!)" "CANCELED(c!/!)" "UNDER-REVISING(u)")))
 
 ;; -- Display images in org mode
 ;; enable image mode first
@@ -1271,6 +1289,52 @@ BEG and END default to the buffer boundaries."
 ;; 		  (overlay-put ov 'modification-hooks
 ;; 			       (list 'org-display-inline-remove-overlay))
 ;; 		  (push ov org-inline-image-overlays))))))))))
+(require 'calfw)
+
+(setq cfw:org-agenda-schedule-args '(:timestamp))
+(setq cfw:org-overwrite-default-keybinding t)
+
+;; Month
+(setq calendar-month-name-array
+  ["January" "February" "March"     "April"   "May"      "June"
+   "July"    "August"   "September" "October" "November" "December"])
+
+;; Week days
+(setq calendar-day-name-array
+      ["Sunday" "Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday"])
+
+;; First day of the week
+(setq calendar-week-start-day 1) ; 0:Sunday, 1:Monday
+
+;; (custom-set-faces
+;;  '(cfw:face-title ((t (:foreground "#f0dfaf" :weight bold :height 2.0 :inherit variable-pitch))))
+;;  '(cfw:face-header ((t (:foreground "#d0bf8f" :weight bold))))
+;;  '(cfw:face-sunday ((t :foreground "#cc9393" :background "grey10" :weight bold)))
+;;  '(cfw:face-saturday ((t :foreground "#8cd0d3" :background "grey10" :weight bold)))
+;;  '(cfw:face-holiday ((t :background "grey10" :foreground "#8c5353" :weight bold)))
+;;  '(cfw:face-grid ((t :foreground "DarkGrey")))
+;;  '(cfw:face-default-content ((t :foreground "#bfebbf")))
+;;  '(cfw:face-periods ((t :foreground "cyan")))
+;;  '(cfw:face-day-title ((t :background "grey10")))
+;;  '(cfw:face-default-day ((t :weight bold :inherit cfw:face-day-title)))
+;;  '(cfw:face-annotation ((t :foreground "RosyBrown" :inherit cfw:face-day-title)))
+;;  '(cfw:face-disable ((t :foreground "DarkGray" :inherit cfw:face-day-title)))
+;;  '(cfw:face-today-title ((t :background "#7f9f7f" :weight bold)))
+;;  '(cfw:face-today ((t :background: "grey10" :weight bold)))
+;;  '(cfw:face-select ((t :background "#2f2f2f")))
+;;  '(cfw:face-toolbar ((t :foreground "Steelblue4" :background "Steelblue4")))
+;;  '(cfw:face-toolbar-button-off ((t :foreground "Gray10" :weight bold)))
+;;  '(cfw:face-toolbar-button-on ((t :foreground "Gray50" :weight bold))))
+
+;; Default setting
+(setq cfw:fchar-junction ?+
+      cfw:fchar-vertical-line ?|
+      cfw:fchar-horizontal-line ?-
+      cfw:fchar-left-junction ?+
+      cfw:fchar-right-junction ?+
+      cfw:fchar-top-junction ?+
+      cfw:fchar-top-left-corner ?+
+      cfw:fchar-top-right-corner ?+ )
 
 (provide 'init)
 ;;; init ends here
