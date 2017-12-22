@@ -1,31 +1,31 @@
 
 ;; ----- smex-history -----
 (
- customize-themes
- helm-themes
- cfw:open-calendar-buffer
- package-list-packages
+ describe-mode
+ mysql-to-org-mode
  package-install
+ sql-mysql
+ php-mode
  customize-face
- org-reload
+ helm-themes
 )
 
 ;; ----- smex-data -----
 (
- (helm-themes . 12)
+ (helm-themes . 17)
  (electric-pair-mode . 5)
  (electric-operator-mode . 1)
  (find-file . 2)
  (find-grep . 2)
  (package-list-packages . 3)
- (describe-mode . 1)
+ (describe-mode . 2)
  (plantuml-mode . 1)
  (setenv . 1)
  (customize-variable . 2)
  (org-mode . 1)
  (eval-buffer . 3)
  (hs-minor-mode . 2)
- (sql-mysql . 3)
+ (sql-mysql . 5)
  (auto-complete . 3)
  (pwd . 3)
  (org-table-create . 2)
@@ -36,16 +36,19 @@
  (org-toggle-inline-images . 1)
  (org-remove-inline-images . 1)
  (load-theme . 1)
- (customize-themes . 2)
- (customize-face . 4)
- (web-mode . 1)
- (php-mode . 3)
+ (customize-themes . 3)
+ (customize-face . 5)
+ (web-mode . 2)
+ (php-mode . 4)
  (package-delete . 4)
  (auto-insert . 1)
  (c-reformat-buffer . 3)
  (visual-line-mode . 1)
  (org-reload . 1)
  (org-deadline . 1)
- (package-install . 2)
- (cfw:open-calendar-buffer . 1)
+ (package-install . 3)
+ (cfw:open-calendar-buffer . 4)
+ (cfw:change-view-day . 1)
+ (process-menu-mode . 2)
+ (mysql-to-org-mode . 3)
 )
