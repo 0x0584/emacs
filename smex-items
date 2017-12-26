@@ -1,19 +1,19 @@
 
 ;; ----- smex-history -----
 (
- describe-mode
- mysql-to-org-mode
+ eww
  package-install
- sql-mysql
- php-mode
- customize-face
+ visual-line-mode
+ web-mode
+ customize-themes
  helm-themes
+ php-mode
 )
 
 ;; ----- smex-data -----
 (
- (helm-themes . 17)
- (electric-pair-mode . 5)
+ (helm-themes . 21)
+ (electric-pair-mode . 7)
  (electric-operator-mode . 1)
  (find-file . 2)
  (find-grep . 2)
@@ -25,30 +25,31 @@
  (org-mode . 1)
  (eval-buffer . 3)
  (hs-minor-mode . 2)
- (sql-mysql . 5)
+ (sql-mysql . 6)
  (auto-complete . 3)
  (pwd . 3)
  (org-table-create . 2)
- (auto-complete-mode . 2)
+ (auto-complete-mode . 3)
  (org-version . 2)
  (impatient-mode . 3)
  (httpd-start . 2)
  (org-toggle-inline-images . 1)
  (org-remove-inline-images . 1)
  (load-theme . 1)
- (customize-themes . 3)
+ (customize-themes . 4)
  (customize-face . 5)
- (web-mode . 2)
- (php-mode . 4)
+ (web-mode . 5)
+ (php-mode . 5)
  (package-delete . 4)
  (auto-insert . 1)
  (c-reformat-buffer . 3)
- (visual-line-mode . 1)
+ (visual-line-mode . 4)
  (org-reload . 1)
  (org-deadline . 1)
- (package-install . 3)
+ (package-install . 4)
  (cfw:open-calendar-buffer . 4)
  (cfw:change-view-day . 1)
  (process-menu-mode . 2)
  (mysql-to-org-mode . 3)
+ (eww . 1)
 )

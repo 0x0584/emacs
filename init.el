@@ -132,10 +132,10 @@
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(blink-cursor-mode t)
  '(column-number-mode t)
- '(custom-enabled-themes (quote (manoj-dark)))
+ '(custom-enabled-themes (quote (gotham)))
  '(custom-safe-themes
    (quote
-    ("d83bd04930314c053753d199873ee36c54bf221fe4b8a0938098f41eaa9a22ae" default)))
+    ("b550fc3d6f0407185ace746913449f6ed5ddc4a9f0cf3be218af4fb3127c7877" "d83bd04930314c053753d199873ee36c54bf221fe4b8a0938098f41eaa9a22ae" default)))
  '(display-time-mode t)
  '(electric-pair-mode t)
  '(fci-rule-character-color "#202020")
@@ -201,7 +201,8 @@
  '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 98 :width normal :size 15))))
  '(bm-face ((t (:background "orange" :foreground "Black"))))
  '(bm-fringe-face ((t (:background "gold" :foreground "Black"))))
- '(font-lock-comment-face ((t (:foreground "cadet blue" :slant oblique)))))
+ '(font-lock-comment-face ((t (:foreground "cadet blue" :slant oblique))))
+ '(font-lock-function-name-face ((t (:foreground "#599cab" :slant italic :weight bold)))))
 ;; '(rainbow-delimiters-depth-1-face ((t (:foreground "#99d1ce"))))
 ;; '(rainbow-delimiters-depth-2-face ((t (:inherit outline-1 :foreground "#5CACEE"))))
 ;; '(rainbow-delimiters-depth-3-face ((t (:inherit outline-2 :foreground "#FF4500"))))
@@ -1244,6 +1245,117 @@ BEG and END default to the buffer boundaries."
       cfw:fchar-top-junction ?+
       cfw:fchar-top-left-corner ?+
       cfw:fchar-top-right-corner ?+ )
+;; css
 
+(defun xah-syntax-color-hex ()
+  "Syntax color text of the form 「#ff1100」 and 「#abc」 in current buffer.
+URL `http://ergoemacs.org/emacs/emacs_CSS_colors.html'
+Version 2017-03-12"
+  (interactive)
+  (font-lock-add-keywords
+   nil
+   '(("#[[:xdigit:]]\\{3\\}"
+      (0 (put-text-property
+          (match-beginning 0)
+          (match-end 0)
+          'face (list :background
+                      (let* (
+                             (ms (match-string-no-properties 0))
+                             (r (substring ms 1 2))
+                             (g (substring ms 2 3))
+                             (b (substring ms 3 4)))
+                        (concat "#" r r g g b b))))))
+     ("#[[:xdigit:]]\\{6\\}"
+      (0 (put-text-property
+          (match-beginning 0)
+          (match-end 0)
+          'face (list :background (match-string-no-properties 0)))))))
+  (font-lock-flush))
+(add-hook 'css-mode-hook 'xah-syntax-color-hex)
+(add-hook 'php-mode-hook 'xah-syntax-color-hex)
+(add-hook 'html-mode-hook 'xah-syntax-color-hex)
+
+;; HSL
+(defun xah-syntax-color-hsl ()
+  "Syntax color CSS's HSL color spec eg 「hsl(0,90%,41%)」 in current buffer.
+URL `http://ergoemacs.org/emacs/emacs_CSS_colors.html'
+Version 2017-02-02"
+  (interactive)
+  (require 'color)
+  (font-lock-add-keywords
+   nil
+   '(("hsl( *\\([0-9]\\{1,3\\}\\) *, *\\([0-9]\\{1,3\\}\\)% *, *\\([0-9]\\{1,3\\}\\)% *)"
+      (0 (put-text-property
+          (+ (match-beginning 0) 3)
+          (match-end 0)
+          'face
+          (list
+           :background
+           (concat
+            "#"
+            (mapconcat
+             'identity
+             (mapcar
+              (lambda (x) (format "%02x" (round (* x 255))))
+              (color-hsl-to-rgb
+               (/ (string-to-number (match-string-no-properties 1)) 360.0)
+               (/ (string-to-number (match-string-no-properties 2)) 100.0)
+               (/ (string-to-number (match-string-no-properties 3)) 100.0)))
+             "" )) ;  "#00aa00"
+           ))))))
+  (font-lock-flush))
+(add-hook 'css-mode-hook 'xah-syntax-color-hsl)
+(add-hook 'php-mode-hook 'xah-syntax-color-hsl)
+(add-hook 'html-mode-hook 'xah-syntax-color-hsl)
+
+;; abbrv
+(define-abbrev-table
+  'global-abbrev-table
+  '(("white" "#ffffff")
+    ("silver" "#c0c0c0")
+    ("gray" "#808080")
+    ("black" "#000000")
+    ("red" "#ff0000")
+    ("maroon" "#800000")
+    ("yellow" "#ffff00")
+    ("olive" "#808000")
+    ("lime" "#00ff00")
+    ("green" "#008000")
+    ("aqua" "#00ffff")
+    ("teal" "#008080")
+    ("blue" "#0000ff")
+    ("navy" "#000080")
+    ("fuchsia" "#ff00ff")
+    ("purple" "#800080")))
+
+
+;; Prevent accidentally killing emacs.
+(global-set-key
+ [(control x) (control c)]
+ '(lambda ()
+    (interactive)
+    (if (y-or-n-p-with-timeout
+	 "Do you really want to exit Emacs ? " 10 nil)
+	(progn
+	  (if window-system
+	      (progn (if (fboundp 'uptime) (uptime))
+		     (sleep-for 1)))
+	  (save-buffers-kill-emacs)))
+    (message "emacs quit aborted")))
+
+(setq org-agenda-custom-commands
+      '(("x" "Exams"
+	 ;; agenda with only items tagged event  
+	 ((agenda "" ((org-agenda-ndays 45)
+		      (org-agenda-tag-filter-preset '("+exam"))
+		      (org-deadline-warning-days 0)))))))
+
+(add-to-list
+ 'org-agenda-custom-commands
+ '("W" "Weekend" ((agenda "" ))
+   ((org-agenda-overriding-header "45 days")
+    (org-agenda-span 45)
+    )) t)
+(setq eww-search-prefix "https://startpage.com/do/m/mobilesearch?query=")
 (provide 'init)
 ;;; init ends here
