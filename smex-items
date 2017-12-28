@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ auto-complete-mode
+ visual-line-mode
+ auto-insert
  eww
  package-install
- visual-line-mode
  web-mode
  customize-themes
- helm-themes
- php-mode
 )
 
 ;; ----- smex-data -----
@@ -29,7 +29,7 @@
  (auto-complete . 3)
  (pwd . 3)
  (org-table-create . 2)
- (auto-complete-mode . 3)
+ (auto-complete-mode . 4)
  (org-version . 2)
  (impatient-mode . 3)
  (httpd-start . 2)
@@ -41,9 +41,9 @@
  (web-mode . 5)
  (php-mode . 5)
  (package-delete . 4)
- (auto-insert . 1)
+ (auto-insert . 2)
  (c-reformat-buffer . 3)
- (visual-line-mode . 4)
+ (visual-line-mode . 5)
  (org-reload . 1)
  (org-deadline . 1)
  (package-install . 4)
