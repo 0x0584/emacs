@@ -1,23 +1,23 @@
 
 ;; ----- smex-history -----
 (
- auto-complete-mode
  visual-line-mode
- auto-insert
- eww
+ helm-tldr
+ tldr
+ tldr-update-docs
  package-install
- web-mode
- customize-themes
+ global-org-gnome-calendar-mode
+ package-install-file
 )
 
 ;; ----- smex-data -----
 (
- (helm-themes . 21)
+ (helm-themes . 30)
  (electric-pair-mode . 7)
  (electric-operator-mode . 1)
  (find-file . 2)
  (find-grep . 2)
- (package-list-packages . 3)
+ (package-list-packages . 6)
  (describe-mode . 2)
  (plantuml-mode . 1)
  (setenv . 1)
@@ -25,11 +25,11 @@
  (org-mode . 1)
  (eval-buffer . 3)
  (hs-minor-mode . 2)
- (sql-mysql . 6)
+ (sql-mysql . 7)
  (auto-complete . 3)
  (pwd . 3)
- (org-table-create . 2)
- (auto-complete-mode . 4)
+ (org-table-create . 6)
+ (auto-complete-mode . 6)
  (org-version . 2)
  (impatient-mode . 3)
  (httpd-start . 2)
@@ -37,19 +37,46 @@
  (org-remove-inline-images . 1)
  (load-theme . 1)
  (customize-themes . 4)
- (customize-face . 5)
- (web-mode . 5)
+ (customize-face . 11)
+ (web-mode . 7)
  (php-mode . 5)
  (package-delete . 4)
  (auto-insert . 2)
  (c-reformat-buffer . 3)
- (visual-line-mode . 5)
- (org-reload . 1)
+ (visual-line-mode . 9)
+ (org-reload . 3)
  (org-deadline . 1)
- (package-install . 4)
+ (package-install . 9)
  (cfw:open-calendar-buffer . 4)
  (cfw:change-view-day . 1)
  (process-menu-mode . 2)
  (mysql-to-org-mode . 3)
  (eww . 1)
+ (clone-buffer . 1)
+ (org-clock-goto . 1)
+ (make-directory . 1)
+ (restart-emacs . 1)
+ (org-capture . 1)
+ (org-habit-toggle-habits . 2)
+ (helm-dictionary . 3)
+ (dictionary-lookup-definition . 1)
+ (set-variable . 1)
+ (table-insert . 2)
+ (table-justify . 8)
+ (table-insert-row . 1)
+ (table-justify-column . 5)
+ (ispell . 1)
+ (calc . 1)
+ (calculator . 2)
+ (table-query-dimension . 1)
+ (org-alert-enable . 1)
+ (org-alert-check . 6)
+ (global-org-gnome-minor-mode . 3)
+ (org-gnome-minor-mode . 6)
+ (package-install-from-buffer . 1)
+ (package-install-file . 3)
+ (global-org-gnome-calendar-mode . 1)
+ (tldr-update-docs . 1)
+ (helm-tldr . 2)
+ (tldr . 1)
 )

@@ -161,7 +161,7 @@
  '(org-plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(package-selected-packages
    (quote
-    (flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org helm-spotify howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc playerctl plsql org-alert ahungry-theme ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme paper-theme spacemacs-theme djvu gited memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org helm-spotify howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(puml-plantuml-jar-path "~/.emacs.d/plantuml/plantuml.jar")
@@ -204,6 +204,9 @@
  '(dired-ignored ((t (:inherit shadow :underline (:color foreground-color :style wave) :slant italic))))
  '(font-lock-comment-face ((t (:foreground "cadet blue" :slant oblique))))
  '(font-lock-function-name-face ((t (:foreground "#599cab" :slant italic :weight bold))))
+ '(org-level-1 ((t (:inherit outline-1 :weight bold))))
+ '(org-level-2 ((t (:inherit outline-2 :slant italic))))
+ '(org-upcoming-deadline ((t (:foreground "#d26937" :slant oblique))))
  '(php-method-call ((t (:inherit php-function-call :slant italic)))))
 ;; '(rainbow-delimiters-depth-1-face ((t (:foreground "#99d1ce"))))
 ;; '(rainbow-delimiters-depth-2-face ((t (:inherit outline-1 :foreground "#5CACEE"))))
@@ -699,8 +702,8 @@ Don't mess with special buffers."
 
 ;; ==== ORG-MODE ====
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "IN-PROGRESS(s!)" "EXAM" "|" "PENDING(p!)" "DONE(d!/!)" "CANCELED(c!/!)" "UNDER-REVISING(u)")))
-
+      '((sequence "TODO(t)" "IN-PROGRESS(s!)" "EXAM" "TO-BUY" "|" "PENDING(p!)" "DONE(d!/@)" "CANCELED(c!/!)" "UNDER-REVISING(u)")))
+(setq org-agenda-skip-scheduled-if-done t)
 ;; -- Display images in org mode
 ;; enable image mode first
 (iimage-mode)
@@ -825,7 +828,18 @@ Don't mess with special buffers."
 ;; ==== EMACS BACKUP ====
 ;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/
 
+(custom-set-variables
+  '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
+  '(backup-directory-alist '((".*" . "~/.emacs.d/backups/"))))
 
+(setq
+   backup-by-copying t			; don't clobber symlinks
+   backup-directory-alist
+    '(("." . "~/.autosaves"))		; don't litter my fs tree
+   delete-old-versions t
+   kept-new-versions 6
+   kept-old-versions 2
+   version-control t)			; use versioned backups
 
 ;; create the autosave dir if necessary, since emacs won't.
 (make-directory "~/.emacs.d/autosaves/" t)
@@ -1359,7 +1373,47 @@ Version 2017-02-02"
     (org-agenda-span 45)
     )) t)
 (setq eww-search-prefix "https://startpage.com/do/m/mobilesearch?query=")
-(global-set-key (kbd "C-c TAB") 'auto-complete)
+(setq works "~/Workspace/")
+(setq www (concat works "www/"))
 
+(global-set-key (kbd "C-c g") 'auto-complete)
+
+(defun change-file-permissions-to-writable ()
+  "to be run from find-file-hook, change write permissions"
+  (when (not (file-writable-p buffer-file-name))
+    (chmod buffer-file-name
+	   (file-modes-symbolic-to-number
+	    "u+w" (nth 8 (file-attributes buffer-file-name))))
+    (if (not (file-writable-p buffer-file-name))
+        (message "Unable to make file writable."))))
+
+(add-hook 'find-file-hook 'change-file-permissions-to-writable)
+(require 'helm-dictionary)
+
+(setq helm-dictionary-database "dict-en.txt")
+(setq org-latex-create-formula-image-program 'dvisvgm)
+(setq org-format-latex-options
+      (plist-put org-format-latex-options
+		 :scale 1.3))
+(require 'org-alert)
+(setq alert-default-style 'libnotify)
+(require 'org-protocol)
+
+(require 'edit-server)
+
+(edit-server-start)
+
+(global-set-key (kbd "C-x \\") 'wordnut-lookup-current-word)
+(global-set-key (kbd "C-x <f12>") 'helm-tldr)
+
+(defun shell-command-on-buffer ()
+  "Asks for a command and execute it in inferior shell with current buffer as input."
+  (interactive)
+  (shell-command-on-region
+   (point-min) (point-max)
+(read-shell-command "Shell command on buffer: ")))
+(global-set-key (kbd "M-\"") 'shell-command-on-buffer)
 (provide 'init)
+
+(put 'dired-find-alternate-file 'disabled nil)
 ;;; init ends here
