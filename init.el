@@ -161,7 +161,7 @@
  '(org-plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(package-selected-packages
    (quote
-    (tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc playerctl plsql org-alert ahungry-theme ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme paper-theme spacemacs-theme djvu gited memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org helm-spotify howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (flymake-jshint flymake-jslint flymake-json flymake-less indium ac-js2 helm-spotify-plus spotify tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ahungry-theme ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme paper-theme spacemacs-theme djvu gited memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(puml-plantuml-jar-path "~/.emacs.d/plantuml/plantuml.jar")
@@ -204,8 +204,14 @@
  '(dired-ignored ((t (:inherit shadow :underline (:color foreground-color :style wave) :slant italic))))
  '(font-lock-comment-face ((t (:foreground "cadet blue" :slant oblique))))
  '(font-lock-function-name-face ((t (:foreground "#599cab" :slant italic :weight bold))))
+ '(org-agenda-clocking ((t (:underline (:color "firebrick" :style wave) :slant italic))))
+ '(org-done ((t (:foreground "#2aa889" :weight bold))))
  '(org-level-1 ((t (:inherit outline-1 :weight bold))))
  '(org-level-2 ((t (:inherit outline-2 :slant italic))))
+ '(org-link ((t (:inherit link :foreground "deep sky blue" :underline nil :slant italic))))
+ '(org-list-dt ((t (:foreground "chocolate" :weight bold))))
+ '(org-tag ((t (:foreground "gold" :weight bold))))
+ '(org-todo ((t (:foreground "#c23127" :slant italic :weight bold))))
  '(org-upcoming-deadline ((t (:foreground "#d26937" :slant oblique))))
  '(php-method-call ((t (:inherit php-function-call :slant italic)))))
 ;; '(rainbow-delimiters-depth-1-face ((t (:foreground "#99d1ce"))))
@@ -702,7 +708,9 @@ Don't mess with special buffers."
 
 ;; ==== ORG-MODE ====
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "IN-PROGRESS(s!)" "EXAM" "TO-BUY" "|" "PENDING(p!)" "DONE(d!/@)" "CANCELED(c!/!)" "UNDER-REVISING(u)")))
+      '((sequence "TODO(t)" "IN-PROGRESS(s!)" "EXAM" "TO-BUY(b!)"
+		  "MEETING(m!)" "|" "PENDING(p!)" "DONE(d!/@)"
+		  "CANCELED(c!/!)" "UNDER-REVISING(u)" "|" "HOLIDAY")))
 (setq org-agenda-skip-scheduled-if-done t)
 ;; -- Display images in org mode
 ;; enable image mode first
@@ -827,10 +835,6 @@ Don't mess with special buffers."
 
 ;; ==== EMACS BACKUP ====
 ;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/
-
-(custom-set-variables
-  '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
-  '(backup-directory-alist '((".*" . "~/.emacs.d/backups/"))))
 
 (setq
    backup-by-copying t			; don't clobber symlinks
@@ -1031,7 +1035,7 @@ The themes will be loaded at the specified time every day.")
 
 ;;(setq org-agenda-files (file-expand-wildcards "~/orged/*.org"))
 ;;(add-to-list 'org-agenda-files (expand-file-name "~/orged"))
-(setq org-agenda-files (list "~/orged"))
+(setq org-agenda-files (list "~/orged/agenda"))
 
 ;; By an unknown contributor
 
@@ -1387,7 +1391,7 @@ Version 2017-02-02"
     (if (not (file-writable-p buffer-file-name))
         (message "Unable to make file writable."))))
 
-(add-hook 'find-file-hook 'change-file-permissions-to-writable)
+;; (add-hook 'find-file-hook 'change-file-permissions-to-writable)
 (require 'helm-dictionary)
 
 (setq helm-dictionary-database "dict-en.txt")
@@ -1395,8 +1399,7 @@ Version 2017-02-02"
 (setq org-format-latex-options
       (plist-put org-format-latex-options
 		 :scale 1.3))
-(require 'org-alert)
-(setq alert-default-style 'libnotify)
+
 (require 'org-protocol)
 
 (require 'edit-server)
@@ -1413,7 +1416,60 @@ Version 2017-02-02"
    (point-min) (point-max)
 (read-shell-command "Shell command on buffer: ")))
 (global-set-key (kbd "M-\"") 'shell-command-on-buffer)
-(provide 'init)
-
 (put 'dired-find-alternate-file 'disabled nil)
+
+
+(require 'org-alert)
+(setq alert-default-style 'libnotify)
+(setq org-alert-interval 900)	; 60 sec * 30 min
+(org-alert-enable)
+(org-alert-check)
+
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
+
+;; Agenda clock report parameters
+(setq org-agenda-clockreport-parameter-plist
+      '(:link t :maxlevel 6 :fileskip0 t :compact t :narrow 60 :score 0))
+
+;; If idle for more than 15 minutes, resolve the things by asking what to do
+;; with the clock time
+(setq org-clock-idle-time 15)
+
+;; global Effort estimate values
+(setq org-global-properties
+      '(("Effort_ALL" .
+         "0:15 0:30 0:45 1:00 2:00 3:00 4:00 5:00 6:00 0:00")))
+;;        1    2    3    4    5    6    7    8    9    0
+;; These are the hotkeys ^^
+;; Set default column view headings: Task Priority Effort Clock_Summary
+(setq org-columns-default-format
+      "%50ITEM(Task) %2PRIORITY %10Effort(Effort){:} %10CLOCKSUM")
+
+(setq ac-auto-start 3)
+(setq ac-dwim t)
+
+(require 'epa-file)
+(epa-file-enable)
+
+(defun org-cycle-or-complete-latex (&optional arg)
+  "Like `org-cycle' (which see) but completes latex math equations
+if point is after ＼[ or ＼(."
+  (interactive "P")
+  (if (looking-back "\\\\[[(]" (max (point-min) (- (point) 2)))
+      (progn
+    (insert
+     (case (char-before)
+       (?\( "  \\)")
+       (?\[ "  \\]")
+       (t (error "Should never happen."))))
+    (backward-char 3))
+    (call-interactively #'org-cycle)))
+
+(defun my-org-mode-hook-fun ()
+  (org-defkey org-mode-map [(tab)] #'org-cycle-or-complete-latex))
+
+(add-hook 'org-mode-hook #'my-org-mode-hook-fun)
+
+(provide 'init)
 ;;; init ends here
