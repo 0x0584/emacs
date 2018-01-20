@@ -1,33 +1,33 @@
 
 ;; ----- smex-history -----
 (
+ calendar
  customize-face
- nyan-mode
  visual-line-mode
- delete-other-windows
- global-org-gnome-calendar-mode
- pwd
- helm-themes
+ nyan-mode
+ org-mode
+ package-install
+ eww
 )
 
 ;; ----- smex-data -----
 (
- (helm-themes . 30)
+ (helm-themes . 34)
  (electric-pair-mode . 7)
  (electric-operator-mode . 1)
  (find-file . 2)
  (find-grep . 2)
- (package-list-packages . 8)
+ (package-list-packages . 10)
  (describe-mode . 2)
  (plantuml-mode . 1)
  (setenv . 2)
  (customize-variable . 4)
- (org-mode . 2)
+ (org-mode . 3)
  (eval-buffer . 3)
  (hs-minor-mode . 2)
  (sql-mysql . 7)
  (auto-complete . 3)
- (pwd . 4)
+ (pwd . 5)
  (org-table-create . 6)
  (auto-complete-mode . 12)
  (org-version . 2)
@@ -37,32 +37,32 @@
  (org-remove-inline-images . 1)
  (load-theme . 1)
  (customize-themes . 4)
- (customize-face . 12)
+ (customize-face . 20)
  (web-mode . 14)
  (php-mode . 6)
  (package-delete . 6)
  (auto-insert . 2)
  (c-reformat-buffer . 3)
- (visual-line-mode . 18)
+ (visual-line-mode . 28)
  (org-reload . 5)
  (org-deadline . 1)
- (package-install . 16)
+ (package-install . 18)
  (cfw:open-calendar-buffer . 4)
  (cfw:change-view-day . 1)
  (process-menu-mode . 2)
  (mysql-to-org-mode . 3)
- (eww . 1)
+ (eww . 2)
  (clone-buffer . 1)
  (org-clock-goto . 1)
- (make-directory . 1)
- (restart-emacs . 2)
+ (make-directory . 2)
+ (restart-emacs . 3)
  (org-capture . 1)
  (org-habit-toggle-habits . 2)
  (helm-dictionary . 3)
  (dictionary-lookup-definition . 1)
  (set-variable . 3)
  (table-insert . 2)
- (table-justify . 8)
+ (table-justify . 10)
  (table-insert-row . 1)
  (table-justify-column . 5)
  (ispell . 1)
@@ -70,7 +70,7 @@
  (calculator . 5)
  (table-query-dimension . 1)
  (org-alert-enable . 6)
- (org-alert-check . 13)
+ (org-alert-check . 16)
  (global-org-gnome-minor-mode . 3)
  (org-gnome-minor-mode . 6)
  (package-install-from-buffer . 1)
@@ -80,7 +80,7 @@
  (helm-tldr . 2)
  (tldr . 1)
  (org-columns . 4)
- (nyan-mode . 2)
+ (nyan-mode . 6)
  (helm-spotify . 3)
  (playerctl-play-pause-song . 1)
  (spotify-enable-song-notifications . 1)
@@ -99,4 +99,17 @@
  (org-agenda . 3)
  (delete-other-windows . 3)
  (org-clock-in . 1)
+ (org-table-convert . 1)
+ (org-table-create-with-table\.el . 2)
+ (boxquote-text . 3)
+ (boxquote-yank . 4)
+ (boxquote-where-is . 1)
+ (epa-encrypt-file . 1)
+ (insert-date . 1)
+ (term . 1)
+ (ansi-term . 1)
+ (org-timer . 1)
+ (org-timer-start . 1)
+ (org-timer-stop . 1)
+ (calendar . 1)
 )
