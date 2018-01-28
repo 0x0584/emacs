@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- emojify-mode
- electric-pair-mode
- customize-group
- auto-insert
- cperl-mode
+ calculator
+ chess
  customize-face
- helm-themes
+ info
+ Info-help
+ vc-update
+ vc-update-change-log
 )
 
 ;; ----- smex-data -----
@@ -29,7 +29,7 @@
  (auto-complete . 3)
  (pwd . 5)
  (org-table-create . 6)
- (auto-complete-mode . 12)
+ (auto-complete-mode . 14)
  (org-version . 2)
  (impatient-mode . 3)
  (httpd-start . 2)
@@ -37,11 +37,11 @@
  (org-remove-inline-images . 1)
  (load-theme . 1)
  (customize-themes . 4)
- (customize-face . 40)
+ (customize-face . 56)
  (web-mode . 14)
  (php-mode . 6)
  (package-delete . 6)
- (auto-insert . 4)
+ (auto-insert . 5)
  (c-reformat-buffer . 3)
  (visual-line-mode . 28)
  (org-reload . 5)
@@ -55,7 +55,7 @@
  (clone-buffer . 1)
  (org-clock-goto . 1)
  (make-directory . 2)
- (restart-emacs . 3)
+ (restart-emacs . 4)
  (org-capture . 1)
  (org-habit-toggle-habits . 2)
  (helm-dictionary . 3)
@@ -67,7 +67,7 @@
  (table-justify-column . 5)
  (ispell . 1)
  (calc . 1)
- (calculator . 5)
+ (calculator . 6)
  (table-query-dimension . 1)
  (org-alert-enable . 6)
  (org-alert-check . 16)
@@ -115,15 +115,24 @@
  (perl-mode . 2)
  (perl6-mode . 1)
  (cperl-mode . 6)
- (info . 1)
+ (info . 5)
  (cperl-lazy-install . 2)
  (cperl-perldoc . 2)
  (cperl-perldoc-at-point . 1)
  (cperl-find-bad-style . 1)
  (customize-group . 2)
- (org-alert-disable . 1)
+ (org-alert-disable . 3)
  (cperl-electric-brace . 1)
  (cperl-set-style . 1)
  (cperl-electric-lbrace . 1)
  (emojify-mode . 1)
+ (encode-hz-buffer . 3)
+ (zeal-at-point . 3)
+ (grep-find . 1)
+ (regexp-builder . 1)
+ (vc-auto-commit . 3)
+ (vc-update-change-log . 1)
+ (vc-update . 1)
+ (Info-help . 1)
+ (chess . 2)
 )

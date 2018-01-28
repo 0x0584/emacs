@@ -171,7 +171,7 @@
  '(org-plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(package-selected-packages
    (quote
-    (ac-emoji emojify-logos plsense perl6-mode org-preview-html flymake-jshint flymake-jslint flymake-json flymake-less indium ac-js2 helm-spotify-plus spotify tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ahungry-theme ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme paper-theme spacemacs-theme djvu gited memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (vc-auto-commit vc-check-status vc-msg ac-emoji emojify-logos plsense perl6-mode org-preview-html flymake-jshint flymake-jslint flymake-json flymake-less indium ac-js2 helm-spotify-plus spotify tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ahungry-theme ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme paper-theme spacemacs-theme djvu gited memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(puml-plantuml-jar-path "~/.emacs.d/plantuml/plantuml.jar")
@@ -212,6 +212,8 @@
  '(bm-face ((t (:background "orange" :foreground "Black"))))
  '(bm-fringe-face ((t (:background "gold" :foreground "Black"))))
  '(bold ((t (:slant normal :weight bold))))
+ '(chess-ics1-black-face ((t (:foreground "dark orange" :weight bold))))
+ '(chess-ics1-white-face ((t (:foreground "white" :weight bold))))
  '(cperl-array-face ((t (:foreground "#599caa" :weight bold))))
  '(cperl-hash-face ((t (:foreground "#599cab" :slant italic))))
  '(dired-ignored ((t (:inherit shadow :underline (:color foreground-color :style wave) :slant italic))))
@@ -671,7 +673,7 @@
                              (lambda ()
                                (interactive)
                                (manual-entry (current-word)))))))
-(global-set-key (kbd "<f2>") 'zeal-at-point)
+(global-set-key (kbd "C-h z") 'zeal-at-point)
 
 ;; ===== KILL BUFFERS =====
 (defun kill-other-buffers ()
@@ -1554,7 +1556,7 @@ if point is after ＼[ or ＼(."
 
 (defalias 'perl-mode 'cperl-mode)
 
-(setq cperl-hairy nil) ;; Turns on most of the CPerlMode options
+(setq cperl-hairy nil) ;; Turns off most of the CPerlMode options
 
 (defun my-cperl-eldoc-documentation-function ()
   "Return meaningful doc string for `eldoc-mode'."
