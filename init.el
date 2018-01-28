@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 ;; ==== EMOJIFY  ====
-;;(add-hook 'after-init-hook #'global-emojify-mode)
+(add-hook 'after-init-hook #'global-emojify-mode)
 
 ;; ===== INSERT TODAY'S DATE AND TIME ====
 (defun insert-current-date () 
@@ -132,6 +132,16 @@
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(blink-cursor-mode t)
  '(column-number-mode t)
+ '(cperl-autoindent-on-semi t)
+ '(cperl-brace-offset 0)
+ '(cperl-close-paren-offset -4)
+ '(cperl-continued-brace-offset 0)
+ '(cperl-continued-statement-offset 0)
+ '(cperl-electric-backspace-untabify t)
+ '(cperl-electric-parens-mark nil)
+ '(cperl-highlight-variables-indiscriminately nil)
+ '(cperl-indent-level 4)
+ '(cperl-indent-parens-as-block t)
  '(custom-enabled-themes (quote (gotham)))
  '(custom-safe-themes
    (quote
@@ -161,7 +171,7 @@
  '(org-plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(package-selected-packages
    (quote
-    (org-preview-html flymake-jshint flymake-jslint flymake-json flymake-less indium ac-js2 helm-spotify-plus spotify tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ahungry-theme ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme paper-theme spacemacs-theme djvu gited memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (ac-emoji emojify-logos plsense perl6-mode org-preview-html flymake-jshint flymake-jslint flymake-json flymake-less indium ac-js2 helm-spotify-plus spotify tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ahungry-theme ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme paper-theme spacemacs-theme djvu gited memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(puml-plantuml-jar-path "~/.emacs.d/plantuml/plantuml.jar")
@@ -202,21 +212,28 @@
  '(bm-face ((t (:background "orange" :foreground "Black"))))
  '(bm-fringe-face ((t (:background "gold" :foreground "Black"))))
  '(bold ((t (:slant normal :weight bold))))
+ '(cperl-array-face ((t (:foreground "#599caa" :weight bold))))
+ '(cperl-hash-face ((t (:foreground "#599cab" :slant italic))))
  '(dired-ignored ((t (:inherit shadow :underline (:color foreground-color :style wave) :slant italic))))
  '(font-lock-comment-face ((t (:foreground "cadet blue" :slant oblique))))
  '(font-lock-function-name-face ((t (:foreground "#599cab" :slant italic :weight bold))))
+ '(font-lock-string-face ((t (:foreground "#2aa889"))))
+ '(font-lock-variable-name-face ((t (:foreground "#599cab"))))
  '(italic ((t (:slant italic))))
  '(org-agenda-clocking ((t (:underline (:color "firebrick" :style wave) :slant italic))))
  '(org-done ((t (:foreground "#2aa889" :weight bold))))
  '(org-level-1 ((t (:inherit outline-1 :weight bold))))
  '(org-level-2 ((t (:inherit outline-2 :slant italic))))
  '(org-link ((t (:inherit link :foreground "Deepskyblue4" :underline nil :slant italic))))
- '(org-list-dt ((t (:foreground "Seagreen3" :weight light))))
+ '(org-list-dt ((t (:foreground "Seagreen3" :weight bold))))
  '(org-priority ((t (:inherit font-lock-keyword-face :slant normal))))
  '(org-scheduled-previously ((t (:foreground "rosy brown" :weight bold))))
  '(org-tag ((t (:foreground "gold" :weight bold))))
  '(org-todo ((t (:foreground "#c23127" :slant italic :weight bold))))
  '(org-upcoming-deadline ((t (:foreground "#d26937" :slant oblique))))
+ '(perl6-identifier ((t (:inherit default))))
+ '(perl6-operator ((t (:foreground "light slate gray"))))
+ '(perl6-var-name ((t (:inherit font-lock-variable-name-face))))
  '(php-method-call ((t (:inherit php-function-call :slant italic)))))
 ;; '(rainbow-delimiters-depth-1-face ((t (:foreground "#99d1ce"))))
 ;; '(rainbow-delimiters-depth-2-face ((t (:inherit outline-1 :foreground "#5CACEE"))))
@@ -287,37 +304,7 @@
          ";;; Commentary:\n\n"
          ";;; Code:\n\n"
          ";;; " (file-name-nondirectory buffer-file-name) " ends here\n")
-        ;; ((c-mode . "C program") nil
-	
-	;;          "/**************************************************************************\\ \n"
-	;;          " File: " (file-name-nondirectory buffer-file-name) "\n\n"
-	;; 	 "The MIT License (MIT)\n
 
-	;; Copyright (c)" (substring (current-time-string) -4)" - Anas Rchid
-
-	;; Permission is hereby granted, free of charge, to any person obtaining a copy
-	;;  of this software and associated documentation files (the ""Software""), to 
-	;; deal in the Software without restriction, including without limitation the 
-	;; rights to use, copy, modify, merge, publish, distribute, sublicense, and/or 
-	;; sell copies of the Software, and to permit persons to whom the Software is 
-	;; furnished to do so, subject to the following conditions:
-
-	;; The above copyright notice and this permission notice shall be included in 
-	;; all copies or substantial portions of the Software.
-
-	;; THE SOFTWARE IS PROVIDED ""AS IS"", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-	;; IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-	;; FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
-	;; AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-	;; LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM
-	;; , OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
-	;; THE SOFTWARE.
-
-	;;  Last modicication:						
-	;; 	"(insert-date)"					
-	
-	;; \\**************************************************************************/\n"
-	;; 	" \n\n")
 	((c-mode . "C program") nil
 	 "/* FILE: \t" (file-name-nondirectory buffer-file-name) "\n"
 	 " * AUTHOR: \tANAS RCHID\n"
@@ -326,7 +313,7 @@
 	 " * CREATION:\t" (insert-date) "\n"
 	 " * MODIFIED:\t" (insert-date) " */\n"
 	 "/* ---------- headers ---------- */\n"
-	 "#include <stdio.h>\n#include<stdlib.h>\n\n"
+	 "#include <stdio.h>\n#include <stdlib.h>\n\n"
 	 "/* ---------- types ---------- */\n\n"
 	 "/* ---------- prototypes ---------- */\n\n"
 	 "/* ---------- main entry ---------- */\n"
@@ -339,8 +326,33 @@
          "#!/bin/bash\n\n"
          " # File: " (file-name-nondirectory buffer-file-name) "\n"
          " # Time-stamp: <>\n"
-         " # Copyright (C) " (substring (current-time-string) -4) " " auto-insert-copyright "\n"
-         " # Description: " _ "\n\n")))
+         " # Copyright (C) " (substring
+			      (current-time-string) -4) " "
+			      auto-insert-copyright "\n"
+			      " # Description: " _ "\n\n")
+	((cperl-mode . "Perl") nil
+	 "#!/usr/bin/perl"
+	 "\n#======================================================="
+	 "========================"
+	 "\n#"
+	 "\n#         FILE: " (file-name-nondirectory buffer-file-name)
+	 "\n#"
+	 "\n#        USAGE: ./" (file-name-nondirectory buffer-file-name)
+	 "\n#"
+	 "\n#  DESCRIPTION: ---"
+	 "\n#"
+	 "\n#      OPTIONS: ---"
+	 "\n# REQUIREMENTS: ---"
+	 "\n#         BUGS: ---"
+	 "\n#        NOTES: ---"
+	 "\n#       AUTHOR: Anas Rchid (0x0584) <rchid.anas@gmail.com>"
+	 "\n# ORGANIZATION: ---"
+	 "\n#      VERSION: 1.0"
+	 "\n#      CREATED: " (insert-date)
+	 "\n#     REVISION: ---"
+	 "\n#========================================================"
+	 "=======================")
+	)) 
 
 
 ;; ==== etags ====
@@ -412,22 +424,22 @@
 ;;     (save-buffer))
 
 (defun c-reformat-buffer()
-    (interactive)
-    (save-buffer)
-    (setq sh-indent-command
-	  (concat "indent -nbad -bap -bbo -nbc -br -brs "
-		  "-brf -c33 -cd33 -ncdb -ce -ci2 -cli0 "
-		  "-cp33 -cs -d0 -di1 -nfc1 -nfca -hnl "
-		  "-i2 -ip0 -l75 -lp -npcs -nprs -npsl "
-		  "-saf -sai -saw -nsc -nsob -nss -ppi2 "))
-    (mark-whole-buffer)
-    (universal-argument)
-    (shell-command-on-region
-     (point-min)
-     (point-max)
-     sh-indent-command
-     (buffer-name))
-    (save-buffer))
+  (interactive)
+  (save-buffer)
+  (setq sh-indent-command
+	(concat "indent -nbad -bap -bbo -nbc -br -brs "
+		"-brf -c33 -cd33 -ncdb -ce -ci2 -cli0 "
+		"-cp33 -cs -d0 -di1 -nfc1 -nfca -hnl "
+		"-i2 -ip0 -l75 -lp -npcs -nprs -npsl "
+		"-saf -sai -saw -nsc -nsob -nss -ppi2 "))
+  (mark-whole-buffer)
+  (universal-argument)
+  (shell-command-on-region
+   (point-min)
+   (point-max)
+   sh-indent-command
+   (buffer-name))
+  (save-buffer))
 
 (global-set-key (kbd "C-c f") 'c-reformat-buffer)
 
@@ -489,18 +501,18 @@
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
-;; V2
-(global-set-key (kbd "S-M-n") 'windmove-down)
-;;    
+;; ;; V2
+;; (global-set-key (kbd "S-M-n") 'windmove-down)
+;; ;;    
 
-(global-set-key (kbd "S-M-b") 'windmove-left)        
-(global-set-key (kbd "S-M-f") 'windmove-right)     
-(global-set-key (kbd "S-M-p") 'windmove-up)           
+;; (global-set-key (kbd "S-M-b") 'windmove-left)        
+;; (global-set-key (kbd "S-M-f") 'windmove-right)     
+;; (global-set-key (kbd "S-M-p") 'windmove-up)           
 ;; ==== WINDOWS SIZE SHORTKEYS ====
-(global-set-key (kbd "S-C-b") 'shrink-window-horizontally)
-(global-set-key (kbd "S-C-f") 'enlarge-window-horizontally)
-(global-set-key (kbd "S-C-n") 'shrink-window)
-(global-set-key (kbd "S-C-p") 'enlarge-window)
+;; (global-set-key (kbd "S-C-b") 'shrink-window-horizontally)
+;; (global-set-key (kbd "S-C-f") 'enlarge-window-horizontally)
+;; (global-set-key (kbd "S-C-n") 'shrink-window)
+;; (global-set-key (kbd "S-C-p") 'enlarge-window)
 
 ;;
 (defalias 'qrr 'query-replace-regexp)
@@ -687,7 +699,8 @@ Don't mess with special buffers."
   "Open the current file's directory however the OS would."
   (interactive)
   (if default-directory
-      (browse-url-of-file (expand-file-name default-directory))
+      (browse-url-of-file
+       (expand-file-name default-directory))
     (error "No `default-directory' to open")))
 
 (global-set-key (kbd "C-x M-d") 'browse-file-directory)
@@ -773,9 +786,9 @@ Don't mess with special buffers."
     (setq b (point))
     (set-mark a)))
 
-(global-set-key (kbd "M-4") 'select-in-delim)
-(global-set-key (kbd "M-5") 'select-line)
-(global-set-key (kbd "M-6") 'select-paragraph)
+(global-set-key (kbd "C-c M-]") 'select-in-delim)
+(global-set-key (kbd "M-[") 'select-line)
+(global-set-key (kbd "M-]") 'select-paragraph)
 (global-set-key (kbd "C-c h") 'highlight-blocks-mode)
 
 ;; ==== REVERT THE BUFFER ==== 
@@ -840,14 +853,13 @@ Don't mess with special buffers."
 ;; ==== EMACS BACKUP ====
 ;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/
 
-(setq
-   backup-by-copying t			; don't clobber symlinks
-   backup-directory-alist
-    '(("." . "~/.autosaves"))		; don't litter my fs tree
-   delete-old-versions t
-   kept-new-versions 6
-   kept-old-versions 2
-   version-control t)			; use versioned backups
+(setq backup-by-copying t		; don't clobber symlinks
+      backup-directory-alist
+      '(("." . "~/.autosaves"))		; don't litter my fs tree
+      delete-old-versions t
+      kept-new-versions 6
+      kept-old-versions 2
+      version-control t)		; use versioned backups
 
 ;; create the autosave dir if necessary, since emacs won't.
 (make-directory "~/.emacs.d/autosaves/" t)
@@ -912,15 +924,15 @@ Don't mess with special buffers."
 
 (ac-config-default)
 
-(setq rsense-home "/opt/rsense-0.3")
-(add-to-list 'load-path (concat rsense-home "/etc"))
-(require 'rsense)
+;; (setq rsense-home "/opt/rsense-0.3")
+;; (add-to-list 'load-path (concat rsense-home "/etc"))
+;; (require 'rsense)
 
-;; Rsense + Autocomplete
-(add-hook 'ruby-mode-hook
-          (lambda ()
-            (add-to-list 'ac-sources 'ac-source-rsense-method)
-            (add-to-list 'ac-sources 'ac-source-rsense-constant)))
+;; ;; Rsense + Autocomplete
+;; (add-hook 'ruby-mode-hook
+;;           (lambda ()
+;;             (add-to-list 'ac-sources 'ac-source-rsense-method)
+;;             (add-to-list 'ac-sources 'ac-source-rsense-constant)))
 
 (require 'ruby-electric)
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
@@ -1043,7 +1055,7 @@ The themes will be loaded at the specified time every day.")
 
 ;; By an unknown contributor
 
-(global-set-key "%" 'match-paren)
+;; (global-set-key "%" 'match-paren)
 ;; (global-set-key ")" 'goto-paren)
 
 ;; (defun goto-paren (ARG)
@@ -1123,8 +1135,8 @@ STR is `current-kill` if unspecified."
 (message "done.")
 
 (setq image-file-name-extensions
-   (quote
-    ("png" "jpeg" "jpg" "gif" "tiff" "tif" "xbm" "xpm" "pbm" "pgm" "ppm" "pnm" "svg" "pdf" "bmp")))
+      (quote
+       ("png" "jpeg" "jpg" "gif" "tiff" "tif" "xbm" "xpm" "pbm" "pgm" "ppm" "pnm" "svg" "pdf" "bmp")))
 
 (setq org-image-actual-width 400)
 
@@ -1156,7 +1168,7 @@ BEG and END default to the buffer boundaries."
         (while (re-search-forward re end t)
           (setq old (get-char-property-and-overlay (match-beginning 1)
                                                    'org-image-overlay)
-        file (expand-file-name
+		file (expand-file-name
                       (concat (or (match-string 3) "") (match-string 4))))
           (when (file-exists-p file)
             (let ((file-thumb (format "%s%s_thumb.png" (file-name-directory file) (file-name-base file))))
@@ -1164,10 +1176,10 @@ BEG and END default to the buffer boundaries."
                   (let ((thumb-time (nth 5 (file-attributes file-thumb 'string)))
                         (file-time (nth 5 (file-attributes file 'string))))
                     (if (time-less-p thumb-time file-time)
-            (shell-command (format org-imagemagick-display-command
-                           file org-image-actual-width org-image-actual-width file-thumb) nil nil)))
+			(shell-command (format org-imagemagick-display-command
+					       file org-image-actual-width org-image-actual-width file-thumb) nil nil)))
                 (shell-command (format org-imagemagick-display-command
-                                         file org-image-actual-width org-image-actual-width file-thumb) nil nil))
+				       file org-image-actual-width org-image-actual-width file-thumb) nil nil))
               (if (and (car-safe old) refresh)
                   (image-refresh (overlay-get (cdr old) 'display))
                 (setq img (save-match-data (create-image file-thumb)))
@@ -1230,8 +1242,8 @@ BEG and END default to the buffer boundaries."
 
 ;; Month
 (setq calendar-month-name-array
-  ["January" "February" "March"     "April"   "May"      "June"
-   "July"    "August"   "September" "October" "November" "December"])
+      ["January" "February" "March"     "April"   "May"      "June"
+       "July"    "August"   "September" "October" "November" "December"])
 
 ;; Week days
 (setq calendar-day-name-array
@@ -1378,8 +1390,7 @@ Version 2017-02-02"
  'org-agenda-custom-commands
  '("W" "Weekend" ((agenda "" ))
    ((org-agenda-overriding-header "45 days")
-    (org-agenda-span 45)
-    )) t)
+    (org-agenda-span 45))) t)
 (setq eww-search-prefix "https://startpage.com/do/m/mobilesearch?query=")
 (setq works "~/Workspace/")
 (setq www (concat works "www/"))
@@ -1418,7 +1429,7 @@ Version 2017-02-02"
   (interactive)
   (shell-command-on-region
    (point-min) (point-max)
-(read-shell-command "Shell command on buffer: ")))
+   (read-shell-command "Shell command on buffer: ")))
 (global-set-key (kbd "M-\"") 'shell-command-on-buffer)
 (put 'dired-find-alternate-file 'disabled nil)
 
@@ -1462,12 +1473,12 @@ if point is after ＼[ or ＼(."
   (interactive "P")
   (if (looking-back "\\\\[[(]" (max (point-min) (- (point) 2)))
       (progn
-    (insert
-     (case (char-before)
-       (?\( "  \\)")
-       (?\[ "  \\]")
-       (t (error "Should never happen."))))
-    (backward-char 3))
+	(insert
+	 (case (char-before)
+	   (?\( "  \\)")
+	   (?\[ "  \\]")
+	   (t (error "Should never happen."))))
+	(backward-char 3))
     (call-interactively #'org-cycle)))
 
 (defun my-org-mode-hook-fun ()
@@ -1478,9 +1489,9 @@ if point is after ＼[ or ＼(."
 (unless (boundp 'org-export-latex-classes)
   (setq org-export-latex-classes nil))
 (add-to-list 'org-export-latex-classes
-  ;; beamer class, for presentations
-  '("beamer"
-     "\\documentclass[11pt]{beamer}\n
+	     ;; beamer class, for presentations
+	     '("beamer"
+	       "\\documentclass[11pt]{beamer}\n
       \\mode<{{{beamermode}}}>\n
       \\usetheme{{{{beamertheme}}}}\n
       \\usecolortheme{{{{beamercolortheme}}}}\n
@@ -1503,30 +1514,30 @@ if point is after ＼[ or ＼(."
       \\institute{{{{beamerinstitute}}}}\n          
        \\subject{{{{beamersubject}}}}\n"
 
-     ("\\section{%s}" . "\\section*{%s}")
-     
-     ("\\begin{frame}[fragile]\\frametitle{%s}"
-       "\\end{frame}"
-       "\\begin{frame}[fragile]\\frametitle{%s}"
-       "\\end{frame}")))
+	       ("\\section{%s}" . "\\section*{%s}")
+	       
+	       ("\\begin{frame}[fragile]\\frametitle{%s}"
+		"\\end{frame}"
+		"\\begin{frame}[fragile]\\frametitle{%s}"
+		"\\end{frame}")))
 
-  ;; letter class, for formal letters
+;; letter class, for formal letters
 
-  (add-to-list 'org-export-latex-classes
+(add-to-list 'org-export-latex-classes
 
-  '("letter"
-     "\\documentclass[11pt]{letter}\n
+	     '("letter"
+	       "\\documentclass[11pt]{letter}\n
       \\usepackage[utf8]{inputenc}\n
       \\usepackage[T1]{fontenc}\n
       \\usepackage{color}"
-     
-     ("\\section{%s}" . "\\section*{%s}")
-     ("\\subsection{%s}" . "\\subsection*{%s}")
-     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-     ("\\paragraph{%s}" . "\\paragraph*{%s}")
-     ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+	       
+	       ("\\section{%s}" . "\\section*{%s}")
+	       ("\\subsection{%s}" . "\\subsection*{%s}")
+	       ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+	       ("\\paragraph{%s}" . "\\paragraph*{%s}")
+	       ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
-(setq browse-url-browser-function 'eww-browse-url)
+;; (setq browse-url-browser-function 'eww-browse-url)
 
 (defun org-html2org-clipboard ()
   "Convert clipboard contents from HTML to Org and then paste (yank)."
@@ -1540,5 +1551,32 @@ if point is after ＼[ or ＼(."
     "pandoc -f json -t org) || "
     "xclip -o"))
   (yank))
+
+(defalias 'perl-mode 'cperl-mode)
+
+(setq cperl-hairy nil) ;; Turns on most of the CPerlMode options
+
+(defun my-cperl-eldoc-documentation-function ()
+  "Return meaningful doc string for `eldoc-mode'."
+  (car
+   (let ((cperl-message-on-help-error nil))
+     (cperl-get-help))))
+
+(add-hook 'cperl-mode-hook
+	  (lambda ()
+	    (set (make-local-variable 'eldoc-documentation-function)
+		 'my-cperl-eldoc-documentation-function)))
+;; (require 'plsense)
+
+;; ;; Key binding
+;; (setq plsense-popup-help-key "C-c :")
+;; (setq plsense-display-help-buffer-key "M-:")
+;; (setq plsense-jump-to-definition-key "C->")
+
+;; ;; Make config suit for you. About the config item, eval the following sexp.
+;; ;; (customize-group "plsense")
+
+;; ;; Do setting recommemded configuration
+;; (plsense-config-default)
 (provide 'init)
 ;;; init ends here
