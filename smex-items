@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- calculator
- chess
+ php-mode
+ web-mode
+ css-mode
+ org-alert-disable
  customize-face
- info
- Info-help
- vc-update
- vc-update-change-log
+ customize-group
+ menu-bar-mode
 )
 
 ;; ----- smex-data -----
@@ -37,11 +37,11 @@
  (org-remove-inline-images . 1)
  (load-theme . 1)
  (customize-themes . 4)
- (customize-face . 56)
- (web-mode . 14)
- (php-mode . 6)
+ (customize-face . 60)
+ (web-mode . 19)
+ (php-mode . 9)
  (package-delete . 6)
- (auto-insert . 5)
+ (auto-insert . 6)
  (c-reformat-buffer . 3)
  (visual-line-mode . 28)
  (org-reload . 5)
@@ -120,8 +120,8 @@
  (cperl-perldoc . 2)
  (cperl-perldoc-at-point . 1)
  (cperl-find-bad-style . 1)
- (customize-group . 2)
- (org-alert-disable . 3)
+ (customize-group . 3)
+ (org-alert-disable . 5)
  (cperl-electric-brace . 1)
  (cperl-set-style . 1)
  (cperl-electric-lbrace . 1)
@@ -135,4 +135,6 @@
  (vc-update . 1)
  (Info-help . 1)
  (chess . 2)
+ (menu-bar-mode . 1)
+ (css-mode . 1)
 )

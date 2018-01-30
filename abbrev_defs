@@ -3,6 +3,10 @@
 
 (define-abbrev-table 'Info-edit-mode-abbrev-table '())
 
+(define-abbrev-table 'bookmark-bmenu-mode-abbrev-table '())
+
+(define-abbrev-table 'bookmark-edit-annotation-mode-abbrev-table '())
+
 (define-abbrev-table 'calendar-mode-abbrev-table '())
 
 (define-abbrev-table 'comint-mode-abbrev-table '())
@@ -13,10 +17,6 @@
 
 (define-abbrev-table 'display-time-world-mode-abbrev-table '())
 
-(define-abbrev-table 'dsssl-mode-abbrev-table '())
-
-(define-abbrev-table 'edebug-eval-mode-abbrev-table '())
-
 (define-abbrev-table 'edit-abbrevs-mode-abbrev-table '())
 
 (define-abbrev-table 'eieio-custom-mode-abbrev-table '())
@@ -25,19 +25,31 @@
 
 (define-abbrev-table 'emacs-lisp-mode-abbrev-table '())
 
-(define-abbrev-table 'eshell-mode-abbrev-table '())
-
 (define-abbrev-table 'flycheck-error-list-mode-abbrev-table '())
 
 (define-abbrev-table 'fundamental-mode-abbrev-table '())
 
-(define-abbrev-table 'global-abbrev-table '())
-
-(define-abbrev-table 'helm-grep-mode-abbrev-table '())
+(define-abbrev-table 'global-abbrev-table
+  '(
+    ("aqua" "#00ffff" nil 0)
+    ("black" "#000000" nil 0)
+    ("blue" "#0000ff" nil 0)
+    ("fuchsia" "#ff00ff" nil 0)
+    ("gray" "#808080" nil 0)
+    ("green" "#008000" nil 0)
+    ("lime" "#00ff00" nil 0)
+    ("maroon" "#800000" nil 0)
+    ("navy" "#000080" nil 0)
+    ("olive" "#808000" nil 0)
+    ("purple" "#800080" nil 0)
+    ("red" "#ff0000" nil 0)
+    ("silver" "#c0c0c0" nil 0)
+    ("teal" "#008080" nil 0)
+    ("white" "#ffffff" nil 0)
+    ("yellow" "#ffff00" nil 0)
+   ))
 
 (define-abbrev-table 'helm-major-mode-abbrev-table '())
-
-(define-abbrev-table 'helm-moccur-mode-abbrev-table '())
 
 (define-abbrev-table 'help-mode-abbrev-table '())
 
@@ -63,11 +75,7 @@
 
 (define-abbrev-table 'ruby-mode-abbrev-table '())
 
-(define-abbrev-table 'scheme-mode-abbrev-table '())
-
 (define-abbrev-table 'shell-mode-abbrev-table '())
-
-(define-abbrev-table 'snippet-mode-abbrev-table '())
 
 (define-abbrev-table 'special-mode-abbrev-table '())
 
@@ -75,15 +83,7 @@
 
 (define-abbrev-table 'tabulated-list-mode-abbrev-table '())
 
-(define-abbrev-table 'tar-mode-abbrev-table '())
-
-(define-abbrev-table 'term-mode-abbrev-table '())
-
 (define-abbrev-table 'text-mode-abbrev-table '())
-
-(define-abbrev-table 'tuareg-interactive-mode-abbrev-table '())
-
-(define-abbrev-table 'tuareg-mode-abbrev-table '())
 
 (define-abbrev-table 'url-cookie-mode-abbrev-table '())
 

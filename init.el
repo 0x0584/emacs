@@ -779,7 +779,7 @@ Don't mess with special buffers."
   (interactive)
   (let (a
         b
-        (target "^\"\'()[]"))
+        (target "/{}^\"\'()[]"))
     (if (not (use-region-p))
 	(progn (skip-chars-backward target)
 	       (setq a (point)))
@@ -1580,5 +1580,16 @@ if point is after ＼[ or ＼(."
 
 ;; ;; Do setting recommemded configuration
 ;; (plsense-config-default)
+
+(defun set-to-nice-view ()
+  "Set the current frame to nice look."
+  (interactive)
+  (set-frame-width nil 115)
+  (text-scale-adjust 2))
+
+(add-hook 'cperl-mode-hook 'auto-insert)
+
+(global-set-key (kbd "C-c +") 'set-to-nice-view)
+
 (provide 'init)
 ;;; init ends here
