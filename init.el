@@ -142,7 +142,7 @@
  '(cperl-highlight-variables-indiscriminately nil)
  '(cperl-indent-level 4)
  '(cperl-indent-parens-as-block t)
- '(custom-enabled-themes (quote (gotham)))
+ '(custom-enabled-themes (quote (manoj-dark)))
  '(custom-safe-themes
    (quote
     ("b550fc3d6f0407185ace746913449f6ed5ddc4a9f0cf3be218af4fb3127c7877" "d83bd04930314c053753d199873ee36c54bf221fe4b8a0938098f41eaa9a22ae" default)))
@@ -214,13 +214,11 @@
  '(bold ((t (:slant normal :weight bold))))
  '(chess-ics1-black-face ((t (:foreground "dark orange" :weight bold))))
  '(chess-ics1-white-face ((t (:foreground "white" :weight bold))))
- '(cperl-array-face ((t (:foreground "#599caa" :weight bold))))
- '(cperl-hash-face ((t (:foreground "#599cab" :slant italic))))
+ '(cperl-array-face ((t (:foreground "Aquamarine" :weight bold))))
+ '(cperl-hash-face ((t (:foreground "Aquamarine" :slant italic))))
  '(dired-ignored ((t (:inherit shadow :underline (:color foreground-color :style wave) :slant italic))))
- '(font-lock-comment-face ((t (:foreground "cadet blue" :slant oblique))))
- '(font-lock-function-name-face ((t (:foreground "#599cab" :slant italic :weight bold))))
- '(font-lock-string-face ((t (:foreground "#2aa889"))))
- '(font-lock-variable-name-face ((t (:foreground "#599cab"))))
+ '(font-lock-keyword-face ((t (:foreground "cyan1" :weight bold))))
+ '(font-lock-type-face ((t (:foreground "SteelBlue1"))))
  '(italic ((t (:slant italic))))
  '(org-agenda-clocking ((t (:underline (:color "firebrick" :style wave) :slant italic))))
  '(org-done ((t (:foreground "#2aa889" :weight bold))))
@@ -232,7 +230,7 @@
  '(org-scheduled-previously ((t (:foreground "rosy brown" :weight bold))))
  '(org-tag ((t (:foreground "gold" :weight bold))))
  '(org-todo ((t (:foreground "#c23127" :slant italic :weight bold))))
- '(org-upcoming-deadline ((t (:foreground "#d26937" :slant oblique))))
+ '(org-upcoming-deadline ((t (:foreground "chocolate1" :slant italic))))
  '(perl6-identifier ((t (:inherit default))))
  '(perl6-operator ((t (:foreground "light slate gray"))))
  '(perl6-var-name ((t (:inherit font-lock-variable-name-face))))
@@ -1588,6 +1586,7 @@ if point is after ＼[ or ＼(."
   (text-scale-adjust 2))
 
 (add-hook 'cperl-mode-hook 'auto-insert)
+(add-hook 'org-mode-hook 'visual-line-mode)
 
 (global-set-key (kbd "C-c +") 'set-to-nice-view)
 

@@ -1,18 +1,18 @@
 
 ;; ----- smex-history -----
 (
+ customize-face
+ customize-themes
+ helm-themes
  php-mode
  web-mode
  css-mode
- org-alert-disable
- customize-face
  customize-group
- menu-bar-mode
 )
 
 ;; ----- smex-data -----
 (
- (helm-themes . 34)
+ (helm-themes . 35)
  (electric-pair-mode . 13)
  (electric-operator-mode . 1)
  (find-file . 3)
@@ -36,8 +36,8 @@
  (org-toggle-inline-images . 1)
  (org-remove-inline-images . 1)
  (load-theme . 1)
- (customize-themes . 4)
- (customize-face . 60)
+ (customize-themes . 7)
+ (customize-face . 70)
  (web-mode . 19)
  (php-mode . 9)
  (package-delete . 6)
