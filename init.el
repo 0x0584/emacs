@@ -111,6 +111,7 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 ;;(desktop-save-mode 1) ; 0 for off
+(require 'desktop+)
 (winner-mode 1)
 
 
@@ -148,6 +149,7 @@
     ("b550fc3d6f0407185ace746913449f6ed5ddc4a9f0cf3be218af4fb3127c7877" "d83bd04930314c053753d199873ee36c54bf221fe4b8a0938098f41eaa9a22ae" default)))
  '(display-time-mode t)
  '(electric-pair-mode t)
+ '(f90-program-indent 2)
  '(fci-rule-character-color "#202020")
  '(fci-rule-color "#202020")
  '(flycheck-clang-include-path
@@ -171,7 +173,7 @@
  '(org-plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(package-selected-packages
    (quote
-    (vc-auto-commit vc-check-status vc-msg ac-emoji emojify-logos plsense perl6-mode org-preview-html flymake-jshint flymake-jslint flymake-json flymake-less indium ac-js2 helm-spotify-plus spotify tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ahungry-theme ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme paper-theme spacemacs-theme djvu gited memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (devdocs god-mode helm-perldoc lang-refactor-perl vc-auto-commit vc-check-status vc-msg ac-emoji emojify-logos plsense perl6-mode org-preview-html flymake-jshint flymake-jslint flymake-json flymake-less indium ac-js2 helm-spotify-plus spotify tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ahungry-theme ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme paper-theme spacemacs-theme djvu gited memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(puml-plantuml-jar-path "~/.emacs.d/plantuml/plantuml.jar")
@@ -217,7 +219,9 @@
  '(cperl-array-face ((t (:foreground "Aquamarine" :weight bold))))
  '(cperl-hash-face ((t (:foreground "Aquamarine" :slant italic))))
  '(dired-ignored ((t (:inherit shadow :underline (:color foreground-color :style wave) :slant italic))))
+ '(font-lock-constant-face ((t (:foreground "LightSlateBlue" :weight bold))))
  '(font-lock-keyword-face ((t (:foreground "cyan1" :weight bold))))
+ '(font-lock-negation-char-face ((t (:foreground "indian red" :weight bold))))
  '(font-lock-type-face ((t (:foreground "SteelBlue1"))))
  '(italic ((t (:slant italic))))
  '(org-agenda-clocking ((t (:underline (:color "firebrick" :style wave) :slant italic))))
@@ -311,7 +315,7 @@
 	 " * DESCRIPTION:\tNULL\n"
 	 " * \n"
 	 " * CREATION:\t" (insert-date) "\n"
-	 " * MODIFIED:\t" (insert-date) " */\n"
+	 " * MODIFIED:\t" (insert-date) "\n */\n\n"
 	 "/* ---------- headers ---------- */\n"
 	 "#include <stdio.h>\n#include <stdlib.h>\n\n"
 	 "/* ---------- types ---------- */\n\n"
@@ -428,9 +432,9 @@
   (save-buffer)
   (setq sh-indent-command
 	(concat "indent -nbad -bap -bbo -nbc -br -brs "
-		"-brf -c33 -cd33 -ncdb -ce -ci2 -cli0 "
+		"-brf -c33 -cd33 -ncdb -ce -ci4 -cli0 "
 		"-cp33 -cs -d0 -di1 -nfc1 -nfca -hnl "
-		"-i2 -ip0 -l75 -lp -npcs -nprs -npsl "
+		"-i4 -ip0 -l75 -lp -npcs -nprs -npsl "
 		"-saf -sai -saw -nsc -nsob -nss -ppi2 "))
   (mark-whole-buffer)
   (universal-argument)
@@ -685,11 +689,11 @@ Don't mess with special buffers."
 (global-set-key (kbd "C-c k") 'kill-other-buffers)
 
 ;; ==== DESKTOP MODE ====
-(require 'desktop+)
-(global-set-key (kbd "C-c s") 'desktop+-create)
-(global-set-key (kbd "C-c S") 'desktop+-create-auto)
-(global-set-key (kbd "C-c l") 'desktop+-load)
-(global-set-key (kbd "C-c L") 'desktop+-load-auto)
+;; (require 'desktop+)
+;; (global-set-key (kbd "C-c s") 'desktop+-create)
+;; (global-set-key (kbd "C-c S") 'desktop+-create-auto)
+;; (global-set-key (kbd "C-c l") 'desktop+-load)
+;; (global-set-key (kbd "C-c L") 'desktop+-load-auto)
 (global-set-key (kbd "C-c r") 'recover-session)
 
 
@@ -1590,5 +1594,71 @@ if point is after ＼[ or ＼(."
 
 (global-set-key (kbd "C-c +") 'set-to-nice-view)
 
+(require 'god-mode)
+(global-set-key (kbd "<escape>") 'god-local-mode)
+
+(defun god-toggle-on-overwrite ()
+  "Toggle `god-mode` on `overwrite-mode`."
+  (if (bound-and-true-p overwrite-mode)
+      (god-local-mode-pause)
+    (god-local-mode-resume)))
+
+(add-hook 'overwrite-mode-hook 'god-toggle-on-overwrite)
+
+(require 'god-mode-isearch)
+
+(define-key isearch-mode-map (kbd "<escape>") 'god-mode-isearch-activate)
+(define-key god-mode-isearch-map (kbd "<escape>") 'god-mode-isearch-disable)
+
+(define-key god-local-mode-map (kbd ".") 'repeat)
+(define-key god-local-mode-map (kbd "i") 'god-local-mode)
+
+;; (defun my-update ()
+;;   (cond
+;;    (god-local-mode
+;;     (setq nyan-wavy-trail nil)
+;;     (nyan-stop-animation)
+;;     )
+;;    (t
+;;     (setq nyan-wavy-trail t)
+;;     (nyan-start-animation)
+;;     )))
+
+;; (add-hook 'god-mode-enabled-hook 'my-update)
+;; (add-hook 'god-mode-disabled-hook 'my-update)
+
+(global-set-key (kbd "C-x C-1") 'delete-other-windows)
+(global-set-key (kbd "C-x C-2") 'split-window-below)
+(global-set-key (kbd "C-x C-3") 'split-window-right)
+(global-set-key (kbd "C-x C-0") 'delete-window)
+(global-set-key (kbd "C-h !") 'devdocs-search)
+(add-to-list 'god-exempt-major-modes 'dired-mode)
+
+(require 'recentf)
+(recentf-mode 1)
+(savehist-mode 1)
+
+(setq org-return-follows-link t)
+(setq org-src-fontify-natively t)
+(require 'flymake-jslint)
+
+(add-hook 'js-mode-hook 'flymake-jslint-load)
+(add-hook 'js-mode-hook 'js2-mode)                                                             
+(add-hook 'js-mode-hook 'ac-js2-mode)
+
+(setq c-default-style "cc-mode")
+
+(defun swap-buffer ()
+  (interactive)
+  (cond ((one-window-p) (display-buffer (other-buffer)))
+        ((let* ((buffer-a (current-buffer))
+                (window-b (cadr (window-list)))
+                (buffer-b (window-buffer window-b)))
+           (set-window-buffer window-b buffer-a)
+           (switch-to-buffer buffer-b)
+           (other-window 1)))))
+(global-set-key (kbd "C-c s") 'swap-buffer)
+;; (setq c-basic-indent 4)
+;; (setq c-basic-offset 4)
 (provide 'init)
 ;;; init ends here

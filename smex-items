@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- customize-face
- customize-themes
- helm-themes
- php-mode
- web-mode
- css-mode
- customize-group
+ desktop+-create
+ desktop+-load-auto
+ desktop-save-in-desktop-dir
+ ansi-term
+ desktop-read
+ package-install
+ text-mode
 )
 
 ;; ----- smex-data -----
@@ -17,7 +17,7 @@
  (electric-operator-mode . 1)
  (find-file . 3)
  (find-grep . 2)
- (package-list-packages . 10)
+ (package-list-packages . 11)
  (describe-mode . 2)
  (plantuml-mode . 1)
  (setenv . 2)
@@ -27,9 +27,9 @@
  (hs-minor-mode . 2)
  (sql-mysql . 7)
  (auto-complete . 3)
- (pwd . 5)
+ (pwd . 7)
  (org-table-create . 6)
- (auto-complete-mode . 14)
+ (auto-complete-mode . 16)
  (org-version . 2)
  (impatient-mode . 3)
  (httpd-start . 2)
@@ -37,16 +37,16 @@
  (org-remove-inline-images . 1)
  (load-theme . 1)
  (customize-themes . 7)
- (customize-face . 70)
- (web-mode . 19)
+ (customize-face . 71)
+ (web-mode . 22)
  (php-mode . 9)
  (package-delete . 6)
- (auto-insert . 6)
+ (auto-insert . 7)
  (c-reformat-buffer . 3)
  (visual-line-mode . 28)
  (org-reload . 5)
  (org-deadline . 1)
- (package-install . 18)
+ (package-install . 21)
  (cfw:open-calendar-buffer . 4)
  (cfw:change-view-day . 1)
  (process-menu-mode . 2)
@@ -80,7 +80,7 @@
  (helm-tldr . 2)
  (tldr . 1)
  (org-columns . 4)
- (nyan-mode . 11)
+ (nyan-mode . 13)
  (helm-spotify . 3)
  (playerctl-play-pause-song . 1)
  (spotify-enable-song-notifications . 1)
@@ -107,7 +107,7 @@
  (epa-encrypt-file . 1)
  (insert-date . 1)
  (term . 1)
- (ansi-term . 1)
+ (ansi-term . 3)
  (org-timer . 1)
  (org-timer-start . 1)
  (org-timer-stop . 1)
@@ -121,7 +121,7 @@
  (cperl-perldoc-at-point . 1)
  (cperl-find-bad-style . 1)
  (customize-group . 3)
- (org-alert-disable . 5)
+ (org-alert-disable . 7)
  (cperl-electric-brace . 1)
  (cperl-set-style . 1)
  (cperl-electric-lbrace . 1)
@@ -137,4 +137,13 @@
  (chess . 2)
  (menu-bar-mode . 1)
  (css-mode . 1)
+ (god-mode . 2)
+ (git-timemachine . 1)
+ (org-mode-restart . 2)
+ (TeX-mode . 1)
+ (text-mode . 1)
+ (desktop-read . 1)
+ (desktop-save-in-desktop-dir . 1)
+ (desktop+-load-auto . 1)
+ (desktop+-create . 1)
 )
