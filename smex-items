@@ -1,25 +1,25 @@
 
 ;; ----- smex-history -----
 (
- desktop+-create
- desktop+-load-auto
- desktop-save-in-desktop-dir
+ package-list-packages
+ customize-face
+ artist-mode
  ansi-term
- desktop-read
- package-install
- text-mode
+ create-tags
+ customize-themes
+ helm-themes
 )
 
 ;; ----- smex-data -----
 (
- (helm-themes . 35)
+ 35
  (electric-pair-mode . 13)
  (electric-operator-mode . 1)
  (find-file . 3)
  (find-grep . 2)
- (package-list-packages . 11)
+ (package-list-packages . 15)
  (describe-mode . 2)
- (plantuml-mode . 1)
+ 1
  (setenv . 2)
  (customize-variable . 4)
  (org-mode . 3)
@@ -31,14 +31,14 @@
  (org-table-create . 6)
  (auto-complete-mode . 16)
  (org-version . 2)
- (impatient-mode . 3)
+ 3
  (httpd-start . 2)
  (org-toggle-inline-images . 1)
  (org-remove-inline-images . 1)
  (load-theme . 1)
- (customize-themes . 7)
- (customize-face . 71)
- (web-mode . 22)
+ (customize-themes . 8)
+ (customize-face . 80)
+ 22
  (php-mode . 9)
  (package-delete . 6)
  (auto-insert . 7)
@@ -55,7 +55,7 @@
  (clone-buffer . 1)
  (org-clock-goto . 1)
  (make-directory . 2)
- (restart-emacs . 4)
+ 4
  (org-capture . 1)
  (org-habit-toggle-habits . 2)
  (helm-dictionary . 3)
@@ -70,7 +70,7 @@
  (calculator . 6)
  (table-query-dimension . 1)
  (org-alert-enable . 6)
- (org-alert-check . 16)
+ (org-alert-check . 17)
  (global-org-gnome-minor-mode . 3)
  (org-gnome-minor-mode . 6)
  (package-install-from-buffer . 1)
@@ -78,13 +78,13 @@
  (global-org-gnome-calendar-mode . 2)
  (tldr-update-docs . 1)
  (helm-tldr . 2)
- (tldr . 1)
+ 1
  (org-columns . 4)
  (nyan-mode . 13)
  (helm-spotify . 3)
  (playerctl-play-pause-song . 1)
  (spotify-enable-song-notifications . 1)
- (helm-spotify-plus . 1)
+ 1
  (flycheck-mode . 2)
  (javascript-mode . 1)
  (js2-mode . 2)
@@ -105,15 +105,15 @@
  (boxquote-yank . 4)
  (boxquote-where-is . 1)
  (epa-encrypt-file . 1)
- (insert-date . 1)
+ (insert-date . 3)
  (term . 1)
- (ansi-term . 3)
+ (ansi-term . 12)
  (org-timer . 1)
  (org-timer-start . 1)
  (org-timer-stop . 1)
  (calendar . 1)
  (perl-mode . 2)
- (perl6-mode . 1)
+ 1
  (cperl-mode . 6)
  (info . 5)
  (cperl-lazy-install . 2)
@@ -121,24 +121,24 @@
  (cperl-perldoc-at-point . 1)
  (cperl-find-bad-style . 1)
  (customize-group . 3)
- (org-alert-disable . 7)
+ (org-alert-disable . 9)
  (cperl-electric-brace . 1)
  (cperl-set-style . 1)
  (cperl-electric-lbrace . 1)
  (emojify-mode . 1)
  (encode-hz-buffer . 3)
- (zeal-at-point . 3)
+ 3
  (grep-find . 1)
  (regexp-builder . 1)
- (vc-auto-commit . 3)
+ 3
  (vc-update-change-log . 1)
  (vc-update . 1)
  (Info-help . 1)
- (chess . 2)
+ 2
  (menu-bar-mode . 1)
  (css-mode . 1)
- (god-mode . 2)
- (git-timemachine . 1)
+ 2
+ 1
  (org-mode-restart . 2)
  (TeX-mode . 1)
  (text-mode . 1)
@@ -146,4 +146,9 @@
  (desktop-save-in-desktop-dir . 1)
  (desktop+-load-auto . 1)
  (desktop+-create . 1)
+ (Info-search . 2)
+ (create-tags . 2)
+ (artist-mode . 8)
+ (copy-file . 1)
+ (helm-themes . 1)
 )

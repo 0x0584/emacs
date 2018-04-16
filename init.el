@@ -75,7 +75,7 @@
 
 
 ;; ==== PACKAGES-SOURCE ====
-
+(setq org-agenda-files (list "~/orged/agenda"))
 (require 'package)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ;; ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -143,10 +143,10 @@
  '(cperl-highlight-variables-indiscriminately nil)
  '(cperl-indent-level 4)
  '(cperl-indent-parens-as-block t)
- '(custom-enabled-themes (quote (manoj-dark)))
+ '(custom-enabled-themes (quote (tao-yin)))
  '(custom-safe-themes
    (quote
-    ("b550fc3d6f0407185ace746913449f6ed5ddc4a9f0cf3be218af4fb3127c7877" "d83bd04930314c053753d199873ee36c54bf221fe4b8a0938098f41eaa9a22ae" default)))
+    ("0e0c37ee89f0213ce31205e9ae8bce1f93c9bcd81b1bcda0233061bb02c357a8" "b550fc3d6f0407185ace746913449f6ed5ddc4a9f0cf3be218af4fb3127c7877" "d83bd04930314c053753d199873ee36c54bf221fe4b8a0938098f41eaa9a22ae" default)))
  '(display-time-mode t)
  '(electric-pair-mode t)
  '(f90-program-indent 2)
@@ -161,21 +161,22 @@
  '(indicate-buffer-boundaries (quote left))
  '(line-number-mode nil)
  '(linum-format (quote dynamic))
+ '(main-line-color1 "#222232")
+ '(main-line-color2 "#333343")
  '(main-line-separator-style (quote chamfer))
  '(menu-bar-mode nil)
  '(nrepl-message-colors
    (quote
     ("#336c6c" "#205070" "#0f2050" "#806080" "#401440" "#6c1f1c" "#6b400c" "#23733c")))
  '(nyan-mode t)
- '(org-agenda-files
-   (quote
-    ("~/orged/LP-DBA/gl.org" "/home/arfed/orged/Q.org" "/home/arfed/orged/emails.org" "/home/arfed/orged/ghiwan.org" "/home/arfed/orged/led-zeppelin.org")))
  '(org-plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(package-selected-packages
    (quote
     (devdocs god-mode helm-perldoc lang-refactor-perl vc-auto-commit vc-check-status vc-msg ac-emoji emojify-logos plsense perl6-mode org-preview-html flymake-jshint flymake-jslint flymake-json flymake-less indium ac-js2 helm-spotify-plus spotify tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ahungry-theme ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme paper-theme spacemacs-theme djvu gited memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
+ '(powerline-color1 "#222232")
+ '(powerline-color2 "#333343")
  '(puml-plantuml-jar-path "~/.emacs.d/plantuml/plantuml.jar")
  '(scroll-bar-mode nil)
  '(send-mail-function (quote smtpmail-send-it))
@@ -220,14 +221,17 @@
  '(cperl-hash-face ((t (:foreground "Aquamarine" :slant italic))))
  '(dired-ignored ((t (:inherit shadow :underline (:color foreground-color :style wave) :slant italic))))
  '(font-lock-constant-face ((t (:foreground "LightSlateBlue" :weight bold))))
+ '(font-lock-function-name-face ((t (:foreground "#F1F1F1" :slant italic))))
  '(font-lock-keyword-face ((t (:foreground "cyan1" :weight bold))))
  '(font-lock-negation-char-face ((t (:foreground "indian red" :weight bold))))
  '(font-lock-type-face ((t (:foreground "SteelBlue1"))))
  '(italic ((t (:slant italic))))
  '(org-agenda-clocking ((t (:underline (:color "firebrick" :style wave) :slant italic))))
+ '(org-checkbox-statistics-todo ((t (:background "gainsboro" :foreground "dim gray" :weight bold))))
  '(org-done ((t (:foreground "#2aa889" :weight bold))))
- '(org-level-1 ((t (:inherit outline-1 :weight bold))))
- '(org-level-2 ((t (:inherit outline-2 :slant italic))))
+ '(org-level-1 ((t (:inherit outline-1 :foreground "#FAFAFA" :overline t :underline t :weight bold :height 1.0))))
+ '(org-level-2 ((t (:inherit outline-2 :foreground "#FAFAFA" :overline t :slant italic :weight normal :height 1.0))))
+ '(org-level-3 ((t (:foreground "#FAFAFA" :underline t :weight normal :height 1.0))))
  '(org-link ((t (:inherit link :foreground "Deepskyblue4" :underline nil :slant italic))))
  '(org-list-dt ((t (:foreground "Seagreen3" :weight bold))))
  '(org-priority ((t (:inherit font-lock-keyword-face :slant normal))))
@@ -235,6 +239,7 @@
  '(org-tag ((t (:foreground "gold" :weight bold))))
  '(org-todo ((t (:foreground "#c23127" :slant italic :weight bold))))
  '(org-upcoming-deadline ((t (:foreground "chocolate1" :slant italic))))
+ '(org-verbatim ((t (:inherit shadow :underline t))))
  '(perl6-identifier ((t (:inherit default))))
  '(perl6-operator ((t (:foreground "light slate gray"))))
  '(perl6-var-name ((t (:inherit font-lock-variable-name-face))))
@@ -316,15 +321,6 @@
 	 " * \n"
 	 " * CREATION:\t" (insert-date) "\n"
 	 " * MODIFIED:\t" (insert-date) "\n */\n\n"
-	 "/* ---------- headers ---------- */\n"
-	 "#include <stdio.h>\n#include <stdlib.h>\n\n"
-	 "/* ---------- types ---------- */\n\n"
-	 "/* ---------- prototypes ---------- */\n\n"
-	 "/* ---------- main entry ---------- */\n"
-	 "int main(int argc, char **argv) {\n"
-	 "  return 0;\n"
-	 "}\n\n"
-	 "/* ---------- implementations ---------- */\n"
 	 )
         ((shell-mode . "Shell script") nil
          "#!/bin/bash\n\n"
@@ -520,8 +516,12 @@
 
 ;;
 (defalias 'qrr 'query-replace-regexp)
+(defun linum-setup ()
+  (interactive)
+  (linum-mode)
+  (set-face-attribute 'linum nil :height 100))
 ;; ==== LINUM SHORTKEY ====
-(global-set-key (kbd "S-C-l") 'linum-mode)
+(global-set-key (kbd "S-C-l") 'linum-setup)
 (global-set-key (kbd "C-:") 'linum-relative-mode)
 
 
@@ -1393,8 +1393,8 @@ Version 2017-02-02"
 (add-to-list
  'org-agenda-custom-commands
  '("W" "Weekend" ((agenda "" ))
-   ((org-agenda-overriding-header "45 days")
-    (org-agenda-span 45))) t)
+   ((org-agenda-overriding-header "20 days")
+    (org-agenda-span 20))) t)
 (setq eww-search-prefix "https://startpage.com/do/m/mobilesearch?query=")
 (setq works "~/Workspace/")
 (setq www (concat works "www/"))
@@ -1419,12 +1419,6 @@ Version 2017-02-02"
       (plist-put org-format-latex-options
 		 :scale 1.3))
 
-(require 'org-protocol)
-
-(require 'edit-server)
-
-(edit-server-start)
-
 (global-set-key (kbd "C-x \\") 'wordnut-lookup-current-word)
 (global-set-key (kbd "C-x <f12>") 'helm-tldr)
 
@@ -1442,7 +1436,6 @@ Version 2017-02-02"
 (setq alert-default-style 'libnotify)
 (setq org-alert-interval 900)	; 60 sec * 30 min
 (org-alert-enable)
-(org-alert-check)
 
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
@@ -1471,75 +1464,75 @@ Version 2017-02-02"
 (require 'epa-file)
 (epa-file-enable)
 
-(defun org-cycle-or-complete-latex (&optional arg)
-  "Like `org-cycle' (which see) but completes latex math equations
-if point is after ＼[ or ＼(."
-  (interactive "P")
-  (if (looking-back "\\\\[[(]" (max (point-min) (- (point) 2)))
-      (progn
-	(insert
-	 (case (char-before)
-	   (?\( "  \\)")
-	   (?\[ "  \\]")
-	   (t (error "Should never happen."))))
-	(backward-char 3))
-    (call-interactively #'org-cycle)))
+;; (defun org-cycle-or-complete-latex (&optional arg)
+;;   "Like `org-cycle' (which see) but completes latex math equations
+;; if point is after ＼[ or ＼(."
+;;   (interactive "P")
+;;   (if (looking-back "\\\\[[(]" (max (point-min) (- (point) 2)))
+;;       (progn
+;; 	(insert
+;; 	 (case (char-before)
+;; 	   (?\( "  \\)")
+;; 	   (?\[ "  \\]")
+;; 	   (t (error "Should never happen."))))
+;; 	(backward-char 3))
+;;     (call-interactively #'org-cycle)))
 
-(defun my-org-mode-hook-fun ()
-  (org-defkey org-mode-map [(tab)] #'org-cycle-or-complete-latex))
+;; (defun my-org-mode-hook-fun ()
+;;   (org-defkey org-mode-map [(tab)] #'org-cycle-or-complete-latex))
 
-(add-hook 'org-mode-hook #'my-org-mode-hook-fun)
+;; (add-hook 'org-mode-hook #'my-org-mode-hook-fun)
 
-(unless (boundp 'org-export-latex-classes)
-  (setq org-export-latex-classes nil))
-(add-to-list 'org-export-latex-classes
-	     ;; beamer class, for presentations
-	     '("beamer"
-	       "\\documentclass[11pt]{beamer}\n
-      \\mode<{{{beamermode}}}>\n
-      \\usetheme{{{{beamertheme}}}}\n
-      \\usecolortheme{{{{beamercolortheme}}}}\n
-      \\beamertemplateballitem\n
-      \\setbeameroption{show notes}
-      \\usepackage[utf8]{inputenc}\n
-      \\usepackage[T1]{fontenc}\n
-      \\usepackage{hyperref}\n
-      \\usepackage{color}
-      \\usepackage{listings}
-      \\lstset{numbers=none,language=[ISO]C++,tabsize=4,
-  frame=single,
-  basicstyle=\\small,
-  showspaces=false,showstringspaces=false,
-  showtabs=false,
-  keywordstyle=\\color{blue}\\bfseries,
-  commentstyle=\\color{red},
-  }\n
-      \\usepackage{verbatim}\n
-      \\institute{{{{beamerinstitute}}}}\n          
-       \\subject{{{{beamersubject}}}}\n"
+;; (unless (boundp 'org-export-latex-classes)
+;;   (setq org-export-latex-classes nil))
+;; (add-to-list 'org-export-latex-classes
+;; 	     ;; beamer class, for presentations
+;; 	     '("beamer"
+;; 	       "\\documentclass[11pt]{beamer}\n
+;;       \\mode<{{{beamermode}}}>\n
+;;       \\usetheme{{{{beamertheme}}}}\n
+;;       \\usecolortheme{{{{beamercolortheme}}}}\n
+;;       \\beamertemplateballitem\n
+;;       \\setbeameroption{show notes}
+;;       \\usepackage[utf8]{inputenc}\n
+;;       \\usepackage[T1]{fontenc}\n
+;;       \\usepackage{hyperref}\n
+;;       \\usepackage{color}
+;;       \\usepackage{listings}
+;;       \\lstset{numbers=none,language=[ISO]C++,tabsize=4,
+;;   frame=single,
+;;   basicstyle=\\small,
+;;   showspaces=false,showstringspaces=false,
+;;   showtabs=false,
+;;   keywordstyle=\\color{blue}\\bfseries,
+;;   commentstyle=\\color{red},
+;;   }\n
+;;       \\usepackage{verbatim}\n
+;;       \\institute{{{{beamerinstitute}}}}\n          
+;;        \\subject{{{{beamersubject}}}}\n"
 
-	       ("\\section{%s}" . "\\section*{%s}")
+;; 	       ("\\section{%s}" . "\\section*{%s}")
 	       
-	       ("\\begin{frame}[fragile]\\frametitle{%s}"
-		"\\end{frame}"
-		"\\begin{frame}[fragile]\\frametitle{%s}"
-		"\\end{frame}")))
+;; 	       ("\\begin{frame}[fragile]\\frametitle{%s}"
+;; 		"\\end{frame}"
+;; 		"\\begin{frame}[fragile]\\frametitle{%s}"
+;; 		"\\end{frame}")))
 
-;; letter class, for formal letters
+;; ;; letter class, for formal letters
 
-(add-to-list 'org-export-latex-classes
+;; (add-to-list 'org-export-latex-classes
 
-	     '("letter"
-	       "\\documentclass[11pt]{letter}\n
-      \\usepackage[utf8]{inputenc}\n
-      \\usepackage[T1]{fontenc}\n
-      \\usepackage{color}"
+;; 	     '("letter"
+;; 	       "\\documentclass[11pt]{letter}\n
+;;       \\usepackage[utf8]{inputenc}\n
+;;       \\usepackage[T1]{fontenc}\n
+;;       \\usepackage{color}"
 	       
-	       ("\\section{%s}" . "\\section*{%s}")
-	       ("\\subsection{%s}" . "\\subsection*{%s}")
-	       ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-	       ("\\paragraph{%s}" . "\\paragraph*{%s}")
-	       ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+;; 	       ("\\section{%s}" . "\\section*{%s}")
+;; 	       ("\\subsection{%s}" . "\\subsection*{%s}")
+;; 	       ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+;; 	       ("\\paragraph{%s}" . "\\paragraph*{%s}")
+;; 	       ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
 ;; (setq browse-url-browser-function 'eww-browse-url)
 
@@ -1658,7 +1651,13 @@ if point is after ＼[ or ＼(."
            (switch-to-buffer buffer-b)
            (other-window 1)))))
 (global-set-key (kbd "C-c s") 'swap-buffer)
+
+;; (require 'org-latex)
+;; (setq org-export-latex-listings 'minted)
+;; (add-to-list 'org-export-latex-packages-alist '("" "minted"))
+
 ;; (setq c-basic-indent 4)
 ;; (setq c-basic-offset 4)
+
 (provide 'init)
 ;;; init ends here

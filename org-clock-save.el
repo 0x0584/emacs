@@ -1,2 +1,1 @@
-;; org-clock-save.el - fedora at <2018-02-26 Mon 07:29>
-(setq org-clock-stored-history '())
+;; org-clock-save.el - fedora at <2018-04-16 Mon 10:50>
