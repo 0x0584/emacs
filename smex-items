@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ langtool-check
  package-list-packages
+ tags-search
  customize-face
- artist-mode
+ helm-find-files
+ eshell
  ansi-term
- create-tags
- customize-themes
- helm-themes
 )
 
 ;; ----- smex-data -----
@@ -17,7 +17,7 @@
  (electric-operator-mode . 1)
  (find-file . 3)
  (find-grep . 2)
- (package-list-packages . 15)
+ (package-list-packages . 18)
  (describe-mode . 2)
  1
  (setenv . 2)
@@ -36,17 +36,17 @@
  (org-toggle-inline-images . 1)
  (org-remove-inline-images . 1)
  (load-theme . 1)
- (customize-themes . 8)
- (customize-face . 80)
+ (customize-themes . 10)
+ (customize-face . 86)
  22
  (php-mode . 9)
- (package-delete . 6)
- (auto-insert . 7)
+ (package-delete . 7)
+ (auto-insert . 8)
  (c-reformat-buffer . 3)
  (visual-line-mode . 28)
  (org-reload . 5)
  (org-deadline . 1)
- (package-install . 21)
+ (package-install . 22)
  (cfw:open-calendar-buffer . 4)
  (cfw:change-view-day . 1)
  (process-menu-mode . 2)
@@ -105,9 +105,9 @@
  (boxquote-yank . 4)
  (boxquote-where-is . 1)
  (epa-encrypt-file . 1)
- (insert-date . 3)
+ (insert-date . 4)
  (term . 1)
- (ansi-term . 12)
+ (ansi-term . 14)
  (org-timer . 1)
  (org-timer-start . 1)
  (org-timer-stop . 1)
@@ -115,7 +115,7 @@
  (perl-mode . 2)
  1
  (cperl-mode . 6)
- (info . 5)
+ (info . 6)
  (cperl-lazy-install . 2)
  (cperl-perldoc . 2)
  (cperl-perldoc-at-point . 1)
@@ -151,4 +151,9 @@
  (artist-mode . 8)
  (copy-file . 1)
  (helm-themes . 1)
+ (jdee-run . 1)
+ (eshell . 1)
+ (helm-find-files . 1)
+ (tags-search . 1)
+ (langtool-check . 2)
 )

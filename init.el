@@ -224,10 +224,11 @@
  '(font-lock-function-name-face ((t (:foreground "#F1F1F1" :slant italic))))
  '(font-lock-keyword-face ((t (:foreground "cyan1" :weight bold))))
  '(font-lock-negation-char-face ((t (:foreground "indian red" :weight bold))))
+ '(font-lock-string-face ((t (:foreground "#C3C3C3" :slant italic))))
  '(font-lock-type-face ((t (:foreground "SteelBlue1"))))
  '(italic ((t (:slant italic))))
  '(org-agenda-clocking ((t (:underline (:color "firebrick" :style wave) :slant italic))))
- '(org-checkbox-statistics-todo ((t (:background "gainsboro" :foreground "dim gray" :weight bold))))
+ '(org-checkbox-statistics-todo ((t (:background "#F1F1F1" :foreground "dark red" :weight bold))))
  '(org-done ((t (:foreground "#2aa889" :weight bold))))
  '(org-level-1 ((t (:inherit outline-1 :foreground "#FAFAFA" :overline t :underline t :weight bold :height 1.0))))
  '(org-level-2 ((t (:inherit outline-2 :foreground "#FAFAFA" :overline t :slant italic :weight normal :height 1.0))))
@@ -548,7 +549,7 @@
   (interactive "sName: ")
   (ansi-term "/usr/bin/sh" name))
 
-;; (global-set-key (kbd "C-x t") 'named-term)
+(global-set-key (kbd "C-x t") 'eshell)
 
 (defun m-term-right ()
   "Add terminal on the right."
@@ -1434,7 +1435,7 @@ Version 2017-02-02"
 
 (require 'org-alert)
 (setq alert-default-style 'libnotify)
-(setq org-alert-interval 900)	; 60 sec * 30 min
+(setq org-alert-interval 2500)	; 60 sec * 30 min
 (org-alert-enable)
 
 (setq org-clock-persist 'history)
@@ -1658,6 +1659,66 @@ Version 2017-02-02"
 
 ;; (setq c-basic-indent 4)
 ;; (setq c-basic-offset 4)
+
+(define-minor-mode delete-nl-spaces-mode
+  "Toggle deleting needless spaces (Delete Needless Spaces mode).
+With a prefix argument ARG, enable Delete Needless Spaces mode if ARG is
+positive, and disable it otherwise.  If called from Lisp, enable
+the mode if ARG is omitted or nil.
+If Delete Needless Spaces mode is enable, before a buffer is saved to its file:
+- delete initial blank lines;
+- change spaces on tabs or vice versa depending on `indent-tabs-mode';
+- delete the trailing whitespaces and empty last lines;
+- delete also latest blank line if `require-final-newline' is nil;"
+  :init-value t
+  :lighter " dns")
+
+(defun delete-nl-spaces ()
+  "Execute `delete-nl-spaces'."
+  (if delete-nl-spaces-mode
+      (save-excursion
+        ;; Delete initial blank lines
+        (goto-char (point-min))
+        (skip-chars-forward " \n\t")
+        (skip-chars-backward " \t")
+        (if (> (point) 0)
+            (delete-char (- (- (point) 1))))
+
+        ;; Change spaces on tabs or tabs on spaces
+        (if indent-tabs-mode
+            (tabify (point-min) (point-max))
+          (untabify (point-min) (point-max)))
+
+        ;; Delete the trailing whitespaces and all blank lines
+        (let ((delete-trailing-lines t))
+          (delete-trailing-whitespace))
+
+        ;; Delete the latest newline
+        (unless require-final-newline
+          (goto-char (point-max))
+          (let ((trailnewlines (skip-chars-backward "\n\t")))
+            (if (< trailnewlines 0)
+                (delete-char (abs trailnewlines))))))))
+
+(defun delete-nl-spaces-find-file-hook ()
+  "Check whether to disable `delete-nl-spaces'."
+  (when (and (buffer-file-name) (file-exists-p (buffer-file-name)))
+    (let ((buffer (current-buffer))
+          (final-newline require-final-newline)
+          (tabs-mode indent-tabs-mode))
+      (with-temp-buffer
+        (setq-local require-final-newline final-newline)
+        (setq indent-tabs-mode tabs-mode)
+        (insert-buffer-substring buffer)
+        (delete-nl-spaces)
+        (unless (= (compare-buffer-substrings buffer nil nil nil nil nil) 0)
+          (set-buffer buffer)
+          (delete-nl-spaces-mode -1)
+          (message "delete-nl-spaces-mode disabed for %s"
+                   (buffer-name buffer)))))))
+
+(add-hook 'find-file-hook 'delete-nl-spaces-find-file-hook)
+(add-hook 'before-save-hook 'delete-nl-spaces)
 
 (provide 'init)
 ;;; init ends here
