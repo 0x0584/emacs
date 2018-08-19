@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "lang-refactor-perl" "20131122.2127" "Simple refactorings, primarily for Perl" 'nil :commit "691bd69639de6b7af357e3b7143563ececd9c497" :keywords '("languages" "refactoring" "perl") :authors '((nil . "Johan Lindstrom <buzzwordninja not_this_bit@googlemail.com>")) :maintainer '(nil . "Johan Lindstrom <buzzwordninja not_this_bit@googlemail.com>") :url "https://github.com/jplindstrom/emacs-lang-refactor-perl")

@@ -62,7 +62,7 @@
 ;;      (nyan-start-animation)))
 
 ;; ===== SET STANDARD INDENT TO 2 RATHER THAT 4 ====
-(setq standard-indent 2)
+(setq standard-indent 4)
 
 ;; ===== MAKE TEXT MODE THE DEFAULT MODE FOR NEW BUFFERS =====
 (setq major-mode 'text-mode)
@@ -116,7 +116,7 @@
 
 
 ;; ==== SHELL ====
-(setenv "SHELL" (expand-file-name "/usr/bin/sh"))
+(setenv "SHELL" (expand-file-name "/bin/bash"))
 ;;(ansi-term "/usr/bin/sh")
 
 (custom-set-variables
@@ -161,6 +161,8 @@
  '(indicate-buffer-boundaries (quote left))
  '(line-number-mode nil)
  '(linum-format (quote dynamic))
+ '(magit-diff-refine-hunk t)
+ '(magit-log-section-arguments (quote ("--graph" "--decorate" "-n256")))
  '(main-line-color1 "#222232")
  '(main-line-color2 "#333343")
  '(main-line-separator-style (quote chamfer))
@@ -169,10 +171,11 @@
    (quote
     ("#336c6c" "#205070" "#0f2050" "#806080" "#401440" "#6c1f1c" "#6b400c" "#23733c")))
  '(nyan-mode t)
+ '(org-latex-caption-above (quote (image table src-block special-block)))
  '(org-plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(package-selected-packages
    (quote
-    (csharp-mode devdocs god-mode helm-perldoc lang-refactor-perl vc-auto-commit vc-check-status vc-msg ac-emoji emojify-logos plsense perl6-mode org-preview-html flymake-jshint flymake-jslint flymake-json flymake-less indium ac-js2 helm-spotify-plus spotify tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ahungry-theme ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme paper-theme spacemacs-theme djvu gited memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (sly markdown-toc markdown-preview-mode markdownfmt ac-math diffview dumb-diff find-file-in-project find-file-in-repository find-things-fast firefox-controller latexdiff magit-org-todos vdiff-magit vdiff magit-find-file magit-annex gitlab csharp-mode devdocs god-mode helm-perldoc lang-refactor-perl vc-auto-commit vc-check-status vc-msg ac-emoji emojify-logos plsense perl6-mode org-preview-html flymake-jshint flymake-jslint flymake-json flymake-less indium ac-js2 helm-spotify-plus spotify tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ahungry-theme ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme paper-theme spacemacs-theme djvu gited memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(powerline-color1 "#222232")
@@ -219,7 +222,10 @@
  '(chess-ics1-white-face ((t (:foreground "white" :weight bold))))
  '(cperl-array-face ((t (:foreground "Aquamarine" :weight bold))))
  '(cperl-hash-face ((t (:foreground "Aquamarine" :slant italic))))
+ '(diff-refine-added ((t (:inherit diff-added :background "sea green" :underline (:color foreground-color :style wave) :weight bold))))
+ '(diff-refine-removed ((t (:inherit diff-removed :strike-through t :weight bold))))
  '(dired-ignored ((t (:inherit shadow :underline (:color foreground-color :style wave) :slant italic))))
+ '(flycheck-error ((t (:underline (:color "#DADADA" :style wave) :weight bold))))
  '(font-lock-constant-face ((t (:foreground "LightSlateBlue" :weight bold))))
  '(font-lock-function-name-face ((t (:foreground "#F1F1F1" :slant italic))))
  '(font-lock-keyword-face ((t (:foreground "cyan1" :weight bold))))
@@ -227,20 +233,27 @@
  '(font-lock-string-face ((t (:foreground "#C3C3C3" :slant italic))))
  '(font-lock-type-face ((t (:foreground "SteelBlue1"))))
  '(italic ((t (:slant italic))))
+ '(magit-diff-hunk-region ((t (:inherit bold :background "gray"))))
+ '(magit-diff-removed-highlight ((t (:background "#663333" :foreground "#eecccc"))))
+ '(makefile-targets ((t (:underline t :weight bold))))
  '(org-agenda-clocking ((t (:underline (:color "firebrick" :style wave) :slant italic))))
+ '(org-agenda-date-today ((t (:foreground "sea green" :slant italic :weight bold))))
+ '(org-agenda-done ((t (:foreground "burlywood3"))))
+ '(org-checkbox ((t (:foreground "#FAFAFA" :box (:line-width 1 :style released-button) :slant normal))))
  '(org-checkbox-statistics-todo ((t (:background "#F1F1F1" :foreground "dark red" :weight bold))))
  '(org-done ((t (:foreground "#2aa889" :weight bold))))
  '(org-level-1 ((t (:inherit outline-1 :foreground "#FAFAFA" :overline t :underline t :weight bold :height 1.0))))
  '(org-level-2 ((t (:inherit outline-2 :foreground "#FAFAFA" :overline t :slant italic :weight normal :height 1.0))))
  '(org-level-3 ((t (:foreground "#FAFAFA" :underline t :weight normal :height 1.0))))
  '(org-link ((t (:inherit link :foreground "Deepskyblue4" :underline nil :slant italic))))
- '(org-list-dt ((t (:foreground "Seagreen3" :weight bold))))
+ '(org-list-dt ((t (:foreground "light steel blue"))))
  '(org-priority ((t (:inherit font-lock-keyword-face :slant normal))))
  '(org-scheduled-previously ((t (:foreground "rosy brown" :weight bold))))
  '(org-tag ((t (:foreground "gold" :weight bold))))
  '(org-todo ((t (:foreground "#c23127" :slant italic :weight bold))))
- '(org-upcoming-deadline ((t (:foreground "chocolate1" :slant italic))))
+ '(org-upcoming-deadline ((t (:inherit font-lock-keyword-face :foreground "cornsilk" :slant italic))))
  '(org-verbatim ((t (:inherit shadow :underline t))))
+ '(org-warning ((t (:foreground "coral" :slant italic :weight bold))))
  '(perl6-identifier ((t (:inherit default))))
  '(perl6-operator ((t (:foreground "light slate gray"))))
  '(perl6-var-name ((t (:inherit font-lock-variable-name-face))))
@@ -430,7 +443,7 @@
   (setq sh-indent-command
 	(concat "indent -nbad -bap -bbo -nbc -br -brs "
 		"-brf -c33 -cd33 -ncdb -ce -ci4 -cli0 "
-		"-cp33 -cs -d0 -di1 -nfc1 -nfca -hnl "
+		"-cp33 -cs -d0 -di4 -nfc1 -nfca -hnl "
 		"-i4 -ip0 -l75 -lp -npcs -nprs -npsl "
 		"-saf -sai -saw -nsc -nsob -nss -ppi2 "))
   (mark-whole-buffer)
@@ -547,7 +560,7 @@
 
 (defun named-term (name)
   (interactive "sName: ")
-  (ansi-term "/usr/bin/sh" name))
+  (ansi-term "/bin/bash" name))
 
 (global-set-key (kbd "C-x t") 'eshell)
 
@@ -557,7 +570,7 @@
   (split-window-right)
   (balance-windows)
   (other-window 1)
-  (ansi-term "/usr/bin/sh"))
+  (ansi-term "/bin/bash"))
 
 (defun m-term-below ()
   "Add terminal on the bottom."
@@ -565,7 +578,7 @@
   (split-window-below)
   (balance-windows)
   (other-window 1)
-  (ansi-term "/usr/bin/sh"))
+  (ansi-term "/bin/bash"))
 
 (global-set-key (kbd "C-x <C-down>") 'm-term-below)
 (global-set-key (kbd "C-x <C-right>") 'm-term-right)
@@ -732,7 +745,7 @@ Don't mess with special buffers."
 (setq org-todo-keywords
       '((sequence "TODO(t)" "IN-PROGRESS(s!)" "EXAM" "TO-BUY(b!)"
 		  "MEETING(m!)" "|" "PENDING(p!)" "DONE(d!/@)"
-		  "CANCELED(c!/!)" "UNDER-REVISING(u)" "|" "HOLIDAY")))
+		  "CANCELED(c!/!)" "UNDER-REVISING(u)" "|" "HOLY-DAY")))
 (setq org-agenda-skip-scheduled-if-done t)
 ;; -- Display images in org mode
 ;; enable image mode first
@@ -904,6 +917,7 @@ Don't mess with special buffers."
 (global-set-key (kbd "C-c d") (lambda ()
                                 (interactive)
                                 (delete-char -1)))
+
 (global-set-key (kbd "C-c M-d") (lambda ()
 				  (interactive)
 				  (kill-word -1)))
@@ -1464,6 +1478,7 @@ Version 2017-02-02"
 
 (require 'epa-file)
 (epa-file-enable)
+(setq epa-file-select-keys nil)
 
 ;; (defun org-cycle-or-complete-latex (&optional arg)
 ;;   "Like `org-cycle' (which see) but completes latex math equations
@@ -1720,5 +1735,24 @@ If Delete Needless Spaces mode is enable, before a buffer is saved to its file:
 (add-hook 'find-file-hook 'delete-nl-spaces-find-file-hook)
 (add-hook 'before-save-hook 'delete-nl-spaces)
 
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq TeX-save-query nil)
+(setq TeX-PDF-mode t)
+
+(require 'edit-server)
+(edit-server-start)
+
+(require 'vdiff)
+(define-key vdiff-mode-map (kbd "C-c") vdiff-mode-prefix-map)
+
+(setq org-latex-listings 'minted)
+(require 'ox-latex)
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+(setq org-latex-pdf-process
+      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+
 (provide 'init)
-;;; init ends here
+;;; init.el ends here
