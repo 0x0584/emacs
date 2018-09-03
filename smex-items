@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- ispell-comments-and-strings
- find-grep
  create-tags
- ansi-term
- delete-trailing-whitespace
+ customize-face
+ find-grep
+ langtool-check
  package-install
- checkdoc-ispell-comments
+ synonyms-definition
+ synonymous-synonyms
 )
 
 ;; ----- smex-data -----
@@ -16,8 +16,8 @@
  (electric-pair-mode . 13)
  (electric-operator-mode . 1)
  (find-file . 4)
- (find-grep . 21)
- (package-list-packages . 20)
+ (find-grep . 23)
+ (package-list-packages . 23)
  (describe-mode . 2)
  1
  (setenv . 2)
@@ -27,7 +27,7 @@
  (hs-minor-mode . 2)
  (sql-mysql . 7)
  (auto-complete . 3)
- (pwd . 8)
+ (pwd . 11)
  (org-table-create . 6)
  (auto-complete-mode . 20)
  (org-version . 3)
@@ -36,18 +36,18 @@
  (org-toggle-inline-images . 1)
  (org-remove-inline-images . 1)
  (load-theme . 1)
- (customize-themes . 13)
- (customize-face . 122)
+ (customize-themes . 20)
+ (customize-face . 130)
  22
  (php-mode . 9)
  (package-delete . 7)
  (auto-insert . 12)
  (c-reformat-buffer . 3)
- (visual-line-mode . 39)
+ (visual-line-mode . 49)
  (org-reload . 5)
  (org-deadline . 1)
- (package-install . 34)
- (cfw:open-calendar-buffer . 4)
+ (package-install . 40)
+ (cfw:open-calendar-buffer . 10)
  (cfw:change-view-day . 1)
  (process-menu-mode . 2)
  (mysql-to-org-mode . 3)
@@ -67,10 +67,10 @@
  (table-justify-column . 5)
  (ispell . 1)
  (calc . 2)
- (calculator . 12)
+ (calculator . 13)
  (table-query-dimension . 1)
  (org-alert-enable . 6)
- (org-alert-check . 17)
+ (org-alert-check . 18)
  (global-org-gnome-minor-mode . 3)
  (org-gnome-minor-mode . 6)
  (package-install-from-buffer . 1)
@@ -80,12 +80,12 @@
  (helm-tldr . 2)
  1
  (org-columns . 4)
- (nyan-mode . 13)
+ (nyan-mode . 15)
  (helm-spotify . 3)
  (playerctl-play-pause-song . 1)
  (spotify-enable-song-notifications . 1)
  1
- (flycheck-mode . 2)
+ (flycheck-mode . 7)
  (javascript-mode . 1)
  (js2-mode . 2)
  (package-reinstall . 2)
@@ -147,15 +147,15 @@
  (desktop+-load-auto . 1)
  (desktop+-create . 1)
  (Info-search . 2)
- (create-tags . 20)
+ (create-tags . 33)
  (artist-mode . 8)
  (copy-file . 1)
- (helm-themes . 14)
+ (helm-themes . 32)
  (jdee-run . 1)
  (eshell . 1)
  (helm-find-files . 1)
  (tags-search . 1)
- (langtool-check . 2)
+ (langtool-check . 9)
  (find-tag . 4)
  (find-dired . 1)
  (smex-find-function . 1)
@@ -172,7 +172,7 @@
  (vdiff-files . 1)
  (vdiff-magit-stage . 6)
  (delete-selection-repeat-replace-region . 1)
- (delete-file . 5)
+ (delete-file . 7)
  (helm-etags-select . 2)
  (gitlab-show-project-description . 1)
  (emacs-version . 1)
@@ -182,11 +182,31 @@
  (rename-file . 2)
  (epa-decrypt-file . 1)
  (whitespace-mode . 8)
- (delete-trailing-whitespace . 8)
+ (delete-trailing-whitespace . 22)
  (common-lisp-mode . 1)
  (inferior-lisp . 1)
  (ielm . 1)
  (magithub-dashboard . 1)
  (checkdoc-ispell-comments . 1)
  (ispell-comments-and-strings . 15)
+ (toggle-frame-fullscreen . 2)
+ (guiler . 2)
+ (hexl-mode . 3)
+ (cpp-highlight-buffer . 1)
+ (helm-colors . 4)
+ (list-colors-display . 1)
+ (symon-mode . 5)
+ (symon-display . 11)
+ (speedbar . 1)
+ (sr-speedbar-open . 5)
+ (sr-speedbar-close . 2)
+ (sr-speedbar-toggle . 5)
+ (sr-speedbar-select-window . 2)
+ (git-timemachine . 1)
+ (zone-mode . 2)
+ (zone . 12)
+ (synonymous-synonyms . 1)
+ (synonyms-definition . 1)
+ (langtool-show-message-at-point . 1)
+ (langtool-check-done . 1)
 )

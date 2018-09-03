@@ -1,0 +1,37 @@
+# A part-of-speech dictionary that's used additionally to the binary dictionary (*.dict).
+# This does not add words to the spell checker, see hunspell/spelling.txt for that.
+# File Encoding: UTF-8
+# Format: three tab-separated fields: fullform baseform postags
+шестигранный	шестигранный	ADJ:Posit:Masc:Nom
+шестигранного	шестигранный	ADJ:Posit:Masc:R
+шестигранному	шестигранный	ADJ:Posit:Masc:D
+шестигранного	шестигранный	ADJ:Posit:Masc:V
+шестигранный	шестигранный	ADJ:Posit:Masc:V
+шестигранным	шестигранный	ADJ:Posit:Masc:T
+шестигранном	шестигранный	ADJ:Posit:Masc:P
+шестигранная	шестигранный	ADJ:Posit:Fem:Nom
+шестигранной	шестигранный	ADJ:Posit:Fem:R
+шестигранной	шестигранный	ADJ:Posit:Fem:D
+шестигранную	шестигранный	ADJ:Posit:Fem:V
+шестигранной	шестигранный	ADJ:Posit:Fem:T
+шестигранною	шестигранный	ADJ:Posit:Fem:T
+шестигранной	шестигранный	ADJ:Posit:Fem:P
+шестигранное	шестигранный	ADJ:Posit:Neut:Nom
+шестигранного	шестигранный	ADJ:Posit:Neut:R
+шестигранному	шестигранный	ADJ:Posit:Neut:D
+шестигранное	шестигранный	ADJ:Posit:Neut:V
+шестигранным	шестигранный	ADJ:Posit:Neut:T
+шестигранном	шестигранный	ADJ:Posit:Neut:P
+шестигранные	шестигранный	ADJ:Posit:PL:Nom
+шестигранных	шестигранный	ADJ:Posit:PL:R
+шестигранным	шестигранный	ADJ:Posit:PL:D
+шестигранных	шестигранный	ADJ:Posit:PL:V
+шестигранные	шестигранный	ADJ:Posit:PL:V
+шестигранными	шестигранный	ADJ:Posit:PL:T
+шестигранных	шестигранный	ADJ:Posit:PL:P
+шестигранен	шестигранный	ADJ:Short:Masc
+шестигранна	шестигранный	ADJ:Short:Fem
+шестигранно	шестигранный	ADJ:Short:Neut
+шестигранны	шестигранный	ADJ:Short:PL
+шестиграннее	шестигранный	ADJ:Comp
+шестигранней	шестигранный	ADJ:Comp

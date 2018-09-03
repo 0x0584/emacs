@@ -146,7 +146,7 @@
  '(custom-enabled-themes (quote (tao-yin)))
  '(custom-safe-themes
    (quote
-    ("0e0c37ee89f0213ce31205e9ae8bce1f93c9bcd81b1bcda0233061bb02c357a8" "b550fc3d6f0407185ace746913449f6ed5ddc4a9f0cf3be218af4fb3127c7877" "d83bd04930314c053753d199873ee36c54bf221fe4b8a0938098f41eaa9a22ae" default)))
+    ("4697a2d4afca3f5ed4fdf5f715e36a6cac5c6154e105f3596b44a4874ae52c45" "b35a14c7d94c1f411890d45edfb9dc1bd61c5becd5c326790b51df6ebf60f402" "fe666e5ac37c2dfcf80074e88b9252c71a22b6f5d2f566df9a7aa4f9bea55ef8" "a3fa4abaf08cc169b61dea8f6df1bbe4123ec1d2afeb01c17e11fdc31fc66379" "725a0ac226fc6a7372074c8924c18394448bb011916c05a87518ad4563738668" "0e0c37ee89f0213ce31205e9ae8bce1f93c9bcd81b1bcda0233061bb02c357a8" "b550fc3d6f0407185ace746913449f6ed5ddc4a9f0cf3be218af4fb3127c7877" "d83bd04930314c053753d199873ee36c54bf221fe4b8a0938098f41eaa9a22ae" default)))
  '(display-time-mode t)
  '(electric-pair-mode t)
  '(f90-program-indent 2)
@@ -159,10 +159,18 @@
  '(fringe-mode 10 nil (fringe))
  '(global-ede-mode nil)
  '(indicate-buffer-boundaries (quote left))
+ '(jdee-db-active-breakpoint-face-colors (cons "#191C25" "#80A0C2"))
+ '(jdee-db-requested-breakpoint-face-colors (cons "#191C25" "#A2BF8A"))
+ '(jdee-db-spec-breakpoint-face-colors (cons "#191C25" "#434C5E"))
  '(line-number-mode nil)
  '(linum-format (quote dynamic))
+ '(magit-diff-arguments
+   (quote
+    ("--no-ext-diff" "--stat" "--diff-algorithm=histogram")))
  '(magit-diff-refine-hunk t)
- '(magit-log-section-arguments (quote ("--graph" "--decorate" "-n256")))
+ '(magit-diff-section-arguments (quote ("--no-ext-diff" "--diff-algorithm=patience")))
+ '(magit-log-arguments (quote ("--graph" "--color" "--decorate" "-n256")))
+ '(magit-log-section-arguments (quote ("--graph" "--color" "--decorate" "-n256")))
  '(main-line-color1 "#222232")
  '(main-line-color2 "#333343")
  '(main-line-separator-style (quote chamfer))
@@ -175,7 +183,7 @@
  '(org-plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(package-selected-packages
    (quote
-    (sly markdown-toc markdown-preview-mode markdownfmt ac-math diffview dumb-diff find-file-in-project find-file-in-repository find-things-fast firefox-controller latexdiff magit-org-todos vdiff-magit vdiff magit-find-file magit-annex gitlab csharp-mode devdocs god-mode helm-perldoc lang-refactor-perl vc-auto-commit vc-check-status vc-msg ac-emoji emojify-logos plsense perl6-mode org-preview-html flymake-jshint flymake-jslint flymake-json flymake-less indium ac-js2 helm-spotify-plus spotify tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ahungry-theme ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme paper-theme spacemacs-theme djvu gited memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (synonymous sr-speedbar map-regexp helm-git-files helm-git-grep helm-git ac-slime magit-todos melancholy-theme nimbus-theme sly markdown-toc markdown-preview-mode markdownfmt ac-math diffview dumb-diff find-file-in-project find-file-in-repository find-things-fast firefox-controller latexdiff magit-org-todos vdiff-magit vdiff magit-find-file magit-annex gitlab csharp-mode devdocs god-mode helm-perldoc lang-refactor-perl ac-emoji emojify-logos plsense perl6-mode org-preview-html flymake-jshint flymake-jslint flymake-json flymake-less indium ac-js2 helm-spotify-plus spotify tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ahungry-theme ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme paper-theme spacemacs-theme djvu gited memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(powerline-color1 "#222232")
@@ -218,6 +226,10 @@
  '(bm-face ((t (:background "orange" :foreground "Black"))))
  '(bm-fringe-face ((t (:background "gold" :foreground "Black"))))
  '(bold ((t (:slant normal :weight bold))))
+ '(cfw:face-select ((t (:background "light steel blue"))))
+ '(cfw:face-sunday ((t (:foreground "gainsboro" :weight bold))))
+ '(cfw:face-today-title ((t (:foreground "medium slate blue" :slant italic))))
+ '(cfw:face-toolbar ((t nil)))
  '(chess-ics1-black-face ((t (:foreground "dark orange" :weight bold))))
  '(chess-ics1-white-face ((t (:foreground "white" :weight bold))))
  '(cperl-array-face ((t (:foreground "Aquamarine" :weight bold))))
@@ -235,6 +247,7 @@
  '(italic ((t (:slant italic))))
  '(magit-diff-hunk-region ((t (:inherit bold :background "gray"))))
  '(magit-diff-removed-highlight ((t (:background "#663333" :foreground "#eecccc"))))
+ '(magit-section-highlight ((t nil)))
  '(makefile-targets ((t (:underline t :weight bold))))
  '(org-agenda-clocking ((t (:underline (:color "firebrick" :style wave) :slant italic))))
  '(org-agenda-date-today ((t (:foreground "sea green" :slant italic :weight bold))))
@@ -258,16 +271,6 @@
  '(perl6-operator ((t (:foreground "light slate gray"))))
  '(perl6-var-name ((t (:inherit font-lock-variable-name-face))))
  '(php-method-call ((t (:inherit php-function-call :slant italic)))))
-;; '(rainbow-delimiters-depth-1-face ((t (:foreground "#99d1ce"))))
-;; '(rainbow-delimiters-depth-2-face ((t (:inherit outline-1 :foreground "#5CACEE"))))
-;; '(rainbow-delimiters-depth-3-face ((t (:inherit outline-2 :foreground "#FF4500"))))
-;; '(rainbow-delimiters-depth-4-face ((t (:inherit outline-3 :foreground "#FF6103"))))
-;; '(rainbow-delimiters-depth-5-face ((t (:inherit outline-4 :foreground "#8B7500"))))
-;; '(rainbow-delimiters-depth-6-face ((t (:inherit outline-5 :foreground "#228B22"))))
-;; '(rainbow-delimiters-depth-7-face ((t (:inherit outline-6 :foreground "#008080"))))
-;; '(rainbow-delimiters-depth-8-face ((t (:inherit outline-7 :foreground "#CC681F"))))
-;; '(rainbow-delimiters-depth-9-face ((t (:inherit outline-8 :foreground "#4B0082"))))
-
 
 (require 'company)
 (add-hook 'global-init-hook 'global-company-mode)
@@ -614,12 +617,17 @@
   (if (find-overlays-specifying
        'line-highlight-overlay-marker
        (line-beginning-position))
-      (remove-overlays (line-beginning-position) (+ 1 (line-end-position)))
-    (let ((overlay-highlight (make-overlay
-                              (line-beginning-position)
-                              (+ 1 (line-end-position)))))
-      (overlay-put overlay-highlight 'face '(:background "gray10"))
-      (overlay-put overlay-highlight 'line-highlight-overlay-marker t))))
+      (remove-overlays
+       (line-beginning-position)
+       (+ 1 (line-end-position)))
+    (let ((overlay-highlight
+	   (make-overlay
+	    (line-beginning-position)
+	    (+ 1 (line-end-position)))))
+      (overlay-put
+       overlay-highlight 'face '(:background "#2f4f4f"))
+      (overlay-put
+       overlay-highlight 'line-highlight-overlay-marker t))))
 
 
 (global-set-key [f8] 'highlight-or-dehighlight-line)
@@ -980,7 +988,7 @@ Don't mess with special buffers."
 ;; (add-hook 'ruby-mode-hook 'inf-ruby)
 
 (global-set-key (kbd "C-.") 'quickrun)
-(global-set-key (kbd "C-,") 'quickrun-compile-only)
+(global-set-key (kbd "C-,") 'helm-git-grep-from-here)
 (global-set-key (kbd "C-c =") 'compile)
 (global-set-key (kbd "C-c z") 'occur)
 (global-set-key (kbd "C-c i") 'inf-ruby)
@@ -1271,25 +1279,7 @@ BEG and END default to the buffer boundaries."
 ;; First day of the week
 (setq calendar-week-start-day 1) ; 0:Sunday, 1:Monday
 
-;; (custom-set-faces
-;;  '(cfw:face-title ((t (:foreground "#f0dfaf" :weight bold :height 2.0 :inherit variable-pitch))))
-;;  '(cfw:face-header ((t (:foreground "#d0bf8f" :weight bold))))
-;;  '(cfw:face-sunday ((t :foreground "#cc9393" :background "grey10" :weight bold)))
-;;  '(cfw:face-saturday ((t :foreground "#8cd0d3" :background "grey10" :weight bold)))
-;;  '(cfw:face-holiday ((t :background "grey10" :foreground "#8c5353" :weight bold)))
-;;  '(cfw:face-grid ((t :foreground "DarkGrey")))
-;;  '(cfw:face-default-content ((t :foreground "#bfebbf")))
-;;  '(cfw:face-periods ((t :foreground "cyan")))
-;;  '(cfw:face-day-title ((t :background "grey10")))
-;;  '(cfw:face-default-day ((t :weight bold :inherit cfw:face-day-title)))
-;;  '(cfw:face-annotation ((t :foreground "RosyBrown" :inherit cfw:face-day-title)))
-;;  '(cfw:face-disable ((t :foreground "DarkGray" :inherit cfw:face-day-title)))
-;;  '(cfw:face-today-title ((t :background "#7f9f7f" :weight bold)))
-;;  '(cfw:face-today ((t :background: "grey10" :weight bold)))
-;;  '(cfw:face-select ((t :background "#2f2f2f")))
-;;  '(cfw:face-toolbar ((t :foreground "Steelblue4" :background "Steelblue4")))
-;;  '(cfw:face-toolbar-button-off ((t :foreground "Gray10" :weight bold)))
-;;  '(cfw:face-toolbar-button-on ((t :foreground "Gray50" :weight bold))))
+
 
 ;; Default setting
 (setq cfw:fchar-junction ?+
@@ -1754,5 +1744,27 @@ If Delete Needless Spaces mode is enable, before a buffer is saved to its file:
         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
+(require 'magit-todos)
+(magit-todos-mode)
+
+;; (require 'symon)
+;; (setq symon-sparkline-type 'bounded)
+;; (setq symon-delay 15)
+
+;; (symon-mode)
+
+(global-set-key (kbd "C-c [") 'sr-speedbar-close)
+(global-set-key (kbd "C-c ]") 'sr-speedbar-open)
+(global-set-key (kbd "C-c \'") 'sr-speedbar-select-window)
+
+(setq langtool-language-tool-jar "~/.emacs.d/langtool/languagetool.jar")
+
+(global-set-key "\C-x4w" 'langtool-check)
+(global-set-key "\C-x4W" 'langtool-check-done)
+(global-set-key "\C-x4l" 'langtool-switch-default-language)
+(global-set-key "\C-x44" 'langtool-show-message-at-point)
+(global-set-key "\C-x4c" 'langtool-correct-buffer)
+
 (provide 'init)
+
 ;;; init.el ends here
