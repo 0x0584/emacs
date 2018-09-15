@@ -1,3 +1,4 @@
+history
 smex-items
 # -*- mode: gitignore; -*-
 *~
@@ -64,3 +65,8 @@ site-lisp/adventur-mode
 /emojis/
 .session
 /autosaves/
+recentf
+ac-comphist.dat
+history
+magithub/*
+smex-items
