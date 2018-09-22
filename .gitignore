@@ -1,5 +1,7 @@
 history
 smex-items
+recentf
+org-clock-save.el
 # -*- mode: gitignore; -*-
 *~
 \#*\#
