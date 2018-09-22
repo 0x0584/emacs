@@ -96,7 +96,7 @@
 (helm-mode 1)
 (helm-autoresize-mode t)
 ;; (global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+;; (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x b") 'helm-mini);
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (setq helm-M-x-fuzzy-match t)
@@ -1772,11 +1772,13 @@ If Delete Needless Spaces mode is enable, before a buffer is saved to its file:
 (global-set-key (kbd "C-x &") 'find-grep-dired)
 
 ;; key bindings
-(when (eq system-type 'darwin) ;; mac specific settings
+(when (eq system-type 'darwin)		; mac specific settings
   (setq mac-option-modifier 'alt)
   (setq mac-command-modifier 'meta)
   ;; sets fn-delete to be right-delete
   (global-set-key [kp-delete] 'delete-char))
+
+(setq gdb-many-windows t)
 
 (provide 'init)
 
