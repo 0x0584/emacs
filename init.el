@@ -9,6 +9,7 @@
 (defun insert-current-date () 
   (interactive)
   (insert (shell-command-to-string "echo -n $(date +%m/%d/%Y-%H:%M:%S)")))
+
 (defun insert-date-time ()
   "Insert current date mm/dd/yyyy_H:M:S."
   (interactive)
@@ -98,7 +99,7 @@
 ;; (global-set-key (kbd "M-x") 'helm-M-x)
 ;; (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x b") 'helm-mini);
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x f") 'helm-find-files)
 (setq helm-M-x-fuzzy-match t)
 
 
@@ -135,6 +136,8 @@
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(blink-cursor-mode t)
  '(column-number-mode t)
+ '(company-quickhelp-color-background "#b0b0b0")
+ '(company-quickhelp-color-foreground "#232333")
  '(cperl-autoindent-on-semi t)
  '(cperl-brace-offset 0)
  '(cperl-close-paren-offset -4)
@@ -145,11 +148,15 @@
  '(cperl-highlight-variables-indiscriminately nil)
  '(cperl-indent-level 4)
  '(cperl-indent-parens-as-block t)
- '(custom-enabled-themes (quote (tao-yin)))
+ '(custom-enabled-themes (quote (clues)))
  '(custom-safe-themes
    (quote
-    ("4697a2d4afca3f5ed4fdf5f715e36a6cac5c6154e105f3596b44a4874ae52c45" "b35a14c7d94c1f411890d45edfb9dc1bd61c5becd5c326790b51df6ebf60f402" "fe666e5ac37c2dfcf80074e88b9252c71a22b6f5d2f566df9a7aa4f9bea55ef8" "a3fa4abaf08cc169b61dea8f6df1bbe4123ec1d2afeb01c17e11fdc31fc66379" "725a0ac226fc6a7372074c8924c18394448bb011916c05a87518ad4563738668" "0e0c37ee89f0213ce31205e9ae8bce1f93c9bcd81b1bcda0233061bb02c357a8" "b550fc3d6f0407185ace746913449f6ed5ddc4a9f0cf3be218af4fb3127c7877" "d83bd04930314c053753d199873ee36c54bf221fe4b8a0938098f41eaa9a22ae" default)))
+    ("0bff60fb779498e69ea705825a2ca1a5497a4fccef93bf3275705c2d27528f2f" "8aca557e9a17174d8f847fb02870cb2bb67f3b6e808e46c0e54a44e3e18e1020" "6b289bab28a7e511f9c54496be647dc60f5bd8f9917c9495978762b99d8c96a0" "93a0885d5f46d2aeac12bf6be1754faa7d5e28b27926b8aa812840fe7d0b7983" "75d3dde259ce79660bac8e9e237b55674b910b470f313cdf4b019230d01a982a" "151bde695af0b0e69c3846500f58d9a0ca8cb2d447da68d7fbf4154dcf818ebc" "d1b4990bd599f5e2186c3f75769a2c5334063e9e541e37514942c27975700370" "6b2636879127bf6124ce541b1b2824800afc49c6ccd65439d6eb987dbf200c36" "b54826e5d9978d59f9e0a169bbd4739dd927eead3ef65f56786621b53c031a7c" "4697a2d4afca3f5ed4fdf5f715e36a6cac5c6154e105f3596b44a4874ae52c45" "6d589ac0e52375d311afaa745205abb6ccb3b21f6ba037104d71111e7e76a3fc" "fe666e5ac37c2dfcf80074e88b9252c71a22b6f5d2f566df9a7aa4f9bea55ef8" "f0dc4ddca147f3c7b1c7397141b888562a48d9888f1595d69572db73be99a024" "d2e9c7e31e574bf38f4b0fb927aaff20c1e5f92f72001102758005e53d77b8c9" "a3fa4abaf08cc169b61dea8f6df1bbe4123ec1d2afeb01c17e11fdc31fc66379" "7e78a1030293619094ea6ae80a7579a562068087080e01c2b8b503b27900165c" "0d456bc74e0ffa4bf5b69b0b54dac5104512c324199e96fc9f3a1db10dfa31f3" "d83bd04930314c053753d199873ee36c54bf221fe4b8a0938098f41eaa9a22ae" "d1cc05d755d5a21a31bced25bed40f85d8677e69c73ca365628ce8024827c9e3" "f11e219c9d043cbd5f4b2e01713c2c24a948a98bed48828dc670bd64ae771aa1" "04589c18c2087cd6f12c01807eed0bdaa63983787025c209b89c779c61c3a4c4" "abe3405767afe98b35b6a2b212af1fbc34e4f4c455310d2b7f2ffd2ec81d387b" "e7b49145d311e86da34a32a7e1f73497fa365110a813d2ecd8105eaa551969da" "36ca8f60565af20ef4f30783aa16a26d96c02df7b4e54e9900a5138fb33808da" "bf798e9e8ff00d4bf2512597f36e5a135ce48e477ce88a0764cfb5d8104e8163" "0329c772ed96053a73b9ddddf96c1183e23c267955bbdf78e7933057ce9da04b" "dbade2e946597b9cda3e61978b5fcc14fa3afa2d3c4391d477bdaeff8f5638c5" "725a0ac226fc6a7372074c8924c18394448bb011916c05a87518ad4563738668" "73c69e346ec1cb3d1508c2447f6518a6e582851792a8c0e57a22d6b9948071b4" "c9ddf33b383e74dac7690255dd2c3dfa1961a8e8a1d20e401c6572febef61045" "20bf9f519f78b247da9ccf974c31d3537bee613ff11579f539b2781246dee73b" "d8dc153c58354d612b2576fea87fe676a3a5d43bcc71170c62ddde4a1ad9e1fb" default)))
  '(display-time-mode t)
+ '(ede-project-directories
+   (quote
+    (quote
+     ("/home/arfed/Workspace/morse-code-master/src"))))
  '(electric-pair-mode t)
  '(f90-program-indent 2)
  '(fci-rule-character-color "#202020")
@@ -180,20 +187,93 @@
  '(nrepl-message-colors
    (quote
     ("#336c6c" "#205070" "#0f2050" "#806080" "#401440" "#6c1f1c" "#6b400c" "#23733c")))
- '(nyan-mode t)
+ '(org-agenda-files
+   (quote
+    (quote
+     ("~/orged/LP-DBA/gl.org" "/home/arfed/orged/MASTER.org" "/home/arfed/orged/Q.org" "/home/arfed/orged/emails.org" "/home/arfed/orged/ghiwan.org" "/home/arfed/orged/led-zeppelin.org" "/home/arfed/orged/todo.org" "/home/arfed/orged/exams.org"))))
  '(org-latex-caption-above (quote (image table src-block special-block)))
  '(org-plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
+ '(org-startup-folded (quote (quote content)))
  '(package-selected-packages
    (quote
-    (helm-flymake f3 synonymous sr-speedbar map-regexp helm-git-files helm-git-grep helm-git ac-slime magit-todos melancholy-theme nimbus-theme sly markdown-toc markdown-preview-mode markdownfmt ac-math diffview dumb-diff find-file-in-project find-file-in-repository find-things-fast firefox-controller latexdiff magit-org-todos vdiff-magit vdiff magit-find-file magit-annex gitlab csharp-mode devdocs god-mode helm-perldoc lang-refactor-perl ac-emoji emojify-logos plsense perl6-mode org-preview-html flymake-jshint flymake-jslint flymake-json flymake-less indium ac-js2 helm-spotify-plus spotify tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ahungry-theme ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme paper-theme spacemacs-theme djvu gited memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell synonyms ac-ispell mysql-to-org calfw-howm geben cyberpunk-theme awk-it smartparens tern zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args bongo emms smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howdoi howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe swift3-mode benchmark-init ivy-youtube sudoku zweilight-theme helm-gitignore hide-comnt super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css all-the-icons ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm dark-krystal-theme caroline-theme meacupla-theme clues-theme cherry-blossom-theme distinguished-theme soothe-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags clang-format bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme imgur hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify elfeed disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers abyss-theme 2048-game 0blayout)))
+    (lsp-javascript-flow fzf helm-flymake f3 sr-speedbar map-regexp helm-git-files helm-git-grep helm-git ac-slime magit-todos melancholy-theme nimbus-theme sly markdown-toc markdown-preview-mode markdownfmt ac-math diffview dumb-diff find-file-in-project find-file-in-repository find-things-fast firefox-controller latexdiff magit-org-todos magit-find-file magit-annex gitlab csharp-mode devdocs god-mode helm-perldoc lang-refactor-perl ac-emoji emojify-logos plsense perl6-mode org-preview-html flymake-jshint flymake-jslint flymake-json flymake-less ac-js2 helm-spotify-plus tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme spacemacs-theme djvu memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell ac-ispell mysql-to-org geben awk-it smartparens zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe benchmark-init ivy-youtube zweilight-theme helm-gitignore super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm meacupla-theme clues-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343")
  '(puml-plantuml-jar-path "~/.emacs.d/plantuml/plantuml.jar")
+ '(red "#ffffff")
  '(scroll-bar-mode nil)
  '(send-mail-function (quote smtpmail-send-it))
  '(show-paren-mode t)
+ '(sml/mode-width
+   (if
+       (eq
+	(powerline-current-separator)
+	(quote arrow))
+       (quote right)
+     (quote full)))
+ '(sml/pos-id-separator
+   (quote
+    (""
+     (:propertize " " face powerline-active1)
+     (:eval
+      (propertize " "
+		  (quote display)
+		  (funcall
+		   (intern
+		    (format "powerline-%s-%s"
+			    (powerline-current-separator)
+			    (car powerline-default-separator-dir)))
+		   (quote powerline-active1)
+		   (quote powerline-active2))))
+     (:propertize " " face powerline-active2))))
+ '(sml/pos-minor-modes-separator
+   (quote
+    (""
+     (:propertize " " face powerline-active1)
+     (:eval
+      (propertize " "
+		  (quote display)
+		  (funcall
+		   (intern
+		    (format "powerline-%s-%s"
+			    (powerline-current-separator)
+			    (cdr powerline-default-separator-dir)))
+		   (quote powerline-active1)
+		   (quote sml/global))))
+     (:propertize " " face sml/global))))
+ '(sml/pre-id-separator
+   (quote
+    (""
+     (:propertize " " face sml/global)
+     (:eval
+      (propertize " "
+		  (quote display)
+		  (funcall
+		   (intern
+		    (format "powerline-%s-%s"
+			    (powerline-current-separator)
+			    (car powerline-default-separator-dir)))
+		   (quote sml/global)
+		   (quote powerline-active1))))
+     (:propertize " " face powerline-active1))))
+ '(sml/pre-minor-modes-separator
+   (quote
+    (""
+     (:propertize " " face powerline-active2)
+     (:eval
+      (propertize " "
+		  (quote display)
+		  (funcall
+		   (intern
+		    (format "powerline-%s-%s"
+			    (powerline-current-separator)
+			    (cdr powerline-default-separator-dir)))
+		   (quote powerline-active2)
+		   (quote powerline-active1))))
+     (:propertize " " face powerline-active1))))
+ '(sml/pre-modes-separator (propertize " " (quote face) (quote sml/modes)))
  '(timeclock-mode-line-display nil)
  '(tool-bar-mode nil)
  '(vc-annotate-background "#d4d4d4")
@@ -224,55 +304,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 98 :width normal :size 15))))
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 113 :width normal :size 15))))
  '(bm-face ((t (:background "orange" :foreground "Black"))))
  '(bm-fringe-face ((t (:background "gold" :foreground "Black"))))
  '(bold ((t (:slant normal :weight bold))))
- '(cfw:face-select ((t (:background "light steel blue"))))
- '(cfw:face-sunday ((t (:foreground "gainsboro" :weight bold))))
- '(cfw:face-today-title ((t (:foreground "medium slate blue" :slant italic))))
- '(cfw:face-toolbar ((t nil)))
- '(chess-ics1-black-face ((t (:foreground "dark orange" :weight bold))))
- '(chess-ics1-white-face ((t (:foreground "white" :weight bold))))
- '(cperl-array-face ((t (:foreground "Aquamarine" :weight bold))))
- '(cperl-hash-face ((t (:foreground "Aquamarine" :slant italic))))
- '(diff-refine-added ((t (:inherit diff-added :background "sea green" :underline (:color foreground-color :style wave) :weight bold))))
- '(diff-refine-removed ((t (:inherit diff-removed :strike-through t :weight bold))))
- '(dired-ignored ((t (:inherit shadow :underline (:color foreground-color :style wave) :slant italic))))
- '(flycheck-error ((t (:underline (:color "#DADADA" :style wave) :weight bold))))
- '(font-lock-constant-face ((t (:foreground "LightSlateBlue" :weight bold))))
- '(font-lock-function-name-face ((t (:foreground "#F1F1F1" :slant italic))))
- '(font-lock-keyword-face ((t (:foreground "cyan1" :weight bold))))
- '(font-lock-negation-char-face ((t (:foreground "indian red" :weight bold))))
- '(font-lock-string-face ((t (:foreground "#C3C3C3" :slant italic))))
- '(font-lock-type-face ((t (:foreground "SteelBlue1"))))
- '(italic ((t (:slant italic))))
- '(magit-diff-hunk-region ((t (:inherit bold :background "gray"))))
- '(magit-diff-removed-highlight ((t (:background "#663333" :foreground "#eecccc"))))
- '(magit-section-highlight ((t nil)))
- '(makefile-targets ((t (:underline t :weight bold))))
- '(org-agenda-clocking ((t (:underline (:color "firebrick" :style wave) :slant italic))))
- '(org-agenda-date-today ((t (:foreground "sea green" :slant italic :weight bold))))
- '(org-agenda-done ((t (:foreground "burlywood3"))))
- '(org-checkbox ((t (:foreground "#FAFAFA" :box (:line-width 1 :style released-button) :slant normal))))
- '(org-checkbox-statistics-todo ((t (:background "#F1F1F1" :foreground "dark red" :weight bold))))
- '(org-done ((t (:foreground "#2aa889" :weight bold))))
- '(org-level-1 ((t (:inherit outline-1 :foreground "#FAFAFA" :overline t :underline t :weight bold :height 1.0))))
- '(org-level-2 ((t (:inherit outline-2 :foreground "#FAFAFA" :overline t :slant italic :weight normal :height 1.0))))
- '(org-level-3 ((t (:foreground "#FAFAFA" :underline t :weight normal :height 1.0))))
- '(org-link ((t (:inherit link :foreground "Deepskyblue4" :underline nil :slant italic))))
- '(org-list-dt ((t (:foreground "light steel blue"))))
- '(org-priority ((t (:inherit font-lock-keyword-face :slant normal))))
- '(org-scheduled-previously ((t (:foreground "rosy brown" :weight bold))))
- '(org-tag ((t (:foreground "gold" :weight bold))))
- '(org-todo ((t (:foreground "#c23127" :slant italic :weight bold))))
- '(org-upcoming-deadline ((t (:inherit font-lock-keyword-face :foreground "cornsilk" :slant italic))))
- '(org-verbatim ((t (:inherit shadow :underline t))))
- '(org-warning ((t (:foreground "coral" :slant italic :weight bold))))
- '(perl6-identifier ((t (:inherit default))))
- '(perl6-operator ((t (:foreground "light slate gray"))))
- '(perl6-var-name ((t (:inherit font-lock-variable-name-face))))
- '(php-method-call ((t (:inherit php-function-call :slant italic)))))
+ '(git-commit-summary ((t (:inherit font-lock-type-face :weight bold))))
+ '(helm-selection ((t (:distant-foreground "black" :box (:line-width 2 :color "grey75" :style released-button) :weight bold))))
+ '(mode-line ((t (:inherit variable-pitch :background "#111111" :foreground "#777777" :box nil :family "DejaVu Sans Mono"))))
+ '(org-level-1 ((t (:inherit outline-1 :weight bold))))
+ '(org-level-2 ((t (:inherit outline-2 :slant italic))))
+ '(term-color-blue ((t (:background "dark slate blue" :foreground "dark slate blue")))))
 
 (require 'company)
 (add-hook 'global-init-hook 'global-company-mode)
@@ -991,9 +1032,12 @@ Don't mess with special buffers."
 
 (global-set-key (kbd "C-.") 'quickrun)
 (global-set-key (kbd "C-,") 'helm-git-grep-from-here)
-(global-set-key (kbd "C-c =") 'compile)
+
 (global-set-key (kbd "C-c z") 'occur)
 (global-set-key (kbd "C-c i") 'inf-ruby)
+
+(global-set-key (kbd "C-c -") 'compile)
+(global-set-key (kbd "C-c =") 'recompile)
 
 (defun next-code-buffer ()
   "Next code buffer."
@@ -1735,9 +1779,6 @@ If Delete Needless Spaces mode is enable, before a buffer is saved to its file:
 
 (require 'edit-server)
 (edit-server-start)
-
-(require 'vdiff)
-(define-key vdiff-mode-map (kbd "C-c") vdiff-mode-prefix-map)
 
 (setq org-latex-listings 'minted)
 (require 'ox-latex)
