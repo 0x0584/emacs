@@ -163,7 +163,7 @@
  '(fci-rule-color "#202020")
  '(flycheck-clang-include-path
    (quote
-    ("/home/arfed/Workspace/morse-code-master" "/home/arfed/Workspace/sdku-gen/include")))
+    ("../../include" "../include" "../util" "../utils" "../lib" "../libs")))
  '(flycheck-clang-includes nil)
  '(fringe-mode 10 nil (fringe))
  '(global-ede-mode nil)
@@ -189,8 +189,7 @@
     ("#336c6c" "#205070" "#0f2050" "#806080" "#401440" "#6c1f1c" "#6b400c" "#23733c")))
  '(org-agenda-files
    (quote
-    (quote
-     ("~/orged/LP-DBA/gl.org" "/home/arfed/orged/MASTER.org" "/home/arfed/orged/Q.org" "/home/arfed/orged/emails.org" "/home/arfed/orged/ghiwan.org" "/home/arfed/orged/led-zeppelin.org" "/home/arfed/orged/todo.org" "/home/arfed/orged/exams.org"))))
+    ("/home/arubu/orged/agenda/MASTER.org" "/home/arubu/orged/agenda/exams.org" "/home/arubu/orged/agenda/holiday.org" "/home/arubu/orged/agenda/math.org" "/home/arubu/orged/agenda/needs.org" "/home/arubu/orged/agenda/other.org" "/home/arubu/orged/agenda/personal.org" "/home/arubu/orged/agenda/quotes.org" "/home/arubu/orged/agenda/stage.org" "/home/arubu/orged/agenda/summer-7e2.org" "/home/arubu/orged/agenda/sway3.org" "/home/arubu/orged/agenda/todo.org")))
  '(org-latex-caption-above (quote (image table src-block special-block)))
  '(org-plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(org-startup-folded (quote (quote content)))
@@ -308,11 +307,25 @@
  '(bm-face ((t (:background "orange" :foreground "Black"))))
  '(bm-fringe-face ((t (:background "gold" :foreground "Black"))))
  '(bold ((t (:slant normal :weight bold))))
+ '(cperl-array-face ((t (:foreground "goldenrod1" :weight bold))))
+ '(cperl-hash-face ((t (:foreground "sea green" :slant italic :weight normal))))
+ '(diff-refine-removed ((t (:inherit diff-refine-change :background "#aa2222"))))
+ '(font-lock-function-name-face ((t (:foreground "#BFC3A9"))))
+ '(font-lock-variable-name-face ((t (:foreground "#BDBA9F" :slant italic))))
  '(git-commit-summary ((t (:inherit font-lock-type-face :weight bold))))
+ '(helm-ff-directory ((t (:weight bold))))
+ '(helm-ff-dotted-directory ((t (:background "DimGray" :foreground "white smoke"))))
+ '(helm-ff-dotted-symlink-directory ((t (:background "white smoke" :foreground "gray20"))))
  '(helm-selection ((t (:distant-foreground "black" :box (:line-width 2 :color "grey75" :style released-button) :weight bold))))
+ '(helm-source-header ((t (:background "#22083397778B" :foreground "white" :weight bold :height 1.3))))
+ '(magit-section-highlight ((t (:background "grey20" :weight bold))))
  '(mode-line ((t (:inherit variable-pitch :background "#111111" :foreground "#777777" :box nil :family "DejaVu Sans Mono"))))
+ '(org-block ((t nil)))
+ '(org-checkbox ((t (:inherit bold))))
+ '(org-document-title ((t (:foreground "pale turquoise" :weight bold))))
  '(org-level-1 ((t (:inherit outline-1 :weight bold))))
  '(org-level-2 ((t (:inherit outline-2 :slant italic))))
+ '(org-tag ((t (:box (:line-width 2 :color "grey75" :style pressed-button) :slant normal :weight bold))))
  '(term-color-blue ((t (:background "dark slate blue" :foreground "dark slate blue")))))
 
 (require 'company)
@@ -1811,7 +1824,10 @@ If Delete Needless Spaces mode is enable, before a buffer is saved to its file:
 
 (global-set-key (kbd "C-x %") 'find-grep)
 (global-set-key (kbd "C-x &") 'find-grep-dired)
-
+(global-set-key (kbd "C-x ^") 'find-name-dired)
+(global-set-key (kbd "C-x 4 k") 'kill-this-buffer)
+(global-set-key (kbd "C-{") 'backward-page)
+(global-set-key (kbd "C-}") 'forward-page)
 ;; key bindings
 (when (eq system-type 'darwin)		; mac specific settings
   (setq mac-option-modifier 'alt)
