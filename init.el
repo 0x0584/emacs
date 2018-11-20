@@ -1,4 +1,3 @@
-
 ;;; package ---- Summary:
 ;;; Commentary:
 ;;; Code:
@@ -50,11 +49,11 @@
 ;;(declare (indent 1) (debug t))
 ;;`(eval-after-load ,file '(progn ,@body))))
 
-(add-to-list 'load-path "~/.emacs.d/nyan-mode")
-(require 'nyan-mode)
-(setq-default nyan-wavy-trail t)
-(nyan-mode)
-(nyan-start-animation)
+;; (add-to-list 'load-path "~/.emacs.d/nyan-mode")
+;; (require 'nyan-mode)
+;; (setq-default nyan-wavy-trail t)
+;; (nyan-mode)
+;; (nyan-start-animation)
 
 ;; (if (/= 1 detect-display)
 ;;     ((add-to-list 'load-path "~/.emacs.d/nyan-mode")
@@ -195,7 +194,7 @@
  '(org-startup-folded (quote (quote content)))
  '(package-selected-packages
    (quote
-    (lsp-javascript-flow fzf helm-flymake f3 sr-speedbar map-regexp helm-git-files helm-git-grep helm-git ac-slime magit-todos melancholy-theme nimbus-theme sly markdown-toc markdown-preview-mode markdownfmt ac-math diffview dumb-diff find-file-in-project find-file-in-repository find-things-fast firefox-controller latexdiff magit-org-todos magit-find-file magit-annex gitlab csharp-mode devdocs god-mode helm-perldoc lang-refactor-perl ac-emoji emojify-logos plsense perl6-mode org-preview-html flymake-jshint flymake-jslint flymake-json flymake-less ac-js2 helm-spotify-plus tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme spacemacs-theme djvu memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell ac-ispell mysql-to-org geben awk-it smartparens zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe benchmark-init ivy-youtube zweilight-theme helm-gitignore super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm meacupla-theme clues-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers)))
+    (telephone-line fzf quack eldoc-eval eldoc-overlay lsp-javascript-flow helm-flymake f3 sr-speedbar map-regexp helm-git-files helm-git-grep helm-git ac-slime magit-todos melancholy-theme nimbus-theme sly markdown-toc markdown-preview-mode markdownfmt ac-math diffview dumb-diff find-file-in-project find-file-in-repository find-things-fast firefox-controller latexdiff magit-org-todos magit-find-file magit-annex gitlab csharp-mode devdocs god-mode helm-perldoc lang-refactor-perl ac-emoji emojify-logos plsense perl6-mode org-preview-html flymake-jshint flymake-jslint flymake-json flymake-less ac-js2 helm-spotify-plus tldr edit-server org-gnome-calendar org-gnome org-web-tools pacmacs php-eldoc plsql org-alert ample-theme doom-themes exotica-theme flatui-dark-theme org-beautify-theme spacemacs-theme djvu memory-usage nlinum sotlisp nasm-mode flycheck-julia julia-mode julia-repl julia-shell ac-ispell mysql-to-org geben awk-it smartparens zenburn-theme yascroll visual-regexp vkill minor-mode-hack symon magithub function-args smart-mode-line smart-mode-line-powerline-theme helm-dictionary define-word dictionary nhexl-mode quickrun popwin ace-popup-menu popup-complete popup-kill-ring popup-switcher basic-c-compile runtests rvm rsense ac-inf-ruby flymake-ruby rubocop yari helm-rubygems-local helm-rubygems-org howm omniref ruby-block ruby-compilation ruby-dev ruby-electric ruby-factory ruby-hash-syntax ruby-refactor ruby-tools helm-robe robe benchmark-init ivy-youtube zweilight-theme helm-gitignore super-save ggtags desktop+ ac-html ac-clang flycheck-css-colorguard flymake-css ox-pandoc pandoc pandoc-mode langtool rich-minority diminish auto-complete-auctex flylisp c-eldoc term+ markdown-mode+ org-commentary org-doing org-readme orgtbl-ascii-plot spaces ssh svg svg-clock swap-buffers sx vline vmd-mode org-pandoc highlight highlight-quoted highlight-escape-sequences highlight-operators highlight-blocks plantuml-mode ascii-art-to-unicode smex desktop-menu magit-filenotify magit-rockstar latex-preview-pane magic-latex-buffer tango-2-theme tangotango-theme anti-zenburn-theme auctex git-timemachine zeal-at-point dash-at-point linum-relative bm ac-helm meacupla-theme clues-theme grandshell-theme helm-company helm-make helm-themes electric-operator flycheck-perl6 rainbow-delimiters helm-gtags ctags-update hl-sexp rainbow-blocks ctags bind-key flycheck flycheck-cstyle iedit impatient-mode xkcd rotate nyan-mode inkpot-theme hlinum gnuplot gnu-apl-mode flycheck-clangcheck emojify disaster chess badger-theme auto-complete-clang auto-complete-c-headers ac-c-headers)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(plantuml-jar-path "/home/arfed/.emacs.d/plantuml/plantuml.jar")
  '(powerline-color1 "#222232")
@@ -455,8 +454,10 @@
   (let ((tags-revert-without-query t))  ; don't query, revert silently          
     (visit-tags-table default-directory nil)))
 
+(require 'fzf)
+
 (global-set-key (kbd "C-;") 'helm-etags-select)
-(global-set-key (kbd "C-c C-f") 'find-tag)
+(global-set-key (kbd "C-c C-f") 'fzf)
 (global-set-key (kbd "C-c /") 'tags-query-replace)
 (global-set-key (kbd "<f12>") 'info)
 (global-set-key (kbd "C-c a") 'org-agenda)
@@ -621,7 +622,10 @@
   (interactive "sName: ")
   (ansi-term "/bin/bash" name))
 
-(global-set-key (kbd "C-x t") 'eshell)
+(global-set-key (kbd "C-c C-d") (lambda ()
+				  (interactive)
+				  (ansi-term "/bin/bash"
+					     "Can you hear the C?")))
 
 (defun m-term-right ()
   "Add terminal on the right."
@@ -791,7 +795,12 @@ Don't mess with special buffers."
 
 
 (load "c-eldoc")
+
 (add-hook 'c-mode-hook 'c-turn-on-eldoc-mode)
+(add-hook 'c++-mode-hook 'c-turn-on-eldoc-mode)
+(setq c-eldoc-includes "-I./include -I../include -I./ -I../ ")
+(setq c-eldoc-buffer-regenerate-time 60)
+
 ;;(global-set-key (kbd "C-.") 'duplicate-line)
 (require 'smex) ; Not needed if you use package.el
 ;; Can be omitted. This might cause a (minimal) delay
@@ -1836,6 +1845,8 @@ If Delete Needless Spaces mode is enable, before a buffer is saved to its file:
   (global-set-key [kp-delete] 'delete-char))
 
 (setq gdb-many-windows t)
+
+(telephone-line-mode)
 
 (provide 'init)
 

@@ -1,0 +1,411 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("eval.h" include nil nil [543 560])
+            ("scope.h" include nil nil [561 579])
+            ("native.h" include nil nil [580 599])
+            ("pair.h" include nil nil [601 618])
+            ("vector.h" include nil nil [619 638])
+            ("characters.h" include nil nil [639 662])
+            ("kwd" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+    {\"quote\", eval_quote},
+    {\"eval\", eval_eval},
+    {\"define\", eval_define},
+    {\"undef\", eval_undef},
+    {\"set\", eval_set},
+    {\"setq\", eval_setq},
+    {\"let\", eval_let},
+    {\"let*\", eval_let_asterisk},
+    {\"if\", eval_if},
+    {\"lambda\", eval_lambda},
+    {NULL, NULL}
+}"
+                :type ("keyword_t" type (:type "class") nil nil))
+                nil [725 1033])
+            ("eval_sexpr" function
+               (:pointer 1
+                :arguments 
+                  ( ("scope" variable
+                       (:pointer 1
+                        :type ("scope_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2948 2964])
+                    ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2965 2980]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [2928 5625])
+            ("eval_sexprs" function
+               (:pointer 1
+                :arguments 
+                  ( ("sexprs" variable
+                       (:pointer 1
+                        :type ("vector_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5868 5886]))                  
+                :type ("vector_t" type (:type "class") nil nil))
+                nil [5846 6343])
+            ("eval_keyword" function
+               (:arguments 
+                  ( ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6582 6597]))                  
+                :type ("k_func" type (:type "class") nil nil))
+                nil [6562 6832])
+            ("eval_quote" function
+               (:pointer 1
+                :arguments 
+                  ( ("scope" variable
+                       (:pointer 1
+                        :type ("scope_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7336 7352])
+                    ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7353 7368]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [7316 7507])
+            ("eval_define" function
+               (:pointer 1
+                :arguments 
+                  ( ("scope" variable
+                       (:pointer 1
+                        :type ("scope_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7898 7914])
+                    ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7915 7930]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [7877 8443])
+            ("eval_if" function
+               (:pointer 1
+                :arguments 
+                  ( ("scope" variable
+                       (:pointer 1
+                        :type ("scope_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9000 9016])
+                    ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9017 9032]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [8983 9267])
+            ("eval_lambda" function
+               (:pointer 1
+                :arguments 
+                  ( ("scope" variable
+                       (:pointer 1
+                        :type ("scope_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9739 9755])
+                    ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9756 9771]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [9718 9962])
+            ("eval_setq_or_set" function
+               (:pointer 1
+                :arguments 
+                  ( ("scope" variable
+                       (:pointer 1
+                        :type ("scope_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9991 10007])
+                    ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10008 10023])
+                    ("quoted" variable (:type "bool") (reparse-symbol arg-sub-list) [10024 10036]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [9965 10469])
+            ("eval_set" function
+               (:pointer 1
+                :arguments 
+                  ( ("scope" variable
+                       (:pointer 1
+                        :type ("scope_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10489 10505])
+                    ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10506 10521]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [10471 10574])
+            ("eval_setq" function
+               (:pointer 1
+                :arguments 
+                  ( ("scope" variable
+                       (:pointer 1
+                        :type ("scope_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10595 10611])
+                    ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10612 10627]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [10576 10679])
+            ("eval_undef" function
+               (:pointer 1
+                :arguments 
+                  ( ("scope" variable
+                       (:pointer 1
+                        :type ("scope_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10837 10853])
+                    ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10854 10869]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [10817 11302])
+            ("eval_eval" function
+               (:pointer 1
+                :arguments 
+                  ( ("scope" variable
+                       (:pointer 1
+                        :type ("scope_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11376 11392])
+                    ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11393 11408]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [11357 11569])
+            ("eval_let" function
+               (:pointer 1
+                :arguments 
+                  ( ("scope" variable
+                       (:pointer 1
+                        :type ("scope_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12373 12389])
+                    ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12390 12405]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [12355 13849])
+            ("eval_let_asterisk" function
+               (:pointer 1
+                :arguments 
+                  ( ("scope" variable
+                       (:pointer 1
+                        :type ("scope_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14745 14761])
+                    ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14762 14777]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [14718 16763]))          
+      :file "eval.c"
+      :pointmax 16766
+      :fsize 16765
+      :lastmodtime '(23535 26675 275895 132000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("sexpr.h" include nil nil [432 450])
+            ("pair.h" include nil nil [451 468])
+            ("native.h" include nil nil [469 488])
+            ("isnil" function
+               (:arguments 
+                  ( ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [624 639]))                  
+                :type "bool")
+                nil [613 701])
+            ("istrue" function
+               (:arguments 
+                  ( ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [930 945]))                  
+                :type "bool")
+                nil [918 974])
+            ("isatom" function
+               (:arguments 
+                  ( ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1243 1258]))                  
+                :type "bool")
+                nil [1231 1307])
+            ("issymbol" function
+               (:arguments 
+                  ( ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1486 1501]))                  
+                :type "bool")
+                nil [1472 1566])
+            ("isnumber" function
+               (:arguments 
+                  ( ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1711 1726]))                  
+                :type "bool")
+                nil [1697 1791])
+            ("isstring" function
+               (:arguments 
+                  ( ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1936 1951]))                  
+                :type "bool")
+                nil [1922 2016])
+            ("ispair" function
+               (:arguments 
+                  ( ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2136 2151]))                  
+                :type "bool")
+                nil [2124 2214])
+            ("islist" function
+               (:arguments 
+                  ( ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2398 2413]))                  
+                :type "bool")
+                nil [2386 2484])
+            ("islambda" function
+               (:arguments 
+                  ( ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2649 2664]))                  
+                :type "bool")
+                nil [2635 2729])
+            ("isnative" function
+               (:arguments 
+                  ( ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2865 2880]))                  
+                :type "bool")
+                nil [2851 2959])
+            ("sexpr_new" function
+               (:pointer 1
+                :arguments 
+                  ( ("type" variable (:type ("type_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3408 3420]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [3389 3564])
+            ("sexpr_length" function
+               (:arguments 
+                  ( ("expr" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3742 3757]))                  
+                :type "int")
+                nil [3725 4011])
+            ("sexpr_err" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4250 4255]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [4231 4291])
+            ("sexpr_nil" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4473 4478]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [4454 4560])
+            ("sexpr_true" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4768 4773]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [4748 4856])
+            ("sexpr_symbol" function
+               (:pointer 1
+                :arguments 
+                  ( ("symbol" variable (:type ("string_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4880 4896]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [4858 4982])
+            ("sexpr_number" function
+               (:pointer 1
+                :arguments 
+                  ( ("number" variable (:type ("number_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5006 5022]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [4984 5100])
+            ("sexpr_string" function
+               (:pointer 1
+                :arguments 
+                  ( ("string" variable (:type ("string_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5124 5140]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [5102 5226])
+            ("lambda_new_native" function
+               (:pointer 1
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5620 5635])
+                    ("func" variable
+                       (:pointer 1
+                        :type ("nlambda_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5636 5653]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [5593 5814])
+            ("lambda_new" function
+               (:pointer 1
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6199 6214])
+                    ("body" variable
+                       (:pointer 1
+                        :type ("sexpr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6215 6230]))                  
+                :type ("sexpr_t" type (:type "class") nil nil))
+                nil [6179 6390])
+            ("print_tabs" function
+               (:arguments 
+                  ( ("ntabs" variable (:type "int") (reparse-symbol arg-sub-list) [6509 6519]))                  
+                :type "void")
+                nil [6493 6635])
+            ("sexpr_describe" function
+               (:arguments 
+                  ( ("o" variable (:type ("object_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6668 6679]))                  
+                :type "void")
+                nil [6648 7951])
+            ("sexpr_print" function
+               (:arguments 
+                  ( ("o" variable (:type ("object_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7970 7981]))                  
+                :type "void")
+                nil [7953 8097])
+            ("_sexpr_print" function
+               (:arguments 
+                  ( ("o" variable (:type ("object_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8117 8128]))                  
+                :type "void")
+                nil [8099 8718])
+            ("lambda_describe" function
+               (:arguments 
+                  ( ("o" variable (:type ("object_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8741 8752]))                  
+                :type "void")
+                nil [8720 9057])
+            ("lambda_print" function
+               (:arguments 
+                  ( ("o" variable (:type ("object_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9077 9088]))                  
+                :type "void")
+                nil [9059 9412]))          
+      :file "sexpr.c"
+      :pointmax 9413
+      :fsize 9412
+      :lastmodtime '(23535 22108 829762 519000)
+      :unmatched-syntax nil))
+  :file "!home!arubu!Workspace!scmin!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
